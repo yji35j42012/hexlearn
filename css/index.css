@@ -62,10 +62,18 @@ body {
 	display: block;
 }
 .photo {padding: 48px 0;}
+img{vertical-align: middle;}
+
 .title {
 	border-bottom: 1px solid #000000;
 	padding-bottom: 8px;
 	font-size: 0;
+}
+.info_bg .title{
+	width: 996px;
+	text-align: center;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 15px;
 }
 .info .content{
 	width: 100%;
@@ -78,28 +86,26 @@ body {
 	justify-content:center;
 	padding-top: 40px;
 }
-
 .content li{
 	line-height: 36px;
 }
 .content li img+img{
 	margin-left: 24px;
 }
+
 .content li+li{
 	margin-top: 24px;
+}
+.info_bg .content li+li{
+	margin-top: 20px;
+}
+.info_bg .contact li+li{
+	margin-top: 16px;
 }
 .content tt{
 	display: block;
 	font-size: 24px;
 }
-.info_bg .title{
-	width: 996px;
-	text-align: center;
-	border-bottom: 1px solid #fff;
-	padding-bottom: 15px;
-}
-
-
 .info_bg .content ul{
 	display: inline-flex;
 	flex-direction: column;
@@ -108,16 +114,7 @@ body {
 	line-height: 28px;
 	font-weight: lighter;
 }
-.info_bg .content li+li{
-	margin-top: 20px;
-}
-.info_bg .contact li+li{
-	margin-top: 16px;
-}
 
-.content img{
-	vertical-align: middle;
-}
 .info .content p{
 	width: 642px;
 	font-size: 20px;
