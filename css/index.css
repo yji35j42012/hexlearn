@@ -33,7 +33,8 @@ body {
 .wrap > div+div{margin-top: 72px;}
 
 .info{
-	width: 1200px;
+	width: 100%;
+	max-width: 1200px;
 	margin: auto;
 }
 .info_bg{
@@ -61,13 +62,15 @@ body {
 .title {
 	border-bottom: 1px solid #000000;
 	padding-bottom: 8px;
+	font-size: 0;
 }
 .info .content{
 	width: 100%;
 	padding-top: 16px;
 }
 .info_bg .content{
-	width: 996px;
+	width: 100%;
+	max-width: 996px;
 	display: flex;
 	justify-content:center;
 	padding-top: 40px;
