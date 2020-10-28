@@ -13,12 +13,12 @@ body {
 	margin-right: 16px;
 	line-height: 45px;
 }
-.info .en {
+.en {
 	display: inline-block;
-	color: #a00404;
 	line-height: 28px;
 	font-size: 24px;
 }
+.info .en{color: #a00404;}
 
 .border_l{border-left: 1px solid #96a9c4;}
 .padding_l24{padding-left: 24px;}
