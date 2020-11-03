@@ -1,0 +1,46 @@
+
+*{
+	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+}
+.wrap{
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    color: #fff;
+    background: #AA0601;
+    padding: 30px 39px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    vertical-align: middle;
+}
+
+.menu{
+    display: flex;
+    font-size: 20px;
+}
+.menu li{ line-height: 30px;}
+.menu li+li{
+    margin-left: 40px;
+}
+
+.banner {
+    width: 100%;
+    height: 304px;
+    background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/qa.png')no-repeat 50% bottom /cover;
+}
+.content{
+    padding: 8px 0 104px;
+}
+.choose_city{
+    width: 237px;
+    height: 46px;
+    border: 1px solid #CED4DA;
+   
+
+}
