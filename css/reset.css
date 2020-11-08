@@ -66,4 +66,5 @@ input,button,select{
 }
 *{
 	box-sizing: border-box;
+	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
 }

@@ -1,0 +1,40 @@
+.header{
+    width: 100%;
+    height: 108px;
+    background: #AA0601;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 88px;
+}
+.menu ul{
+    display: flex;
+}
+.menu li{
+    margin-left: 64px;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+.banner{
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/week3/banner.png')no-repeat center/cover;
+}
+.banner_txt{
+
+    color: #650300;
+}
+.banner_p1{
+    font-size: 36px;
+    line-height: 50px;
+}
+.banner_p2{
+    font-size: 64px;
+    line-height: 96px;
+}
