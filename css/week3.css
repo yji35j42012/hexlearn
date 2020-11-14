@@ -29,7 +29,7 @@
     background: url('../images/week3/banner.png')no-repeat center/cover;
 }
 .banner_txt{
-
+    text-align: right;
     color: #650300;
 }
 .banner_p1{
@@ -95,6 +95,10 @@
 }
 .info_product .pic{
     width: 60%;
+}
+.info_product>img{
+    width: 645px;
+    vertical-align: middle;
 }
 .info_product .txt{
     position: relative;
