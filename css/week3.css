@@ -1,4 +1,16 @@
 .txtc{text-align: center;}
+.txtr{text-align: right;}
+img{vertical-align: middle;}
+h1{
+    color: #650300;
+    font-size: 48px;
+    line-height: 72px;
+    margin-bottom: 60px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+.color_white{color: #fff;}
 
 .header{
     width: 100%;
@@ -46,69 +58,75 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-.info_title{
-    color: #650300;
-    font-size: 48px;
-    line-height: 72px;
-    margin-bottom: 60px;
-    width: 100%;
-    text-align: center;
-}
+
 .about{
     background: #AA06010D;
 }
-.info_about{
+.info_content{
+    width: 100%;
+    max-width: 1110px;
+}
+.about .info_content{
+    display: flex;
+    justify-content: center;
     padding-bottom: 16px;
 }
-.info_about ul{
-    display: flex;
-    width: 100%;
-    max-width: 1062px;
-    justify-content: center;
-}
-.info_about li{
+
+.about_item{
     width: calc(100% / 4);
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
 }
-.info_about li+li{
+.about_item + .about_item{
     margin-left: 76px;
 }
-.info_about li img{
-    vertical-align: middle;
+.about_item .pic{height: 100px;}
+
+.about_item .txt{
+    margin-top: 40px;
 }
 .about_title{
     font-size: 24px;
     line-height: 36px;
     text-align: center;
-    margin-top: 40px;
     margin-bottom: 4px;
+    color: #650300;
+    font-weight: bold;
 }
 .about_txt{
     font-size: 16px;
     line-height: 24px;
     text-align: left;
+    align-self: flex-start;
 }
-.info_product{
-    width: 100%;
-    max-width: 1238px;
+.product .info_content{
     padding-bottom: 16px;
 }
-.info_product .pic{
-    width: 60%;
+.product_item{
+    display: flex;
+    align-items: center;
 }
-.info_product>img{
+.product_item:nth-child(2){
+    flex-direction: row-reverse;
+}
+.product_item>img{
     width: 645px;
-    vertical-align: middle;
 }
-.info_product .txt{
+.product_item .txt{
     position: relative;
-    width: 40%;
+    display: block;
     font-size: 48px;
     color: #AA0601;
     margin-left: 86px;
-    /* padding-left: 48px; */
+    font-weight: 900;
 }
-.info_product .txt::before{
+.product_item:nth-child(2) .txt{
+    margin-left: 0;
+    margin-right: 86px;
+}
+.product_item .txt::before{
     content:'';
     position: absolute;
     width: 40px;
@@ -136,6 +154,37 @@
     margin-left: 0;
     margin-right: 86px;
 }
-.info_product li+li{
+.product_item+.product_item{
     margin-top: 32px;
+}
+
+.design{
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png)no-repeat center/cover ;
+}
+.design .info_content{
+    display: flex;
+    justify-content: center;
+}
+.design_item{
+    position: relative;
+    max-width: 540px;
+}
+.design_item::before{
+    content:attr(data-txt);
+    color: #AA0601;
+    font-size: 72px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: rgba(255,255,255,.5);
+}
+.design_item + .design_item{
+    margin-left: 30px;
+}
+.design_item > img{
+    width: 100%;
 }
