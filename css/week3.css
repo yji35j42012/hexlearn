@@ -203,6 +203,7 @@ h1{
 	padding-left: 12px;
 }
 .inp_box.large{
+	padding-top: 10px;
 	height: 100px;
 }
 .chbox{
@@ -243,28 +244,30 @@ h1{
 	background: #AA0601;
 	padding: 24px 15px 0;
 }
-.footer_top{
+.footer_info{
 	display: flex;
 	padding-bottom: 24px;
 	justify-content: space-between;
 	border-bottom:1px solid #fff;
 }
-.footer_l ul{
+.footer_menu{
 	display: none;
-	margin-bottom: 36px;
 }
-.footer_r{
+.footer_community{
 	display: flex;
 	flex-wrap: wrap;
 }
-.footer_r li{
+.footer_community li{
 	width: 24px;
 }
-.footer_r li+li{
+.footer_community li+li{
 	margin-left: 24px;
 }
-.footer_r li img{
+.footer_community li img{
 	width: 100%;
+}
+.phone{
+	margin-bottom: 8px;
 }
 .phone,
 .mail{
@@ -279,7 +282,6 @@ h1{
 	content:'';
 	display: block;
 	margin-right: 4px;
-	margin-bottom: 8px;
 }
 .phone::before{
 	width: 20px;
@@ -291,21 +293,29 @@ h1{
 	height: 20px;
 	background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week3/icon-mail.svg')no-repeat center/contain;	
 }
-.footer_bot{
+.footer_law{
+	position: relative;
 	padding: 24px 0;
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-end;
 }
-.footer_bot .footer_l{
+.footer_copyright{
 	display: flex;
-	flex-direction: row-reverse;
-	
+	flex-direction: row-reverse;	
 }
-.footer_r span{
+.copyright_pic{
+	position: absolute;
+	width: 46px;
+	bottom: 24px;
+	right: 0;
+}
+.copyright_txt{
+	margin-bottom: 7px;
+}
+.footer_privacy span{
 	display: block;
-	width: 100%;
 }
+.footer_privacy span+span{margin-top: 7px;}
 	@media (min-width:768px){
 	.info_box {
 		padding: 40px;
@@ -399,6 +409,41 @@ h1{
 	}
 	.contact .btn{
 		width: 220px;
+	}
+	.footer{
+		padding: 40px;
+	}
+	.footer_menu{
+		display: flex;
+		margin-bottom: 24px;
+	}
+	.footer_menu li{
+		font-size: 16px;
+	}
+	.footer_menu li+li{
+		margin-left: 40px;
+	}
+	.phone,
+	.mail{
+		font-size: 20px;
+	}
+
+	.phone::before,
+	.mail::before{
+		width: 32px;
+		height: 32px;
+		margin-right: 8px;
+	}
+	.footer_law{
+		justify-content: space-between;
+	}
+	.copyright_pic{display: none;}
+	.footer_privacy{
+		display: flex;
+	}
+	.footer_privacy span+span{
+		margin-top: 0;
+		margin-left: 24px;
 	}
 }
 @media (min-width:1024px){    
@@ -611,31 +656,28 @@ h1{
 		padding: 28px 0 8px;
 	}
 
-	.footer_bot{
+	.footer_law{
 		padding: 20px 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-
-	.footer_l li+li{
+	.footer_menu li+li{
 		margin-left: 48px;
 		font-size: 16px;
 	}
-	.footer_r li+li{
+	.footer_community li+li{
 		margin-left: 32px;
 	}
-	.footer_r span+span{
+	.footer_privacy span+span{
 		margin-left: 62px;
 	}
-
-	
-	.footer_bot .footer_l{
+	.footer_copyright{
 		display: flex;
 		align-items: center;
 	}
-	.copyright{
+	.copyright_txt{
 		margin-left: 38px;
 	}
 }
