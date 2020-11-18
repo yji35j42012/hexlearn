@@ -64,6 +64,12 @@ input,button,select{
 	resize: none;
 	outline:none;
 }
+img{
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
 *{
 	box-sizing: border-box;
 	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
