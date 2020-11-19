@@ -314,6 +314,49 @@ h1{
 	display: block;
 }
 .footer_privacy span+span{margin-top: 7px;}
+
+
+/* serise */
+.serise_menu{
+	display: flex;
+	height: 35px;
+}
+.serise_menu li{
+	position: relative;
+	width: 100%;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
+.serise_menu li::before{
+	content:'';
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin-right: 5px;
+}
+.serise_menu li:nth-child(1)::before{
+	background-image:url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/c7639be6b4ca9e758e4c0f8fc6cb52b44e94b323/week3/icon-diamond-black.svg');
+}
+.serise_menu li:nth-child(2)::before{
+	background-image:url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/c7639be6b4ca9e758e4c0f8fc6cb52b44e94b323/week3/icon-sun-black.svg');
+}
+
+.serise_menu li:nth-child(3)::before{
+	background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/c7639be6b4ca9e758e4c0f8fc6cb52b44e94b323/week3/icon-thunder-black.svg');
+}
+/* serise */
+
+
+
+
+
+
+
 	@media (min-width:768px){
 	.info_box {
 		padding: 40px;
