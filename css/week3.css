@@ -16,6 +16,7 @@ h1{
 }
 /* 16 20 20 */
 h2{
+	width: 100%;
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: bold;
@@ -46,12 +47,24 @@ h2{
 }
 .menu li{
 	width: 50%;
-	color: #FFFFFF;
 	border: 1px solid #fff;
 	font-size: 20px;
 	line-height: 30px;
 	padding: 8px 0;
 	text-align: center;
+}
+.menu a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.menu a:focus{
+	color: #FFFFFF;
+}
+.menu a:visited{
+	color: #FFFFFF;
+}
+.menu a:link{
+	color: #fff;
 }
 .banner{
 	position: relative;
@@ -251,6 +264,23 @@ h2{
 	color: #fff;
 	margin: 24px auto 0;
 }
+
+
+.breadcrumb{
+	display: flex;
+}
+.breadcrumb li{
+	font-size: 14px;
+	line-height: 21px
+}
+.breadcrumb li+li::before{
+	content:' / ';
+	color: #000;
+}
+.breadcrumb li:last-child{
+	color: #AA0601
+}
+
 .footer{
 	color: #fff;
 	background: #AA0601;
@@ -417,23 +447,23 @@ h2{
 .serise_color li+li{
 	margin-left: 4px;
 }
-.serise_page{
+.mod_page{
 	display: flex;
 	margin-top: 40px;
 	margin-bottom: 24px;
 	justify-content: center;
 }
-.serise_page li{
+.mod_page li{
 	border: 1px solid #555555;
 	height: 40px;
 	line-height: 40px;
 	padding: 0 10px;
 }
-.serise_page li.on{
+.mod_page li.on{
 	color: #fff;
 	background: #000;
 }
-.serise_page li+li{
+.mod_page li+li{
 	border-left: none;
 }
 /* serise end*/
@@ -571,9 +601,23 @@ h2{
 
 
 /* question end */
-
-
-
+.blogs_item h2{
+	color: #650300;
+	margin-top: 8px;
+}
+.blogs_item+.blogs_item{
+	margin-top: 26px;
+}
+.blogs_txt{
+	font-size: 14px;
+	line-height: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.blogs_info{
+	display: none;
+}
 
 
 @media (min-width:768px){
@@ -773,6 +817,24 @@ h2{
 		padding: 0 15px 72px;
 	}
 	.serise_item+.serise_item{margin-top: 0;}
+
+	.blogs_item{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.blogs_item img{ width: 50%;}
+	.blogs_txt{
+		width: 50%;
+		padding-left: 30px;
+	}
+	.blogs_info{
+		display: block;
+		text-align: justify;
+		font-size: 14px;
+		line-height: 21px;
+		padding-top: 16px;
+		
+	}
 }
 @media (min-width:1280px){    
 	h1,
@@ -898,6 +960,7 @@ h2{
 		justify-content: center;
 		flex-wrap: nowrap;
 	}
+	.recommend img{width: 100%;}
 	.recommend_item{
 		width: calc(100% / 4);
 		margin-bottom: 0;
@@ -982,7 +1045,7 @@ h2{
 		width: 25%;
 		padding: 0 15px 100px
 	}
-	.serise_page{margin-top: 0;}
+	.mod_page{margin-top: 0;}
 	.banner_title::after{margin-left: 24px;}
 	.choose_txt{font-size: 24px;}
 	.store_item{
