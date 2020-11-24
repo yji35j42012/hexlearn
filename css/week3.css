@@ -597,6 +597,9 @@ h2{
 /* question 320 end */
 
 /* blogs 320 start */
+.blogs_menu{
+	display: none;
+}
 .blogs_item h2{
 	color: #650300;
 	margin-top: 8px;
@@ -613,6 +616,12 @@ h2{
 }
 .blogs_info{
 	display: none;
+}
+.more_txt{
+	display: none;
+}
+.loaction_map{
+	margin-top: 10px;
 }
 /* blogs 320 end */
 
@@ -818,22 +827,76 @@ h2{
 		padding: 0 15px 72px;
 	}
 	.serise_item+.serise_item{margin-top: 0;}
-
+	/* blogs 768 start */
+	.blogs_menu {
+		display: block;
+		background: #650300;
+	}
+	.blogs_menu .info_content{
+		display: flex;
+		padding: 0 40px;
+	}
+	.blogs_menu ul{
+		display: flex;
+		width: 100%;
+		height: 55px;
+		display: flex;
+		align-items: center;
+	}
+	.blogs_menu li{
+		color: #fff;
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.blogs_menu li+li{
+		margin-left: 32px;
+	}
+	.blogs_item h2{margin-top: 0;}
 	.blogs_item{
 		display: flex;
 		flex-wrap: wrap;
 	}
 	.blogs_item img{ width: 50%;}
 	.blogs_txt{
+		position: relative;
 		width: 50%;
 		padding-left: 30px;
+		align-content: flex-start;
 	}
 	.blogs_info{
-		display: block;
+		position: relative;
 		text-align: justify;
 		font-size: 14px;
 		line-height: 21px;
 		padding-top: 16px;
+		display: -webkit-box;
+		-webkit-box-orient: vertical; /* 用來設定一個元素是水平還是垂直方向排列其內容 */
+		-webkit-line-clamp: 6; /* 限制指定的行數 */
+		overflow: hidden;
+		text-overflow : ellipsis;
+	}
+	.more_txt{
+		display: block;
+		position: absolute;
+		font-size: 14px;
+		bottom: 5px;
+		right: 0;
+		background: #fff;
+		padding-left: 6px;
+	}
+
+	/* blogs 768 end */
+
+	.loaction .store_item{
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap
+	}
+	.loaction .store_title{
+		width: 50%;
+	}
+	.loaction_map{
+		width: 100%;
 	}
 }
 @media (min-width:1280px){
@@ -1084,7 +1147,7 @@ h2{
 		width: 25%;
 		padding: 0 15px 100px
 	}
-	.mod_page{margin-top: 0;}
+
 	.banner_title::after{margin-left: 24px;}
 	.choose_txt{font-size: 24px;}
 	.store_item{
@@ -1109,5 +1172,48 @@ h2{
 	}
 	.question_item ul {
 		padding: 16px 0 40px 90px;
+	}
+	/* blogs 1280 start */
+	.blogs_item h2{
+		font-size: 32px;
+		line-height: 45px;
+	}
+	.blogs_txt .title{
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 16px;
+	}
+	.blogs_info{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.blogs_txt{
+		width: 40%;
+	}
+	.more_txt {
+		font-size: 36px;
+		line-height: 48px;
+		color: #650300;
+	}
+	.blogs_item img{
+		width: 60%;
+	}
+	.more_txt tt{display: none;}
+	/* blogs 1280 end */
+	.loaction .info_content{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.loaction .store_item{
+		width: 40%;
+		display: block;
+	}
+	.loaction .store_title{
+		width: 100%;
+	}
+	.loaction_map{
+		width: calc(60% - 30px);
+		margin-top: 0;
 	}
 }
