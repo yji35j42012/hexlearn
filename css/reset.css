@@ -1,155 +1,71 @@
-html,
-body,
-div,
-span,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-em,
-img,
-tt,
-b,
-i,
-ol,
-ul,
-li,
-form,
-label,
-caption {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    list-style: none;
-    font-size: 100%;
-    font-style: normal;
-    font-weight: normal;
-	vertical-align: baseline;
-	touch-action:manipulation;
-}
-html,body{
-    width: 100%;
-	height: 100%;
-	font-size: 14px;
-}
-body{
-	line-height: 1;
-}
-ol , ul{
-	list-style: none;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-blockquote, q{
-	quotes:none;
-}
-blockquote:before, blockquote:after,
-q:before , q:after{
-	content:'';
-	content:none;
-}
-input,button,select{
-	padding: 0;
-	border: none;
-	appearance: none;
-	resize: none;
-	outline:none;
-}
-img{
-	display: block;
-	width: 100%;
-	height: auto;
-	vertical-align: middle;
-}
-*{
-	box-sizing: border-box;
-	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
-	line-height: 1;
-}
-*:hover,
-*:focus,
-*:active {
-	outline: 0;
-	-moz-outline: none;
-	-webkit-tap-highlight-color: transparent;
-}
-a,
-a:hover {
-	text-decoration: none;
-	color: inherit;
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	appearance: none;
-}
-input[type=number] {
-	-moz-appearance: textfield;
-}
-input[type="password"]::-webkit-textfield-decoration-container {
-	visibility: hidden;
-}
-input,
-button,
-select,
-textarea {
-	font-family: 'Helvetica', sans-serif;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
 	padding: 0;
 	border: 0;
-	background-color: transparent;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-	resize: none;
-	font-size: 16px;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-input::-ms-clear,
-input::-ms-reveal,
-select::-ms-expand{
-	display: none;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-.nofloat:after {
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
 	content: '';
-	display: table;
-	clear: both;
+	content: none;
 }
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-tt {
-	font-family: 'Helvetica', sans-serif;
+
+
+/*==========================custom==========================*/
+body{
+	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
 }
-@media only screen and (min-device-width: 1025px) {
-	::-webkit-scrollbar {
-		width: 6px;
-		height: 6px;
-		background-color: #f1f1f1;
-	}
-
-	::-webkit-scrollbar-thumb {
-		background-color: #c1c1c1;
-		border: 1px #f1f1f1 solid;
-		border-radius: 3px;
-		cursor: pointer;
-		-webkit-transition: background .5s linear;
-		transition: background .5s linear;
-	}
-
-	*:hover::-webkit-scrollbar-thumb {
-		background-color: #a9a9a9;
-	}
-
-	::-webkit-scrollbar-corner {
-		background-color: #f1f1f1;
-	}
+img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+*{
+	box-sizing: border-box;
+}
+button{
+	background: transparent;
+	outline: 0;
+	border: 0;
 }

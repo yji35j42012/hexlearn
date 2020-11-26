@@ -309,12 +309,27 @@ h2{
 }
 .chbox input{display: none;}
 .chbox span{
+	position: relative;
 	display:block;
 	flex: none;
 	width: 10px;
 	height: 10px;
 	border: 1px solid #000;
 	margin: 3px;
+}
+.chbox input:checked + span:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 3px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 10px;
+	height: 5px;
+	border-left: 2px solid #000;
+	border-bottom: 2px solid #000;
+	transform: rotate( 315deg);
 }
 .contact .btn{
 	display: block;
@@ -872,7 +887,6 @@ h2{
 	.blogs_txt{
 		position: relative;
 		width: 50%;
-		padding-left: 30px;
 		align-content: flex-start;
 	}
 	.blogs_info{
@@ -1088,7 +1102,6 @@ h2{
 		display: flex;
 		align-items: center;
 	}
-	.chbox input{display: none;}
 	.chbox span{
 		display: inline-block;
 		width: 20px;
@@ -1210,6 +1223,7 @@ h2{
 	.blogs_info{
 		font-size: 20px;
 		line-height: 30px;
+		-webkit-line-clamp: 8;
 	}
 	.blogs_txt{
 		width: 40%;
@@ -1218,9 +1232,12 @@ h2{
 		font-size: 36px;
 		line-height: 48px;
 		color: #650300;
+		text-transform: uppercase;
+		font-weight: 900;
 	}
 	.blogs_item img{
-		width: 60%;
+		width: calc(60% - 30px);
+		margin-right: 30px;
 	}
 	.more_txt tt{display: none;}
 	/* blogs 1280 end */
