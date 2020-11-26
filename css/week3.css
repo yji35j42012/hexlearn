@@ -364,6 +364,7 @@ h2{
 	align-items: center;
 	justify-content:center;
 	border: 1px solid #DCDCDC;
+	cursor: pointer;
 }
 .serise_menu li::before{
 	content:'';
@@ -375,13 +376,17 @@ h2{
 	background-position: center;
 	margin-right: 5px;
 }
-.serise_menu li.on::after{
+.serise_menu li::after{
 	content:'';
 	position: absolute;
-	width: 100%;
+	width: 0;
 	height: 4px;
 	background: #AA0601;
 	bottom: 0;
+	transition-duration: .3s;
+}
+.serise_menu li.on::after{
+	width: 100%;
 }
 .serise_menu li:nth-child(1)::before{
 	background-image:url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/c7639be6b4ca9e758e4c0f8fc6cb52b44e94b323/week3/icon-diamond-black.svg');
@@ -1238,4 +1243,14 @@ h2{
 		width: calc(60% - 30px);
 		margin-top: 0;
 	}
+}
+@media (pointer: fine),
+(pointer: fine) and (-moz-touch-enabled: 0),
+screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	.serise_menu li:hover::after{
+		width: 100%;
+	}
+}
+.serise_menu li:active::after{
+	width: 100%;
 }
