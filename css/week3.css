@@ -516,7 +516,7 @@ h2{
 	font-size: 16px;
 	line-height: 24px;
 	padding: 8px 16px;
-	border: 1px solid #00000021;
+	border-bottom: 1px solid #00000021;
 }
 .store_item+.store_item{
 	margin-top: 16px;
@@ -524,7 +524,6 @@ h2{
 
 .area_info{
 	padding: 16px;
-	border: 1px solid #00000021;
 }
 .area_info li{
 	font-size: 14px;
@@ -624,6 +623,7 @@ h2{
 .loaction_map{
 	margin-top: 10px;
 }
+
 /* blogs 320 end */
 
 @media (min-width:768px){
@@ -897,12 +897,16 @@ h2{
 	.loaction .store_item{
 		display: flex;
 		width: 100%;
-		flex-wrap: wrap
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-	.loaction .store_title{
+	.loaction img{
 		width: 50%;
 	}
-	.loaction_map{
+	.loaction .store_title{
+		width: calc(50% - 30px);
+	}
+	.loaction .loaction_map{
 		width: 100%;
 	}
 }
@@ -1227,7 +1231,10 @@ h2{
 	.loaction .store_title{
 		width: 100%;
 	}
-	.loaction_map{
+	.loaction img{
+		width: 100%;
+	}
+	.loaction .loaction_map{
 		width: calc(60% - 30px);
 		margin-top: 0;
 	}
