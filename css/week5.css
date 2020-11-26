@@ -1,0 +1,82 @@
+/* share pc start */
+.wrap{
+    height: 100%;
+    display: flex;
+}
+.menu_box{
+    position: relative;
+    flex: none;
+    width: 300px;
+    height: 100%;
+    background: #EDF4EE;
+    padding: 32px 0;
+}
+.logo{
+    width: 150px;
+    margin-left: 32px;
+    margin-bottom: 32px;
+}
+.menu li{
+    position: relative;
+    display: flex;
+    height: 32px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    padding-left: 32px;
+    align-items: center;
+    cursor: pointer;
+}
+.menu li+li{
+    margin-top: 30px;
+}
+.menu li::after{
+    content:'';
+    width: 4px;
+    height: 0;
+    position: absolute;
+    background: #2A8356;
+    top: 0;
+    left: 0;
+}
+.menu li i{
+    margin-right: 16px;
+}
+.menu li.on,
+.menu li:hover{
+    color: #2A8356;
+}
+.menu li.on::after,
+.menu li:hover::after{
+    height: 100%;
+    color: #2A8356;
+    background: #2A8356;
+}
+.menu li:hover i,
+.menu li.on i{
+    fill: #2A8356;
+}
+
+.user_info{
+    padding-left: 32px;
+    position: absolute;
+    bottom: 32px;
+    display: flex;
+}
+.user_pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.user_name{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+.user_email{
+    font-size: 14px;
+    line-height: 18px;
+    color: #0000009A;
+}
+/* share pc end */
