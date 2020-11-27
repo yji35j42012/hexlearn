@@ -1,0 +1,240 @@
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox.*/
+	-moz-osx-font-smoothing: grayscale;
+}
+.wrap{
+    height: 100%;
+    display: flex;
+}
+.menu_box{
+    position: relative;
+    flex: none;
+    width: 300px;
+    height: 100%;
+    background: #EDF4EE;
+    padding: 32px 0;
+}
+.logo{
+    width: 150px;
+    margin-left: 32px;
+    margin-bottom: 32px;
+}
+.menu li{
+    position: relative;
+    display: flex;
+    height: 32px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    padding-left: 32px;
+    align-items: center;
+    cursor: pointer;
+}
+.menu li+li{
+    margin-top: 30px;
+}
+.menu li::after{
+    content:'';
+    width: 4px;
+    height: 0;
+    position: absolute;
+    background: #2A8356;
+    top: 0;
+    left: 0;
+}
+.menu li i{
+    margin-right: 16px;
+}
+.menu li.on,
+.menu li:hover,
+.menu li:hover i,
+.menu li.on i{
+    color: #2A8356;
+}
+.menu li.on::after,
+.menu li:hover::after{
+    height: 100%;
+    color: #2A8356;
+    background: #2A8356;
+}
+
+.user_info{
+    padding-left: 32px;
+    position: absolute;
+    bottom: 32px;
+    display: flex;
+}
+.user_pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.user_name{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+.user_email{
+    font-size: 14px;
+    line-height: 18px;
+    color: #0000009A;
+}
+h1{
+    font-size: 24px;
+    height: 30px;
+    margin-right: 50px;
+}
+h2{
+    font-size: 16px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+h2 i {
+    margin: 0 8px;
+    color: #2A8356;
+}
+h2:hover {
+    color: #2A8356;
+    cursor: pointer;
+}
+.txtr{text-align: right;}
+
+.container{
+    width: calc(100% - 150px);
+    padding: 32px;
+}
+.txt_box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header i + i,
+td i+i{
+    margin-left: 25px;
+}
+.mod_tb{
+    width: 100%;
+    text-align: left;
+}
+.mod_tb th{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #121212;
+}
+th .material-icons{
+    font-size: 12px;
+    color: #2A8356;
+}
+.mod_tb td{
+    height: 55px;
+    vertical-align: middle;
+    border-bottom: 1px solid #CDDDCD;
+}
+.mod_page{
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.mod_page i{
+    color: #2A8356;
+    vertical-align: middle;
+}
+.mod_page ul{
+    display: flex;
+    border: 1px solid #2A8356;
+}
+.mod_page li{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    align-content: center; 
+}
+.mod_page li.on{
+    color: #fff;
+    background: #2A8356;
+    cursor: pointer;
+}
+
+.mod_page li + li{
+    border-left: 1px solid #2A8356;
+}
+
+.assignment{
+    display: flex;
+}
+
+.assignment_list{
+    width: 320px;
+    flex: none;
+}
+.assignment_range{
+    margin-bottom: 5px;
+}
+.assignment_range i{
+    vertical-align: middle;
+    color: #2A8356;
+}
+.assignment_list ul{
+    border:1px solid #CDDDCD;
+    border-radius: 3px;
+}
+.assignment_list_txt{
+    padding: 12px;
+    font-size: 12px;
+    color: #0000009A;
+    border:1px solid #CDDDCD;
+}
+.assignment_list_txt.on{
+    background: #EDF4EE;
+}
+.assignment_list_txt + .assignment_list_txt{
+    border-top:1px solid #CDDDCD;
+}
+.assignment_list_txt div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.assignment_list_txt div+div{
+    margin-top: 5px;
+}
+.assignment_list_txt .title{
+    font-size: 16px;
+    line-height: 20px;
+    color:#000;
+}
+.assignment_content{
+    width: 100%;
+    margin-left: 16px;
+}
+.assignment_txt{
+    font-size: 12px;
+    line-height: 15px;
+    color: #707070;
+    text-align: right;
+    margin-bottom: 15px;
+}
