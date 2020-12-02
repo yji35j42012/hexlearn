@@ -122,6 +122,7 @@ h2:hover {
     padding: 32px;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .txt_box{
     display: flex;
@@ -219,6 +220,7 @@ th .material-icons{
 .assignment_list_txt.on{
     background: #EDF4EE;
 }
+
 .assignment_list_txt + .assignment_list_txt{
     border-top:none;
 }
@@ -228,10 +230,11 @@ th .material-icons{
     justify-content: space-between;
     align-items: center;
 }
-
+.assignment_list_txt div:nth-child(2){
+    flex: none;
+    width: 100px;
+}
 .assignment_list_txt .title{
-    font-size: 16px;
-    line-height: 20px;
     color:#000;
     width: 100%;
 }
@@ -376,3 +379,4 @@ th .material-icons{
     text-align: right;
     padding-right: 24px;
 }
+.d_none{display: none;}
