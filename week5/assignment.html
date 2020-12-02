@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<div class="wrap">
+	<div class="wrap" id="app">
 		<div class="menu_box">
 			<div class="logo">
 				<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg"
@@ -143,7 +143,7 @@
 								HW-2-David.zip
 							</div>
 						</div>
-						<div class="assignment_item reply_item">
+						<div class="assignment_item reply_item" :class="{d_none : reply_item}">
 							<div class="msg_title">
 								<img class="msg_pic"
 									src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
@@ -178,7 +178,7 @@
 							</div>
 							<div class="msg_file"></div>
 						</div>
-						<div class="reply_box">
+						<div class="reply_box" :class="{d_none : reply_box}">
 							<div class="reply_header">
 								<span>
 									Body Text
@@ -200,7 +200,7 @@
 									<button class="read_btn">
 										Cancel
 									</button>
-									<button class="reply_btn">
+									<button class="reply_btn" @click="reply_check">
 										Reply
 									</button>
 								</div>
@@ -210,16 +210,16 @@
 				</div>
 			</div>
 
-			<div class="page_box">
+			<div class="page_box":class="{d_none : page_box}">
 				<div class="page_btn_gruou">
 					<button class="material-icons page_btn">chevron_left</button>
 					<button class="material-icons page_btn">chevron_right</button>
 				</div>
-				<div class="function_btn_gruop">
+				<div class="function_btn_gruop" >
 					<button class="read_btn">
 						Mark as read
 					</button>
-					<button class="reply_btn">
+					<button class="reply_btn" @click="reply_btn">
 						Reply
 					</button>
 				</div>
@@ -227,8 +227,31 @@
 		</div>
 
 	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
+	<script>
+		let data = {
+			page_box: false,
+			reply_box: true,
+			reply_item: false,
+		}
+		let vm = new Vue({
+			el: '#app',
+			data: data,
+			methods: {
+				reply_btn() {
+					this.page_box = true
+					this.reply_box = false
+					this.reply_item = true
+				},
+				reply_check() {
+					this.page_box = false
+					this.reply_box = true
+					this.reply_item = false
+				}
+			}
+		})
+	</script>
 
-	
 </body>
 
 </html>
