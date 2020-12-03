@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<div class="wrap">
+	<div class="wrap" id="app">
 		<div class="menu_box">
 			<div class="logo">
 				<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg"
@@ -66,7 +66,7 @@
 			<div class="header">
 				<div class="txt_box">
 					<h1>Admin</h1>
-					<h2>
+					<h2 @click="open('cu')">
 						<i class="material-icons">add</i>
 						Add New Admin
 					</h2>
@@ -92,116 +92,182 @@
 						<td>#1</td>
 						<td>Emir Wicks</td>
 						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
+						<td @click="open('v')">Yes</td>
 						<td class="txtr">
 							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
+							<i class="material-icons" @click="open('cu_e')">edit</i>
 						</td>
 					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td>Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons">edit</i>
-						</td>
-					</tr>
+
 				</table>
-				<div class="mod_page">
-					<ul>
-						<li><i class="material-icons">chevron_left</i></li>
-						<li class="on">1</li>
-						<li>2</li>
-						<li>3</li>
-						<li><i class="material-icons">chevron_right</i></li>
-					</ul>
-				</div>
+			</div>
+			<div class="mod_page">
+				<ul>
+					<li><i class="material-icons">chevron_left</i></li>
+					<li class="on">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li><i class="material-icons">chevron_right</i></li>
+				</ul>
 			</div>
 
 		</div>
+		<div class="mask" :class="{d_flex : cu_box}">
+			<div class="cu_box" :class="cu_state">
+				<div class="cu_header">
+					<span class="new_txt">New Admin</span>
+					<span class="edit_txt">Edit Admin</span>
+					<i class="material-icons" @click="close('cu')">clear</i>
+				</div>
+				<div class="cu_content">
+					<div class="cu_item">
+						<div class="cu_title">Account</div>
+						<div class="input_box">
+							<span class="inp_txt">Name</span>
+							<input type="text" class="mod_inp">
+						</div>
+						<div class="input_box">
+							<span class="inp_txt">Email</span>
+							<input type="text" class="mod_inp">
+						</div>
+					</div>
+					<div class="cu_item">
+						<div class="cu_title">Verification</div>
+						<div class="attest_txt problem">
+							<i class="material-icons ">report_problem</i>
+							Unverified
+						</div>
+						<div class="attest_txt check">
+							<i class="material-icons ">check_circle</i>
+							<div>
+								<span>Verified</span>
+								<span class="date">2020/4/12</span>
+							</div>
+						</div>
+						<button class="mod_btn" :disabled="cu_btn_d">Send Verification Mail</button>
+					</div>
+					<div class="cu_item">
+						<div class="cu_title">Access Level</div>
+						<select class="mod_select">
+							<option>-Choose access level-</option>
+						</select>
+					</div>
+					<div class="cu_item">
+						<div class="cu_title">Custom Access</div>
+						<label class="mod_check">
+							<input type="checkbox">
+							<span></span>
+							Lecture
+						</label>
+						<label class="mod_check">
+							<input type="checkbox">
+							<span></span>
+							Lecture
+						</label>
+						<label class="mod_check">
+							<input type="checkbox">
+							<span></span>
+							Lecture
+						</label>
+						<label class="mod_check">
+							<input type="checkbox">
+							<span></span>
+							Lecture
+						</label>
+						<label class="mod_check">
+							<input type="checkbox">
+							<span></span>
+							Lecture
+						</label>
+					</div>
+					<div class="cu_item deactivate">
+						<div class="cu_title">Deactivate Account</div>
+						<div class="deactivate_txt">
+							<i class="material-icons deactivate_problem">report_problem</i>
+							This cannot be undone!
+						</div>
+						<button class="mod_btn">Deactivate This Account</button>
+					</div>
+
+				</div>
+				<div class="cu_btn_box">
+					<button class="mod_btn">Cancel</button>
+					<button class="mod_btn bg_green">Add</button>
+				</div>
+			</div>
+		</div>
+		<div class="mask" :class="{d_flex : verified_box}">
+			<div class="verified_box">
+				<div class="verified_item">
+					<div class="verified_pic"></div>
+					<div class="verified_txt">
+						<i class="material-icons close" @click="close('v')">clear</i>
+						<h2>#1</h2>
+						<h2 class="margin_t8px">Admin</h2>
+						<div class="verified_name">Emir Wicks</div>
+						<div class="verified_mail margin_t8px">emir.wicks@mail.com</div>
+						<div class="verified_btn">
+							Verified
+							<i class="material-icons" :class="{active : verified_state}"
+								@click="toggle('v')">keyboard_arrow_down</i>
+						</div>
+
+						<div class="verified_btn_box" :class="{active : verified_state}">
+							<button class="mod_btn bg_pink">Deactivate</button>
+							<button class="mod_btn bg_green">Edit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
+	<script>
+		let data = {
+			verified_box: false,
+			verified_state: false,
+			cu_box: false,
+			cu_state:'',
+			cu_btn_d:false,
+		}
+		let vm = new Vue({
+			el: '#app',
+			data: data,
+			methods: {
+				open(txt) {
+					if (txt == 'v') {
+						this.verified_box = true;
+					}else if(txt == 'cu'){
+						this.cu_box = true;
+					}else if(txt == 'cu_e'){
+						this.cu_box = true;
+						this.cu_state = 'edit';
+						this.cu_btn_d = true;
+					}
+				},
+				close(txt) {
+					if (txt == 'v') {
+						this.verified_box = false;
+					}else if(txt == 'cu'){
+						this.cu_box = false;
+						this.cu_state = ''
+						this.cu_btn_d = '';
+						this.cu_btn_d = false;
+					}
+				},
+				toggle(txt) {
+					if (txt == 'v') {
+						if(this.verified_state){
+							this.verified_state = false;
+						}else{
+							this.verified_state = true;
+						}
+					}
+				}
+			}
+		})
+	</script>
 </body>
 
 </html>
