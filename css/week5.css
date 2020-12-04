@@ -515,16 +515,21 @@ td i+i{
 }
 
 
+.edit .add_btn,
 .edit_txt,
 .check,
 .edit .new_txt,
 .edit .problem,
-.deactivate{
+.deactivate,
+.update_btn{
 	display: none;
 }
 .edit .edit_txt,
 .edit .deactivate{
 	display: block;
+}
+.edit .update_btn{
+	display: inline-block;
 }
 .edit .check{
 	display: flex;

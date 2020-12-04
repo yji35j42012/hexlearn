@@ -300,8 +300,9 @@
 
 				</div>
 				<div class="cu_btn_box">
-					<button class="mod_btn">Cancel</button>
-					<button class="mod_btn bg_green">Add</button>
+					<button class="mod_btn" @click="close('cu')">Cancel</button>
+					<button class="mod_btn bg_green add_btn">Add</button>
+					<button class="mod_btn bg_green update_btn">Update</button>
 				</div>
 			</div>
 		</div>
@@ -367,11 +368,7 @@
 				},
 				toggle(txt) {
 					if (txt == 'v') {
-						if(this.verified_state){
-							this.verified_state = false;
-						}else{
-							this.verified_state = true;
-						}
+						this.verified_state = !this.verified_state
 					}
 				}
 			}

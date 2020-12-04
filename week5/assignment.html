@@ -239,14 +239,14 @@
 			data: data,
 			methods: {
 				reply_btn() {
-					this.page_box = true
-					this.reply_box = false
-					this.reply_item = true
+					this.page_box = !this.page_box
+					this.reply_box = !this.reply_box
+					this.reply_item = !this.reply_item
 				},
 				reply_check() {
-					this.page_box = false
-					this.reply_box = true
-					this.reply_item = false
+					this.page_box = !this.page_box
+					this.reply_box = !this.reply_box
+					this.reply_item = !this.reply_item
 				}
 			}
 		})
