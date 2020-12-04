@@ -39,10 +39,10 @@
 					<i class="material-icons">video_library</i>
 					Course
 				</li>
-				<li >
+				<li>
 					<i class="material-icons">supervisor_account</i>
 					<a href="admin.html">Admin</a>
-					
+
 				</li>
 				<li>
 					<i class="material-icons">settings</i>
@@ -178,32 +178,35 @@
 								</ul>
 							</div>
 							<div class="msg_file"></div>
-						</div>
-						<div class="reply_box" :class="{d_none : reply_box}">
-							<div class="reply_header">
-								<span>
-									Body Text
-									<i class="material-icons">arrow_drop_down</i>
-								</span>
-								<i class="material-icons">format_bold</i>
-								<i class="material-icons">format_italic</i>
-								<i class="material-icons">format_list_bulleted</i>
-								<i class="material-icons">format_list_numbered</i>
-								<i class="material-icons">insert_photo</i>
-								<i class="material-icons">link</i>
-								<i class="material-icons">code</i>
-							</div>
-							<div class="reply_content">
-								<div class="reply_txt">
-									<textarea cols="30" rows="10" placeholder="Reply an answer…"></textarea>
+
+
+
+							<div class="reply_box" :class="{active : reply_box}">
+								<div class="reply_header">
+									<span>
+										Body Text
+										<i class="material-icons">arrow_drop_down</i>
+									</span>
+									<i class="material-icons">format_bold</i>
+									<i class="material-icons">format_italic</i>
+									<i class="material-icons">format_list_bulleted</i>
+									<i class="material-icons">format_list_numbered</i>
+									<i class="material-icons">insert_photo</i>
+									<i class="material-icons">link</i>
+									<i class="material-icons">code</i>
 								</div>
-								<div class="btn_group">
-									<button class="mod_btn read_btn">
-										Cancel
-									</button>
-									<button class="mod_btn bg_green reply_btn" @click="reply_check">
-										Reply
-									</button>
+								<div class="reply_content">
+									<div class="reply_txt">
+										<textarea class="textarea_inp" placeholder="Reply an answer…"></textarea>
+									</div>
+									<div class="btn_group">
+										<button class="mod_btn read_btn" @click="reply_box = !reply_box">
+											Cancel
+										</button>
+										<button class="mod_btn bg_green reply_btn" @click="reply_box = !reply_box">
+											Reply
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -211,7 +214,7 @@
 				</div>
 			</div>
 
-			<div class="page_box":class="{d_none : page_box}">
+			<div class="page_box" :class="{d_none : reply_box}">
 				<div class="page_btn_gruou">
 					<button class="material-icons page_btn">chevron_left</button>
 					<button class="material-icons page_btn">chevron_right</button>
@@ -220,7 +223,7 @@
 					<button class="mod_btn read_btn">
 						Mark as read
 					</button>
-					<button class="mod_btn bg_green reply_btn" @click="reply_btn">
+					<button class="mod_btn bg_green reply_btn" @click="reply_box = !reply_box">
 						Reply
 					</button>
 				</div>
@@ -231,8 +234,8 @@
 	<script>
 		let data = {
 			page_box: false,
-			reply_box: true,
-			reply_item: false,
+			reply_box: false,
+			// reply_item: false,
 		}
 		let vm = new Vue({
 			el: '#app',
@@ -240,13 +243,13 @@
 			methods: {
 				reply_btn() {
 					this.page_box = !this.page_box
-					this.reply_box = !this.reply_box
-					this.reply_item = !this.reply_item
+					// this.reply_box = !this.reply_box
+					// this.reply_item = !this.reply_item
 				},
 				reply_check() {
 					this.page_box = !this.page_box
-					this.reply_box = !this.reply_box
-					this.reply_item = !this.reply_item
+					// this.reply_box = !this.reply_box
+					// this.reply_item = !this.reply_item
 				}
 			}
 		})
