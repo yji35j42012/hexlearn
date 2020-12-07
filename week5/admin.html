@@ -16,315 +16,318 @@
 </head>
 
 <body>
-	<div class="wrap" id="app">
-		<div class="menu_box">
-			<div class="logo">
-				<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg"
-					alt="">
-			</div>
-			<ul class="menu">
-				<li>
-					<i class="material-icons">assessment</i>
-					Dashboard
-				</li>
-				<li>
-					<i class="material-icons">question_answer</i>
-					Question
-				</li>
-				<li>
-					<i class="material-icons">assignment</i>
-					<a href="assignment.html">Assignment</a>
+	<div id="app">
+		<div class="fix" v-if="fined">調整ing</div>
+		<div class="wrap" v-else>
+			<div class="menu_box">
+				<div class="logo">
+					<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg"
+						alt="">
+				</div>
+				<ul class="menu">
+					<li>
+						<i class="material-icons">assessment</i>
+						Dashboard
+					</li>
+					<li>
+						<i class="material-icons">question_answer</i>
+						Question
+					</li>
+					<li>
+						<i class="material-icons">assignment</i>
+						<a href="assignment.html">Assignment</a>
 
-				</li>
-				<li>
-					<i class="material-icons">video_library</i>
-					Course
-				</li>
-				<li class="on">
-					<i class="material-icons">supervisor_account</i>
-					Admin
-				</li>
-				<li>
-					<i class="material-icons">settings</i>
-					Settings
-				</li>
-			</ul>
-			<div class="user_info">
-				<img class="user_pic"
-					src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
-					alt="">
-				<div class="user_txt">
-					<h2 class="user_name">Andy Chen</h2>
-					<div class="user_email">
-						andy0401@mail.com
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="header">
-				<div class="txt_box">
-					<h1>Admin</h1>
-					<h2 @click="open('cu')">
-						<i class="material-icons">add</i>
-						Add New Admin
-					</h2>
-				</div>
-				<div class="btn_box">
-					<i class="material-icons">search</i>
-					<i class="material-icons">notifications_active</i>
-				</div>
-			</div>
-			<div class="info_box">
-				<table class="mod_tb">
-					<tr>
-						<th>
-							ID
-							<i class="material-icons">arrow_downward</i>
-						</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Verified</th>
-						<th></th>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-					<tr>
-						<td>#1</td>
-						<td>Emir Wicks</td>
-						<td>emir.wicks@mail.com</td>
-						<td @click="open('v')">Yes</td>
-						<td class="txtr">
-							<i class="material-icons">visibility</i>
-							<i class="material-icons" @click="open('cu_e')">edit</i>
-						</td>
-					</tr>
-
-				</table>
-			</div>
-			<div class="mod_page">
-				<ul>
-					<li><i class="material-icons">chevron_left</i></li>
-					<li class="on">1</li>
-					<li>2</li>
-					<li>3</li>
-					<li><i class="material-icons">chevron_right</i></li>
+					</li>
+					<li>
+						<i class="material-icons">video_library</i>
+						Course
+					</li>
+					<li class="on">
+						<i class="material-icons">supervisor_account</i>
+						Admin
+					</li>
+					<li>
+						<i class="material-icons">settings</i>
+						Settings
+					</li>
 				</ul>
-			</div>
-
-		</div>
-		<div class="mask" :class="{d_flex : cu_box}">
-			<div class="cu_box" :class="cu_state">
-				<div class="cu_header">
-					<span class="new_txt">New Admin</span>
-					<span class="edit_txt">Edit Admin</span>
-					<i class="material-icons" @click="close('cu')">clear</i>
-				</div>
-				<div class="cu_content">
-					<div class="cu_item">
-						<div class="cu_title">Account</div>
-						<div class="input_box">
-							<span class="inp_txt">Name</span>
-							<input type="text" class="mod_inp">
-						</div>
-						<div class="input_box">
-							<span class="inp_txt">Email</span>
-							<input type="text" class="mod_inp">
+				<div class="user_info">
+					<img class="user_pic"
+						src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+						alt="">
+					<div class="user_txt">
+						<h2 class="user_name">Andy Chen</h2>
+						<div class="user_email">
+							andy0401@mail.com
 						</div>
 					</div>
-					<div class="cu_item">
-						<div class="cu_title">Verification</div>
-						<h2 class="attest_txt problem">
-							<i class="material-icons ">report_problem</i>
-							Unverified
+				</div>
+			</div>
+			<div class="container">
+				<div class="header">
+					<div class="txt_box">
+						<h1>Admin</h1>
+						<h2 @click="open('cu')">
+							<i class="material-icons">add</i>
+							Add New Admin
 						</h2>
-						<h2 class="attest_txt check">
-							<i class="material-icons ">check_circle</i>
-							<div>
-								<span>Verified</span>
-								<span class="date">2020/4/12</span>
+					</div>
+					<div class="btn_box">
+						<i class="material-icons">search</i>
+						<i class="material-icons">notifications_active</i>
+					</div>
+				</div>
+				<div class="info_box">
+					<table class="mod_tb">
+						<tr>
+							<th>
+								ID
+								<i class="material-icons">arrow_downward</i>
+							</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Verified</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+						<tr>
+							<td>#1</td>
+							<td>Emir Wicks</td>
+							<td>emir.wicks@mail.com</td>
+							<td @click="open('v')">Yes</td>
+							<td class="txtr">
+								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('cu_e')">edit</i>
+							</td>
+						</tr>
+
+					</table>
+				</div>
+				<div class="mod_page">
+					<ul>
+						<li><i class="material-icons">chevron_left</i></li>
+						<li class="on">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li><i class="material-icons">chevron_right</i></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="mask" :class="{d_flex : cu_box}">
+				<div class="cu_box" :class="cu_state">
+					<div class="cu_header">
+						<span class="new_txt">New Admin</span>
+						<span class="edit_txt">Edit Admin</span>
+						<i class="material-icons" @click="close('cu')">clear</i>
+					</div>
+					<div class="cu_content">
+						<div class="cu_item">
+							<div class="cu_title">Account</div>
+							<div class="input_box">
+								<span class="inp_txt">Name</span>
+								<input type="text" class="mod_inp">
 							</div>
-						</h2>
-						<button class="mod_btn" :disabled="cu_btn_d">Send Verification Mail</button>
-					</div>
-					<div class="cu_item">
-						<div class="cu_title">Access Level</div>
-						<select class="mod_select">
-							<option>-Choose access level-</option>
-						</select>
-					</div>
-					<div class="cu_item">
-						<div class="cu_title">Custom Access</div>
-						<label class="mod_check">
-							<input type="checkbox">
-							<span></span>
-							Lecture
-						</label>
-						<label class="mod_check">
-							<input type="checkbox">
-							<span></span>
-							Lecture
-						</label>
-						<label class="mod_check">
-							<input type="checkbox">
-							<span></span>
-							Lecture
-						</label>
-						<label class="mod_check">
-							<input type="checkbox">
-							<span></span>
-							Lecture
-						</label>
-						<label class="mod_check">
-							<input type="checkbox">
-							<span></span>
-							Lecture
-						</label>
-					</div>
-					<div class="cu_item deactivate">
-						<div class="cu_title">Deactivate Account</div>
-						<h2 class="deactivate_txt">
-							<i class="material-icons deactivate_problem">report_problem</i>
-							This cannot be undone!
-						</h2>
-						<button class="mod_btn bg_pink">Deactivate This Account</button>
-					</div>
-
-				</div>
-				<div class="cu_btn_box">
-					<button class="mod_btn" @click="close('cu')">Cancel</button>
-					<button class="mod_btn bg_green add_btn">Add</button>
-					<button class="mod_btn bg_green update_btn">Update</button>
-				</div>
-			</div>
-		</div>
-		<div class="mask" :class="{d_flex : verified_box}">
-			<div class="verified_box">
-				<div class="verified_item">
-					<div class="verified_pic"></div>
-					<div class="verified_txt">
-						<i class="material-icons close" @click="close('v')">clear</i>
-						<h2>#1</h2>
-						<h2 class="margin_t8px">Admin</h2>
-						<div class="verified_name">Emir Wicks</div>
-						<div class="verified_mail margin_t8px">emir.wicks@mail.com</div>
-						<div class="verified_btn">
-							Verified
-							<i class="material-icons" :class="{active : verified_state}"
-								@click="toggle('v')">keyboard_arrow_down</i>
+							<div class="input_box">
+								<span class="inp_txt">Email</span>
+								<input type="text" class="mod_inp">
+							</div>
+						</div>
+						<div class="cu_item">
+							<div class="cu_title">Verification</div>
+							<h2 class="attest_txt problem">
+								<i class="material-icons ">report_problem</i>
+								Unverified
+							</h2>
+							<h2 class="attest_txt check">
+								<i class="material-icons ">check_circle</i>
+								<div>
+									<span>Verified</span>
+									<span class="date">2020/4/12</span>
+								</div>
+							</h2>
+							<button class="mod_btn" :disabled="cu_btn_d">Send Verification Mail</button>
+						</div>
+						<div class="cu_item">
+							<div class="cu_title">Access Level</div>
+							<select class="mod_select">
+								<option>-Choose access level-</option>
+							</select>
+						</div>
+						<div class="cu_item">
+							<div class="cu_title">Custom Access</div>
+							<label class="mod_check">
+								<input type="checkbox">
+								<span></span>
+								Lecture
+							</label>
+							<label class="mod_check">
+								<input type="checkbox">
+								<span></span>
+								Lecture
+							</label>
+							<label class="mod_check">
+								<input type="checkbox">
+								<span></span>
+								Lecture
+							</label>
+							<label class="mod_check">
+								<input type="checkbox">
+								<span></span>
+								Lecture
+							</label>
+							<label class="mod_check">
+								<input type="checkbox">
+								<span></span>
+								Lecture
+							</label>
+						</div>
+						<div class="cu_item deactivate">
+							<div class="cu_title">Deactivate Account</div>
+							<h2 class="deactivate_txt">
+								<i class="material-icons deactivate_problem">report_problem</i>
+								This cannot be undone!
+							</h2>
+							<button class="mod_btn bg_pink">Deactivate This Account</button>
 						</div>
 
-						<div class="verified_btn_box" :class="{active : verified_state}">
-							<button class="mod_btn bg_pink">Deactivate</button>
-							<button class="mod_btn bg_green">Edit</button>
+					</div>
+					<div class="cu_btn_box">
+						<button class="mod_btn" @click="close('cu')">Cancel</button>
+						<button class="mod_btn bg_green add_btn">Add</button>
+						<button class="mod_btn bg_green update_btn">Update</button>
+					</div>
+				</div>
+			</div>
+			<div class="mask" :class="{d_flex : verified_box}">
+				<div class="verified_box">
+					<div class="verified_item">
+						<div class="verified_pic"></div>
+						<div class="verified_txt">
+							<i class="material-icons close" @click="close('v')">clear</i>
+							<h2>#1</h2>
+							<h2 class="margin_t8px">Admin</h2>
+							<div class="verified_name">Emir Wicks</div>
+							<div class="verified_mail margin_t8px">emir.wicks@mail.com</div>
+							<div class="verified_btn">
+								Verified
+								<i class="material-icons" :class="{active : verified_state}"
+									@click="toggle('v')">keyboard_arrow_down</i>
+							</div>
+
+							<div class="verified_btn_box" :class="{active : verified_state}">
+								<button class="mod_btn bg_pink">Deactivate</button>
+								<button class="mod_btn bg_green">Edit</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -335,11 +338,12 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
 	<script>
 		let data = {
+			fined:true,
 			verified_box: false,
 			verified_state: false,
 			cu_box: false,
-			cu_state:'',
-			cu_btn_d:false,
+			cu_state: '',
+			cu_btn_d: false,
 		}
 		let vm = new Vue({
 			el: '#app',
@@ -348,9 +352,9 @@
 				open(txt) {
 					if (txt == 'v') {
 						this.verified_box = true;
-					}else if(txt == 'cu'){
+					} else if (txt == 'cu') {
 						this.cu_box = true;
-					}else if(txt == 'cu_e'){
+					} else if (txt == 'cu_e') {
 						this.cu_box = true;
 						this.cu_state = 'edit';
 						this.cu_btn_d = true;
@@ -359,7 +363,7 @@
 				close(txt) {
 					if (txt == 'v') {
 						this.verified_box = false;
-					}else if(txt == 'cu'){
+					} else if (txt == 'cu') {
 						this.cu_box = false;
 						this.cu_state = ''
 						this.cu_btn_d = '';
