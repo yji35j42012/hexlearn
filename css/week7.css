@@ -86,9 +86,11 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #F1F5F6;
 }
 
 .w7_item .w7_txt {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,13 +115,34 @@ h5 {
   background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week7/img1.jpg?raw=true") no-repeat center/cover;
 }
 
+.w7_item .read_more_arrow {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.w7_item .read_more_arrow .material-icons {
+  color: #fff;
+  padding: 19px;
+  background: #000;
+  z-index: 1;
+}
+
 .w7_item .read_more_txt {
-  padding: 16px;
   font-size: 24px;
   line-height: 30px;
   position: absolute;
   top: 0;
   bottom: 0;
+  right: 0;
   margin: auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,6 +150,11 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.w7_item .read_more_txt tt {
+  background: #fff;
+  padding: 16px;
 }
 
 .w7_item .w7_control_box {
@@ -207,6 +235,25 @@ h5 {
 
 .w7_item3 .big_txt * + * {
   margin-top: 24px;
+}
+
+.w7_item3 .read_more_arrow {
+  left: 100%;
+}
+
+.w7_item3 .read_more_arrow .material-icons {
+  color: #000;
+  background: #fff;
+}
+
+.w7_item3 .read_more_txt {
+  right: 100%;
+}
+
+.w7_item3 .read_more_txt tt {
+  color: #fff;
+  background: #000;
+  white-space: nowrap;
 }
 
 .bulit {
