@@ -7,11 +7,8 @@
 	<link rel="stylesheet" href="../css/reset.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="../css/week5.css">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
-		rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 	<title>Document</title>
 </head>
 
@@ -52,9 +49,10 @@
 					</li>
 				</ul>
 				<div class="user_info">
-					<img class="user_pic"
-						src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
-						alt="">
+					<div class="user_pic">
+						<img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+							alt="">
+					</div>
 					<div class="user_txt">
 						<h2 class="user_name">Andy Chen</h2>
 						<div class="user_email">
@@ -67,7 +65,7 @@
 				<div class="header">
 					<div class="txt_box">
 						<h1>Admin</h1>
-						<h2 @click="open('cu')">
+						<h2 class="h2_hover" @click="open('cu')">
 							<i class="material-icons">add</i>
 							Add New Admin
 						</h2>
@@ -78,6 +76,7 @@
 					</div>
 				</div>
 				<div class="info_box">
+
 					<table class="mod_tb">
 						<tr>
 							<th>
@@ -95,7 +94,7 @@
 							<td>emir.wicks@mail.com</td>
 							<td @click="open('v')">Yes</td>
 							<td class="txtr">
-								<i class="material-icons">visibility</i>
+								<i class="material-icons" @click="open('v')">visibility</i>
 								<i class="material-icons" @click="open('cu_e')">edit</i>
 							</td>
 						</tr>
@@ -189,28 +188,8 @@
 								<i class="material-icons" @click="open('cu_e')">edit</i>
 							</td>
 						</tr>
-						<tr>
-							<td>#1</td>
-							<td>Emir Wicks</td>
-							<td>emir.wicks@mail.com</td>
-							<td @click="open('v')">Yes</td>
-							<td class="txtr">
-								<i class="material-icons">visibility</i>
-								<i class="material-icons" @click="open('cu_e')">edit</i>
-							</td>
-						</tr>
-						<tr>
-							<td>#1</td>
-							<td>Emir Wicks</td>
-							<td>emir.wicks@mail.com</td>
-							<td @click="open('v')">Yes</td>
-							<td class="txtr">
-								<i class="material-icons">visibility</i>
-								<i class="material-icons" @click="open('cu_e')">edit</i>
-							</td>
-						</tr>
-
 					</table>
+
 				</div>
 				<div class="mod_page">
 					<ul>
@@ -259,9 +238,13 @@
 						</div>
 						<div class="cu_item">
 							<div class="cu_title">Access Level</div>
-							<select class="mod_select">
-								<option>-Choose access level-</option>
-							</select>
+							<label class="mod_select">
+								<select>
+									<option>-Choose access level-</option>
+								</select>
+								<i class="material-icons">keyboard_arrow_down</i>
+							</label>
+
 						</div>
 						<div class="cu_item">
 							<div class="cu_title">Custom Access</div>
@@ -336,15 +319,8 @@
 	</div>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
+	<script src="../js/week7.js"></script>
 	<script>
-		let data = {
-			fined:true,
-			verified_box: false,
-			verified_state: false,
-			cu_box: false,
-			cu_state: '',
-			cu_btn_d: false,
-		}
 		let vm = new Vue({
 			el: '#app',
 			data: data,

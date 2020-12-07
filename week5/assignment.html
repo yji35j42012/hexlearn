@@ -7,11 +7,8 @@
 	<link rel="stylesheet" href="../css/reset.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="../css/week5.css">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
-		rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 	<title>Document</title>
 </head>
 
@@ -52,9 +49,11 @@
 					</li>
 				</ul>
 				<div class="user_info">
-					<img class="user_pic"
-						src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
-						alt="">
+					<div class="user_pic">
+						<img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+							alt="">
+					</div>
+
 					<div class="user_txt">
 						<div class="user_name">
 							Andy Chen
@@ -68,11 +67,13 @@
 			<div class="container">
 				<div class="header">
 					<div class="txt_box">
-						<h1>Admin</h1>
-						<h2>
-							All Courses
+						<h1>Assignment</h1>
+						<label class="mod_select">
+							<select>
+								<option>All Courses</option>
+							</select>
 							<i class="material-icons">keyboard_arrow_down</i>
-						</h2>
+						</label>
 					</div>
 					<div class="btn_box">
 						<i class="material-icons">search</i>
@@ -80,30 +81,32 @@
 					</div>
 				</div>
 				<div class="info_box assignment">
-					<div class="assignment_list">
-						<div class="assignment_range">
-							All(4)
+					<div class="assignment_listBox">
+						<label class="mod_select assignment_range">
+							<select>
+								<option>All(4)</option>
+							</select>
 							<i class="material-icons">keyboard_arrow_down</i>
-						</div>
+						</label>
 						<ul>
-							<li class="assignment_list_txt on">
+							<li class="assignment_list on">
 								<div>
-									<span>Chapter Assignment 2</span>
+									<h3>Chapter Assignment 2</h3>
 									<span class="title margin_t4px">Please check this file…</span>
 								</div>
 								<div>
-									<span>4 hrs ago</span>
-									<span class="margin_t4px">Emily Wang</span>
+									<h3>4 hrs ago</h3>
+									<h3 class="color_gray margin_t4px">Emily Wang</h3>
 								</div>
 							</li>
-							<li class="assignment_list_txt">
+							<li class="assignment_list">
 								<div>
-									<span>Chapter Assignment 1</span>
-									<span class="title margin_t4px">My Homework</span>
+									<h3>Chapter Assignment 2</h3>
+									<span class="title margin_t4px">Please check this file…</span>
 								</div>
 								<div>
-									<span>12 hrs ago</span>
-									<span class="margin_t4px">Tony Wei</span>
+									<h3>4 hrs ago</h3>
+									<h3 class="color_gray margin_t4px">Emily Wang</h3>
 								</div>
 							</li>
 						</ul>
@@ -112,19 +115,22 @@
 						<div class="assignment_txt">
 							2 comments
 						</div>
-						<div class="assignment_list_txt on">
+						<div class="assignment_list on">
 							<div>
 								<span>Chapter Assignment 2</span>
 								<span class="title margin_t4px">Please check this file…</span>
 							</div>
 							<i class="material-icons">more_vert</i>
 						</div>
+
 						<div class="assignment_body">
 							<div class="assignment_item">
 								<div class="msg_title">
-									<img class="msg_pic"
-										src="https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80"
-										alt="">
+									<div class="msg_pic">
+										<img src="https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80"
+											alt="">
+									</div>
+
 									<div class="msg_txt">
 										<div class="msg_name">Emily Wang</div>
 										<div class="mag_time">10:38 AM (4 hours ago)</div>
@@ -137,7 +143,8 @@
 								<div class="msg_content">
 									Hi Teacher, the attached file is my homework of chapter 2. And here comes a
 									question:
-									Why in the following code the height of the div is bigger than the height of the img
+									Why in the following code the height of the div is bigger than the height of the
+									img
 									?
 									There is a gap below the image, but it doesn’t seems to be a padding/margin.
 									<br>
@@ -150,9 +157,11 @@
 							</div>
 							<div class="assignment_item reply_item" :class="{d_none : reply_item}">
 								<div class="msg_title">
-									<img class="msg_pic"
-										src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
-										alt="">
+									<div class="msg_pic">
+										<img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+											alt="">
+									</div>
+
 									<div class="msg_txt">
 										<div class="msg_name">Andy Chen (You)</div>
 										<div class="mag_time">10:38 AM (4 hours ago)</div>
@@ -163,9 +172,11 @@
 									</div>
 								</div>
 								<div class="msg_content">
-									Hi David, by default, an image is rendered inline, like a letter so it sits on the
+									Hi David, by default, an image is rendered inline, like a letter so it sits on
+									the
 									same
-									line that a, b, c and d sit on. There is space below that line for the descenders
+									line that a, b, c and d sit on. There is space below that line for the
+									descenders
 									you
 									find on letters like g, j, p and q.
 									<br>
@@ -188,63 +199,59 @@
 
 
 
-								<div class="reply_box" :class="{active : reply_box}">
-									<div class="reply_header">
-										<span>
-											Body Text
-											<i class="material-icons">arrow_drop_down</i>
-										</span>
-										<i class="material-icons">format_bold</i>
-										<i class="material-icons">format_italic</i>
-										<i class="material-icons">format_list_bulleted</i>
-										<i class="material-icons">format_list_numbered</i>
-										<i class="material-icons">insert_photo</i>
-										<i class="material-icons">link</i>
-										<i class="material-icons">code</i>
-									</div>
-									<div class="reply_content">
-										<div class="reply_txt">
-											<textarea class="textarea_inp" placeholder="Reply an answer…"></textarea>
-										</div>
-										<div class="btn_group">
-											<button class="mod_btn read_btn" @click="reply_box = !reply_box">
-												Cancel
-											</button>
-											<button class="mod_btn bg_green reply_btn" @click="reply_box = !reply_box">
-												Reply
-											</button>
-										</div>
-									</div>
+							</div>
+						</div>
+						<div class="page_box">
+							<div class="page_btn_gruou">
+								<button class="material-icons page_btn">chevron_left</button>
+								<button class="material-icons page_btn">chevron_right</button>
+							</div>
+							<div class="function_btn_gruop">
+								<button class="mod_btn read_btn">
+									Mark as read
+								</button>
+								<button class="mod_btn bg_green reply_btn" @click="reply_box = !reply_box">
+									Reply
+								</button>
+							</div>
+						</div>
+
+						<div class="reply_box" :class="{active : reply_box}">
+							<div class="reply_header">
+								<span>
+									Body Text
+									<i class="material-icons">arrow_drop_down</i>
+								</span>
+								<i class="material-icons">format_bold</i>
+								<i class="material-icons">format_italic</i>
+								<i class="material-icons">format_list_bulleted</i>
+								<i class="material-icons">format_list_numbered</i>
+								<i class="material-icons">insert_photo</i>
+								<i class="material-icons">link</i>
+								<i class="material-icons">code</i>
+							</div>
+							<div class="reply_content">
+								<div class="reply_txt">
+									<textarea class="textarea_inp" placeholder="Reply an answer…"></textarea>
+								</div>
+								<div class="btn_group">
+									<button class="mod_btn read_btn" @click="reply_box = !reply_box">
+										Cancel
+									</button>
+									<button class="mod_btn bg_green reply_btn" @click="reply_box = !reply_box">
+										Reply
+									</button>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="page_box" :class="{d_none : reply_box}">
-					<div class="page_btn_gruou">
-						<button class="material-icons page_btn">chevron_left</button>
-						<button class="material-icons page_btn">chevron_right</button>
-					</div>
-					<div class="function_btn_gruop">
-						<button class="mod_btn read_btn">
-							Mark as read
-						</button>
-						<button class="mod_btn bg_green reply_btn" @click="reply_box = !reply_box">
-							Reply
-						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.js'></script>
+	<script src="../js/week7.js"></script>
 	<script>
-		let data = {
-			fined:true,
-			page_box: false,
-			reply_box: false,
-			// reply_item: false,
-		}
 		let vm = new Vue({
 			el: '#app',
 			data: data,
