@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<div class="header">
+	<div id="header" class="header">
 		<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/logo-fixie.svg" alt="">
 		<ul class="menu">
 			<li>Product</li>
@@ -158,6 +158,13 @@
 
 		<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/logo-fixie.svg" alt="">
 	</footer>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js'></script>
+	<script>
+		$(document).ready(function () {
+			$("#header").slideDown(3000)
+		});
+
+	</script>
 </body>
 
 </html>
