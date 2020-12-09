@@ -29,14 +29,7 @@ h5 {
 
 .container {
   margin: auto;
-  padding: 24px 85px 72px;
-}
-
-@media screen and (min-width: 1281px) {
-  .container {
-    max-width: 1100px;
-    padding: 24px 0 72px;
-  }
+  max-width: 1110px;
 }
 
 .mod_select_box {
@@ -335,19 +328,19 @@ h5 {
   border-radius: 3px;
 }
 
-.choose_box {
-  font-size: 0;
+.top_choices {
+  padding-left: 40px;
 }
 
-.choose_box h1 {
+.top_choices h1 {
   margin-bottom: 24px;
 }
 
-.choose_box .list_tab {
+.top_choices .list_tab {
   margin-bottom: 24px;
 }
 
-.choose_box .list_tab li {
+.top_choices .list_tab li {
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -363,7 +356,7 @@ h5 {
   padding: 0 24px;
 }
 
-.choose_box .list_tab li:before {
+.top_choices .list_tab li:before {
   content: '';
   width: 100%;
   height: 2px;
@@ -373,51 +366,84 @@ h5 {
   color: #00000099;
 }
 
-.choose_box .list_tab li.on,
-.choose_box .list_tab li:hover {
+.top_choices .list_tab li.on,
+.top_choices .list_tab li:hover {
   color: #6C51E2;
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
   cursor: pointer;
 }
 
-.choose_box .list_tab li.on:before,
-.choose_box .list_tab li:hover:before {
+.top_choices .list_tab li.on:before,
+.top_choices .list_tab li:hover:before {
   background: #6C51E2;
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
 }
 
-.choose_box .list_tab .count {
+.top_choices .list_tab .count {
   font-size: 12px;
   font-family: 'Raleway', sans-serif;
 }
 
-.choose_box .scroll_group {
+.top_choices .top_choices_group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
-.choose_box .scroll_item {
+.top_choices .content_box {
+  position: relative;
+}
+
+.top_choices .next {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  bottom: 30%;
+  margin: auto 0;
+  width: 40px;
+  height: 40px;
+  background: #F1F0F8;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .top_choices .next {
+    right: 20px;
+  }
+}
+
+.top_choices .next:hover {
+  cursor: pointer;
+}
+
+.top_choices .top_choices_group::-webkit-scrollbar {
+  display: none;
+}
+
+.top_choices .top_choices_item {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  width: calc(100% / 4 - 20px);
+  width: 255px;
 }
 
-.choose_box .scroll_item h3 {
+.top_choices .top_choices_item h3 {
   margin-top: 8px;
 }
 
-.choose_box .scroll_item .pic {
+.top_choices .top_choices_item .pic {
   position: relative;
   height: 175px;
   overflow: hidden;
   border-radius: 8px;
 }
 
-.choose_box .scroll_item img {
+.top_choices .top_choices_item img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -426,11 +452,11 @@ h5 {
   margin: auto;
 }
 
-.choose_box .scroll_item + .scroll_item {
+.top_choices .top_choices_item + .top_choices_item {
   margin-left: 30px;
 }
 
-.choose_box .evaluation {
+.top_choices .evaluation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +464,7 @@ h5 {
   margin-top: 10px;
 }
 
-.choose_box .price {
+.top_choices .price {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -449,20 +475,69 @@ h5 {
   color: #00000099;
 }
 
-.choose_box .price .new_price {
+.top_choices .price .new_price {
   margin-right: 8px;
 }
 
-.choose_box .price .old_price {
+.top_choices .price .old_price {
   text-decoration: line-through;
 }
 
-.choose_box .start {
+.top_choices .start {
   color: #000;
   margin-right: 4px;
 }
 
-.choose_box .start .material-icons {
+.top_choices .start .material-icons {
   font-size: 17px;
+}
+
+.popular {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 70px;
+}
+
+.popular .popular_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.popular .popular_item {
+  position: relative;
+  width: 350px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.popular .popular_item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.popular .popular_item + .popular_item {
+  margin-left: 30px;
+}
+
+.popular .popular_item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+.inspiration {
+  padding-left: 40px;
+  margin-top: 70px;
+}
+
+.inspiration h1 {
+  margin-bottom: 24px;
 }
 /*# sourceMappingURL=all.css.map */
