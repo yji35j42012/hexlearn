@@ -165,11 +165,12 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0;
+  height: 120px;
 }
 
 .w7_item .w7_control_box button {
   width: 120px;
+  height: 100%;
   text-align: center;
   font-size: 24px;
   border-right: 1px solid #121212;
@@ -308,6 +309,7 @@ h5 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 96px 255px;
+  overflow: hidden;
 }
 
 .ul_list li {
@@ -340,6 +342,10 @@ h5 {
 }
 
 footer {
+  overflow: hidden;
+}
+
+.footer_box {
   max-width: 1410px;
   height: 96px;
   margin: auto;
@@ -354,26 +360,35 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   background: #F1F5F6;
+  overflow: hidden;
 }
 
-footer .menu {
+.footer_box .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-footer .menu li {
+.footer_box .menu li {
   font-size: 16px;
   line-height: 20px;
 }
 
-footer .menu li + li {
+.footer_box .menu li + li {
   margin-left: 48px;
 }
 
-footer .copy_rigth {
+.footer_box .copy_rigth {
   color: #00000099;
   font-size: 14px;
   line-height: 16px;
+}
+
+[data-aos] {
+  visibility: hidden;
+}
+
+[data-aos].animated {
+  visibility: visible;
 }
 /*# sourceMappingURL=week7.css.map */

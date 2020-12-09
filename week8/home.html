@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- 字行 -->
+	<!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway"> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
 	<!-- https://fonts.google.com/specimen/Raleway -->
 	<!-- https://fonts.google.com/specimen/Open+Sans -->
 	<!-- 圖片 -->
@@ -49,7 +52,7 @@
 			</div>
 		</div>
 		<div class="home search_box">
-			<div class="containter">
+			<div class="container">
 				<label class="search_inp">
 					<i class="material-icons">location_on</i>
 					<input type="text" placeholder="Destination">
@@ -60,7 +63,6 @@
 								<span class="city">Bangkok</span>
 								<span class="country">Thailand</span>
 							</div>
-
 						</li>
 						<li>
 							<i class="material-icons">star</i>
@@ -81,15 +83,36 @@
 				<label class="search_inp">
 					<i class="material-icons">date_range</i>
 					<input type="text" placeholder="Check-in / Check-out">
-					<ul class="search_list">
-
-					</ul>
+					<ul class="search_list"></ul>
 				</label>
 				<label class="search_inp">
 					<i class="material-icons">person</i>
 					<input type="text" placeholder="Guests">
-					<ul class="search_list">
-
+					<ul class="search_list guests">
+						<li>
+							<span>Adult</span>
+							<span class="num">
+								<button class="material-icons">remove</button>
+								<tt>2</tt>
+								<button class="material-icons">add</button>
+							</span>
+						</li>
+						<li>
+							<span>Child</span>
+							<span class="num">
+								<button class="material-icons">remove</button>
+								<tt>0</tt>
+								<button class="material-icons">add</button>
+							</span>
+						</li>
+						<li>
+							<span>Room</span>
+							<span class="num">
+								<button class="material-icons">remove</button>
+								<tt>1</tt>
+								<button class="material-icons">add</button>
+							</span>
+						</li>
 					</ul>
 				</label>
 				<button class="search_btn">SEARCH</button>
@@ -97,9 +120,54 @@
 		</div>
 		<div class="choose_box">
 			<div class="container">
-				<div class="top"></div>
-				<div class="popular"></div>
-				<div class="inspiration"></div>
+				<div class="top_choices">
+					<h1>Top Choices</h1>
+					<ul class="list_tab">
+						<li class="on">
+							<h2 class="area">Bali</h2>
+							<span class="count">128</span>
+						</li>
+						<li>
+							<h2 class="area">Okinawa</h2>
+							<span class="count">67</span>
+						</li>
+						<li>
+							<h2 class="area">Taipei</h2>
+							<span class="count">53</span>
+						</li>
+					</ul>
+					<div class="content_box">
+						<div class="scroll_group">
+							<div class="scroll_item">
+								<div class="pic">
+									<img src="" alt="">
+								</div>
+								<h3>Hotel Aqua</h3>
+								<div class="evaluation">
+									<ul class="start">
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+									</ul>
+									<h4 class="evaluation_num">5.0</h4>
+									<h5 class="reviews">・2k reviews</h5>
+								</div>
+								<div class="price">
+									<h4 class="new_price">TWD 2,480</h4>
+									<h5 class="old_price">TWD 3,980</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popular">
+					<h1>Popular Destinations</h1>
+				</div>
+				<div class="inspiration">
+					<h1>Get Inspiration</h1>
+				</div>
 			</div>
 		</div>
 		<div class="subscribe">

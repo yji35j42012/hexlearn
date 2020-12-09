@@ -12,13 +12,14 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<title>Document</title>
 </head>
 
 <body>
 	<div id="header" class="header">
 		<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/logo-fixie.svg" alt="">
-		<ul class="menu">
+		<ul class="menu" data-aos="slide-down" data-aos-duration="300">
 			<li>Product</li>
 			<li>Blog</li>
 			<li>contact</li>
@@ -27,15 +28,19 @@
 	<div class="container">
 		<div class="w7_item w7_item1">
 			<div class="w7_txt">
-				<h1 class="title">Single Speed, Single Life.</h1>
-				<h4 class="margin_t48px">
+				<h1 class="title animated" data-aos="slide-right" data-aos-duration="800">
+					Single Speed, Single Life.
+				</h1>
+				<h4 class="margin_t48px animated" data-aos="slide-right" data-aos-duration="800">
 					More recently the “fixie” has become a popular alternative among mainly urban cyclists, offering the
 					advantage of simplicity compared with the standard multi-geared bicycle.
 				</h4>
-				<button class="mod_btn margin_t48px">Shop Now</button>
+				<button class="mod_btn margin_t48px animated" data-aos="slide-right" data-aos-duration="800">
+					Shop Now
+				</button>
 			</div>
 			<div class="w7_pic_box">
-				<div class="w7_pic"></div>
+				<div class="w7_pic" data-aos="slide-left" data-aos-duration="800"></div>
 				<div class="w7_control_box">
 					<button class="material-icons">arrow_back_ios_new</button>
 					<button class="material-icons">arrow_forward_ios</button>
@@ -60,7 +65,7 @@
 				</div>
 			</div>
 			<div class="w7_pic_box">
-				<div class="w7_pic">
+				<div class="w7_pic" data-aos="slide-right" data-aos-duration="800">
 					<div class="read_more_txt">
 						<tt>Read More</tt>
 					</div>
@@ -93,8 +98,8 @@
 			</div>
 		</div>
 		<div class="bulit">
-			<h3>A collection built for regular commuters</h3>
-			<h5>
+			<h3 data-aos="slide-up" data-aos-duration="400">A collection built for regular commuters</h3>
+			<h5 data-aos="slide-up" data-aos-duration="400">
 				Riders unknown to each other commonly greet each other when on bikes. As in many subcultures, this
 				feeling
 				of belonging is a key factor in recruiting and retaining participants.
@@ -110,7 +115,7 @@
 			</div>
 		</div>
 		<ul class="ul_list">
-			<li>
+			<li data-aos="slide-up" data-aos-duration="800">
 				<img src="https://images.unsplash.com/photo-1565291395961-ec8c830a1227?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80"
 					alt="">
 				<div class="txt">
@@ -122,7 +127,7 @@
 					</div>
 				</div>
 			</li>
-			<li>
+			<li data-aos="slide-up" data-aos-duration="800" data-aos-delay="200">
 				<img src="https://images.unsplash.com/photo-1571932148037-0da9166b18f1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80"
 					alt="">
 				<div class="txt">
@@ -134,7 +139,7 @@
 					</div>
 				</div>
 			</li>
-			<li>
+			<li data-aos="slide-up" data-aos-duration="800" data-aos-delay="400">
 				<img src="https://images.unsplash.com/photo-1548774432-8d118269f9ee?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80"
 					alt="">
 				<div class="txt">
@@ -149,21 +154,27 @@
 		</ul>
 	</div>
 	<footer>
-		<ul class="menu">
-			<li>Product</li>
-			<li>Blog</li>
-			<li>contact</li>
-		</ul>
-		<div class="copy_rigth">© 2020 Fixie. All Rights Reserved.</div>
+		<div class="footer_box">
+			<ul class="menu">
+				<li>Product</li>
+				<li>Blog</li>
+				<li>contact</li>
+			</ul>
+			<div class="copy_rigth">© 2020 Fixie. All Rights Reserved.</div>
 
-		<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/logo-fixie.svg" alt="">
+			<img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/logo-fixie.svg"
+				alt="">
+		</div>
+
+
 	</footer>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js'></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
-		$(document).ready(function () {
-			$("#header").slideDown(3000)
+		AOS.init({
+			useClassNames: true,
+			initClassName: false,
+			animatedClassName: 'animated',
 		});
-
 	</script>
 </body>
 
