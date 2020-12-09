@@ -30,7 +30,13 @@ h5 {
 .container {
   margin: auto;
   padding: 24px 85px 72px;
-  max-width: 1100px;
+}
+
+@media screen and (min-width: 1281px) {
+  .container {
+    max-width: 1100px;
+    padding: 24px 0 72px;
+  }
 }
 
 .mod_select_box {
@@ -385,6 +391,43 @@ h5 {
 .choose_box .list_tab .count {
   font-size: 12px;
   font-family: 'Raleway', sans-serif;
+}
+
+.choose_box .scroll_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.choose_box .scroll_item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: calc(100% / 4 - 20px);
+}
+
+.choose_box .scroll_item h3 {
+  margin-top: 8px;
+}
+
+.choose_box .scroll_item .pic {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.choose_box .scroll_item img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.choose_box .scroll_item + .scroll_item {
+  margin-left: 30px;
 }
 
 .choose_box .evaluation {
