@@ -1,5 +1,5 @@
 h1{
-	
+
 }
 h2{
 	font-size: 32px;
@@ -41,12 +41,78 @@ h6{
 		width: 100%;
 		height: 100%;
 		align-items: center;
-		
+
 		tt{
 			margin: 0 10px;
 		}
 	}
 	.second_menu{
 		display: none;
+	}
+}
+.mod_checkbox{
+	cursor: pointer;
+    display: flex;
+	align-items: center;
+	font-size: 16px;
+	line-height: 22px;
+	color: #00000099;
+	font-family: 'Open Sans', sans-serif;
+	input{
+		display: none;
+	}
+	span{
+		position: relative;
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		border: 2px solid #000000;
+		margin-right: 5px;
+	}
+	input:checked ~ span::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 8px;
+		height: 4px;
+		transform: rotate(-48deg);
+		top: 3px;
+		left: 2px;
+		background: transparent;
+		border-width: 2px 2px;
+		border-style: none none solid solid;
+		border-color: #6C51E2 #6C51E2;
+		border-image: initial;
+		border-top: none;
+		border-right: none;
+	}
+}
+.mod_range{
+	position: relative;
+	display: block;
+	width: 100%;
+	&::before{
+		content:'';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #6C51E2;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	input{
+		position: relative;
+		width: 100%;
+	}
+	input[type="range"]::-webkit-slider-thumb{
+		-webkit-appearance: none;
+		position: relative;
+		width:10px;
+		height:10px;
+		background: #6C51E2;
+		border-radius:50%;
+		transition:.2s;
 	}
 }

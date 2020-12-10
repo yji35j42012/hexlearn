@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div class="wrap" id="app">
         <div class="header">
             <div class="container">
                 <div class="logo">
@@ -117,7 +117,6 @@
                 <button class="search_btn">SEARCH</button>
             </div>
         </div>
-
         <div class="result_box">
             <div class="container">
                 <div class="function_box">
@@ -125,12 +124,155 @@
                         <h2>Bangkok</h2>
                         <h4 class="count">3,240</h4>
                     </div>
+                    <div class="function_group">
+                        <div class="function_item">
+                            <h4>Deals</h4>
+                            <ul>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        Free cancellation
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        No prepayment
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        Special offers
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="function_item">
+                            <h4>Popular filter</h4>
+                            <ul>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        Breakfast included
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        Free Wi-Fi
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        Swimming pool
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="function_item">
+                            <h4>Budget</h4>
+                            <span class="mod_range">
+                                <input type="range">
+                            </span>
+                            <div class="price_box">
+                                <span class="min_price">
+                                    <tt>Min price</tt>
+                                    <tt>TWD 800</tt>
+                                </span>
+                                <tt class="price_dash">-</tt>
+                                <span class="max_price">
+                                    <tt>Max price</tt>
+                                    <tt>TWD 4,000+</tt>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="function_item">
+                            <h4>Rating</h4>
+                            <ul>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        <ul class="starts">
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                        </ul>
+                                        5.0
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        <ul class="starts">
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                        </ul>
+                                        4.0
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        <ul class="starts">
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                        </ul>
+                                        3.0
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        <ul class="starts">
+                                            <li class="material-icons">grade</li>
+                                            <li class="material-icons">grade</li>
+                                        </ul>
+                                        2.0
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        <ul class="starts">
+                                            <li class="material-icons">grade</li>
+                                        </ul>
+                                        1.0
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mod_checkbox">
+                                        <input name="button" type="checkbox">
+                                        <span></span>
+                                        Unrated
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="list_box"></div>
+                <div class="list_box">
+                    <div class="list_header"></div>
+                </div>
             </div>
         </div>
-
-
         <div class="subscribe">
             <div class="container">
                 <div class="subscribe_txt">
@@ -186,6 +328,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
