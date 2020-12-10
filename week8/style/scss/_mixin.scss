@@ -4,3 +4,18 @@
         @content;
     }
 }
+@mixin max992px{
+    @media screen and (max-width: 992px){
+        @content;
+    }
+}
+@mixin max768px{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+@mixin max576px{
+    @media screen and (max-width: 576px){
+        @content;
+    }
+}

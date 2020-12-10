@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 字行 -->
+    <!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- https://fonts.google.com/specimen/Raleway -->
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <!-- 圖片 -->
+    <!-- https://unsplash.com/collections/10473290/booking -->
+    <link rel="stylesheet" href="./style/css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style/css/all.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/logo-aloha.svg"
+                        alt="">
+                </div>
+                <ul class="h_menu">
+                    <li class="mod_select_box">
+                        <span class="mod_select_btn">
+                            <i class="material-icons">language</i>
+                            <i class="material-icons">arrow_drop_down</i>
+                        </span>
+                        <ul class="second_menu">
+                            <li class="active">繁體中文</li>
+                            <li>簡體</li>
+                            <li>English</li>
+                        </ul>
+                    </li>
+                    <li>Sign up</li>
+                    <li>Login</li>
+                </ul>
+            </div>
+        </div>
+        <div class="search_box">
+            <div class="container">
+                <label class="search_inp">
+                    <i class="material-icons">location_on</i>
+                    <input type="text" placeholder="Destination">
+                    <ul class="search_list">
+                        <li>
+                            <i class="material-icons">star</i>
+                            <div class="search_list_txt">
+                                <span class="city">Bangkok</span>
+                                <span class="country">Thailand</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="material-icons">star</i>
+                            <div class="search_list_txt">
+                                <span class="city">Osaka</span>
+                                <span class="country">Japan</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="material-icons">star</i>
+                            <div class="search_list_txt">
+                                <span class="city">Roma</span>
+                                <span class="country">Italy</span>
+                            </div>
+                        </li>
+                    </ul>
+                </label>
+                <label class="search_inp">
+                    <i class="material-icons">date_range</i>
+                    <input type="text" placeholder="Check-in / Check-out">
+                    <ul class="search_list"></ul>
+                </label>
+                <label class="search_inp">
+                    <i class="material-icons">person</i>
+                    <input type="text" placeholder="Guests">
+                    <ul class="search_list guests">
+                        <li>
+                            <span>Adult</span>
+                            <span class="num">
+                                <button class="material-icons">remove</button>
+                                <tt>2</tt>
+                                <button class="material-icons">add</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span>Child</span>
+                            <span class="num">
+                                <button class="material-icons">remove</button>
+                                <tt>0</tt>
+                                <button class="material-icons">add</button>
+                            </span>
+                        </li>
+                        <li>
+                            <span>Room</span>
+                            <span class="num">
+                                <button class="material-icons">remove</button>
+                                <tt>1</tt>
+                                <button class="material-icons">add</button>
+                            </span>
+                        </li>
+                    </ul>
+                </label>
+                <button class="search_btn">SEARCH</button>
+            </div>
+        </div>
+
+        <div class="result_box">
+            <div class="container">
+                <div class="function_box">
+                    <div class="function_header">
+                        <h2>Bangkok</h2>
+                        <h4 class="count">3,240</h4>
+                    </div>
+                </div>
+                <div class="list_box"></div>
+            </div>
+        </div>
+
+
+        <div class="subscribe">
+            <div class="container">
+                <div class="subscribe_txt">
+                    Subscribe for Exclusive Offer
+                </div>
+                <div class="email_box">
+                    <input type="text" placeholder="Your email address">
+                    <button class="subscribe_btn">subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="qa_box">
+                    <span class="cp_right">
+                        © 2020 ALOHA, Inc. All rights reserved.
+                    </span>
+                    <ul class="question">
+                        <li>FAQs</li>
+                        <li>Terms of use</li>
+                        <li>Privacy policy</li>
+                    </ul>
+                </div>
+                <ul class="f_menu">
+                    <li class="mod_select_box">
+                        <span class="mod_select_btn">
+                            <i class="material-icons">language</i>
+                            <tt>English</tt>
+                            <i class="material-icons">arrow_drop_down</i>
+                        </span>
+
+                        <ul id="second_menu" class="second_menu">
+                            <li class="active">繁體中文</li>
+                            <li>簡體</li>
+                            <li>English</li>
+                        </ul>
+                    </li>
+                    <li class="mod_select_box">
+                        <span class="mod_select_btn">
+                            <i class="material-icons">language</i>
+                            <tt>TWD</tt>
+                            <i class="material-icons">arrow_drop_down</i>
+                        </span>
+
+                        <ul id="second_menu" class="second_menu">
+                            <li class="active">繁體中文</li>
+                            <li>簡體</li>
+                            <li>English</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
