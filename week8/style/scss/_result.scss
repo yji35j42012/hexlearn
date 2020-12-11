@@ -1,14 +1,20 @@
 .result_box{
 	margin-top: 24px;
-	padding-left: 40px;
+	
 	.container{
 		display: flex;
+	}
+	@include max1200px{
+		padding-left: 40px;
+		.container{
+			margin: 0;
+		}
 	}
 }
 .function_box{
 	width: 350px;
 	flex: none;
-	padding: 24px 24px 24px 0;
+	padding: 24px 0 24px;
 	.function_header{
 		display: flex;
 		height: 40px;
@@ -21,7 +27,7 @@
 	}
 }
 .function_group{
-	margin-top: 24px;
+	margin-top: 25px;
 	padding: 0 24px;
 	background: #F1F0F8;
 	border-radius: 8px;
@@ -79,6 +85,7 @@
 }
 .list_txt{
 	width: 100%;
+	padding: 16px;
 }
 .list_box{
 	width: 100%;
@@ -105,9 +112,9 @@
 }
 
 .list_group{
-	margin-top: 24px;
 	.list_item{
 		display: flex;
+		padding: 25px 0;
 		.pic{
 			position: relative;
 			overflow: hidden;
@@ -115,7 +122,6 @@
 			width: 255px;
 			height: 175px;
 			border-radius: 8px 0 0 8px;
-			margin-right: 16px;
 		}
 		img{
 			@include poa_img;
@@ -128,6 +134,9 @@
 		li{
 			font-size: 18px;
 		}
+		h5{
+			font-weight: bold;
+		}
 	}
 	.list_evaluate{
 		display: flex;
@@ -136,5 +145,69 @@
 			margin-right: 4px;
 		}
 	}
+	.list_model{
+		margin-top: 16px;
+		color: #00000099;
+		h5{
+			font-weight: bold;
+		}
+	}
+	.list_price{
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	.list_note{
+		display: flex;
+		align-self: flex-end;
+		li{
+			font-size: 12px;
+			line-height: 17px;
+			border-radius: 13px;
+			color: #00000099;
+			background: #F1F0F8;
+			padding: 4px 8px;
+		}
+		li+li{
+			margin-left: 4px;
+		}
+	}
 }
 
+.page_box{
+	padding: 16px;
+	background: #F1F0F8;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 48px;
+	border-radius: 8px;
+	button{
+		padding: 8px 16px;
+		border-radius: 3px;
+		color: #6C51E2;
+		border:1px solid #6C51E2;
+
+		@include hoverHandler{
+			&:hover{
+				background: #6C51E2;
+				color: #fff;
+				transition-duration: .3s;
+				cursor: pointer;
+			}
+		}
+	}
+	ul{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	li{
+		padding: 8px 14px;
+		font-size: 16px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	li.on{
+		background: #fff;
+	}
+}
