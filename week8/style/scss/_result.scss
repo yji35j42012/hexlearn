@@ -25,6 +25,10 @@
 		font-family: 'Raleway', sans-serif;
 		font-weight: 600;
 	}
+	@include max1200px {
+		width: 210px;
+	}
+
 }
 .function_group{
 	margin-top: 25px;

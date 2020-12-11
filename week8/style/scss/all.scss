@@ -557,9 +557,11 @@
 		font-family: 'Raleway', sans-serif;
 	}
 	.email_box{
+		flex: auto;
 		display: flex;
 		height: 55px;
 		margin-left: 35px;
+		justify-content: center;
 		input{
 			width: 100%;
 			max-width: 390px;
@@ -577,6 +579,24 @@
 			border-radius: 0 4px 4px 0;
 		}
 	}
+	@include max768px{
+		.subscribe_txt{
+			max-width: 171px;
+			font-size: 24px;
+			line-height: 36px;
+			text-align: left;
+		}
+	}
+	@include max576px{
+		.container{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.subscribe_txt{
+			max-width: none;
+			margin-bottom: 16px;
+		}
+	}
 }
 .subscribe.home{
 	.subscribe_txt{
@@ -590,6 +610,11 @@
 	.email_box{
 		margin-left: 0;
 		margin-top: 24px;
+	}
+	@include max768px{
+		.subscribe_txt{
+			max-width: 1100px;
+		}
 	}
 	@include max576px{
 		.container{
