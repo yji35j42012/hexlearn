@@ -18,3 +18,18 @@
 		@content;
 	}
 }
+@mixin hoverHandler{
+	@media (pointer: fine),
+	(-moz-touch-enabled: 0),
+	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){ 
+		@content;
+	}
+}
+@mixin poa_img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin:auto;
+}

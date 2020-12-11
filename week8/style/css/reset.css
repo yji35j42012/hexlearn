@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 *{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-touch-callout: none;
@@ -118,11 +118,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-tt {
-	font-family: 'Lato', sans-serif;
-}
-
 
 @media only screen and (min-device-width: 1025px) {
 	::-webkit-scrollbar {

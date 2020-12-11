@@ -1,11 +1,17 @@
 .result_box{
 	margin-top: 24px;
+	padding-left: 40px;
+	.container{
+		display: flex;
+	}
 }
 .function_box{
 	width: 350px;
+	flex: none;
 	padding: 24px 24px 24px 0;
 	.function_header{
 		display: flex;
+		height: 40px;
 		align-items: flex-start;
 	}
 	.count{
@@ -71,8 +77,64 @@
 		}
 	}
 }
-
+.list_txt{
+	width: 100%;
+}
 .list_box{
+	width: 100%;
+	padding: 24px 0 24px 30px;	
+	.list_header{
+		display: flex;
+		align-items: flex-end;
+		height: 40px;
+		overflow-x: auto;
+		overflow-y: hidden;
+		li{
+			flex: none;
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: bold;
+			margin-right: 24px;
+		}
+		li.on{
+			color: #6C51E2;
+		}
+	}
+	.list_header::-webkit-scrollbar {display: none;}
 	
+}
+
+.list_group{
+	margin-top: 24px;
+	.list_item{
+		display: flex;
+		.pic{
+			position: relative;
+			overflow: hidden;
+			flex: none;
+			width: 255px;
+			height: 175px;
+			border-radius: 8px 0 0 8px;
+			margin-right: 16px;
+		}
+		img{
+			@include poa_img;
+		}
+	}
+	.list_info{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		li{
+			font-size: 18px;
+		}
+	}
+	.list_evaluate{
+		display: flex;
+		align-items: center;
+		.start{
+			margin-right: 4px;
+		}
+	}
 }
 

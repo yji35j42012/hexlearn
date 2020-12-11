@@ -15,9 +15,9 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	// padding: 0 85px;
 	background: #fff;
 	z-index: 10;
+	padding: 0 40px;
 	.container{
 		display: flex;
 		height: 72px;
@@ -40,8 +40,12 @@
 			margin-left: 48px;
 		}
 	}
+	@include max768px {
+		padding: 0 40px;
+	}
 }
 .footer{
+	padding: 0 40px;
 	.container{
 		display: flex;
 		align-items: center;
@@ -80,7 +84,7 @@
 		}
 	}
 	.banner_txt{
-		// padding: 0 180px;
+		padding: 0 40px;
 		max-width: 920px;
 		display: flex;
 		justify-content: space-between;
@@ -112,11 +116,13 @@
 		justify-content: center;
 		height: 100%;
 		max-width: 1110px;
+		
 	}
 	&.home{
 		position: relative;
 		padding: 0 85px;
 		background: #fff;
+		top: 0;
 		// 目前只有首頁需要用到
 		.container{
 			max-width: 920px;
@@ -162,10 +168,18 @@
 			padding: 12px 16px;
 			display: flex;
 			align-items: center;
-			&:hover{
+
+			&:active{
 				background: #F1F0F8;
 				cursor: pointer;
 			}
+			@include hoverHandler{
+				&:hover{
+					background: #F1F0F8;
+					cursor: pointer;
+				}
+			}
+			
 		}
 		i{
 			position: relative;
@@ -224,37 +238,50 @@
 		}
 		li:before{
 			content:'';
-			width: 100%;
+			width: 0;
+			// width: 100%;
 			height: 2px;
 			position: absolute;
 			left: 0;
 			bottom: 0;
 			color: #00000099;
+			background: #6C51E2;
 		}
 		li.on,
-		li:hover{
+		li:active{
 			color: #6C51E2;
 			transition-duration: .3s;
 			cursor: pointer;
 		}
 		li.on:before,
-		li:hover:before{
-			background: #6C51E2;
+		li:active:before{
+			width: 100%;
 			transition-duration: .3s;
+		}
+		@include hoverHandler{
+			li:hover{
+				color: #6C51E2;
+				transition-duration: .3s;
+				cursor: pointer;
+			}
+			li:hover:before{
+				width: 100%;
+				transition-duration: .3s;
+			}
 		}
 		.count{
 			font-size: 12px;
 			font-family: 'Raleway', sans-serif;
 		}
 	}
+	.content_box{
+		position: relative;
+	}
 	.top_choices_group{
 		display: flex;
 		overflow-x: auto;
 		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
-	}
-	.content_box{
-		position: relative;
 	}
 	.next{
 		position: absolute;
@@ -289,12 +316,7 @@
 			border-radius: 8px;
 		}
 		img{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			margin: auto;
+			@include poa_img;
 		}
 	}
 	.top_choices_item+.top_choices_item{
@@ -343,13 +365,7 @@
 		overflow: hidden;
 		margin-top: 24px;
 		img{
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-
+			@include poa_img;
 		}
 		.txt_box{
 			display: flex;
@@ -408,7 +424,6 @@
 		display: flex;
 		// overflow-x: auto;
 		// overflow-y: hidden;
-
 		// -webkit-overflow-scrolling: touch;
 	}
 	// .inspiration_gruop::-webkit-scrollbar {display: none;}
@@ -428,14 +443,9 @@
 			border-radius: 8px;
 		}
 		img{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			margin: auto;
+			@include poa_img;
 		}
-		img:first-child{
+		&:first-child img{
 			height: 100%;
 		}
 	}
