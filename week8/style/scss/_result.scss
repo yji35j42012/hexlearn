@@ -114,7 +114,6 @@
 	.list_header::-webkit-scrollbar {display: none;}
 	
 }
-
 .list_group{
 	.list_item{
 		display: flex;
@@ -144,9 +143,14 @@
 	}
 	.list_evaluate{
 		display: flex;
-		align-items: center;
-		.start{
-			margin-right: 4px;
+		align-content: flex-start;
+		align-items: flex-start;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		
+		.color_graw{
+			line-height: 18px;
+			margin-left: 4px;
 		}
 	}
 	.list_model{
@@ -164,6 +168,7 @@
 	.list_note{
 		display: flex;
 		align-self: flex-end;
+		flex-wrap: wrap;
 		li{
 			font-size: 12px;
 			line-height: 17px;
@@ -176,8 +181,36 @@
 			margin-left: 4px;
 		}
 	}
+	@include max992px{
+		.list_model{
+			margin-top: 8px;
+		}
+		.list_txt{
+			h3{
+				font-size: 16px;
+				line-height: 22px;
+				white-space: nowrap;
+			}
+		}
+		.list_item{
+			padding-right: 40px;
+			.pic{
+				width: 150px;
+				height: 150px;
+			}
+		}
+		.color_graw{
+			span{
+				display: none;
+			}
+		}
+		.list_note{
+			li{
+				transform: scale(.85);
+			}
+		}
+	}
 }
-
 .page_box{
 	padding: 16px;
 	background: #F1F0F8;
