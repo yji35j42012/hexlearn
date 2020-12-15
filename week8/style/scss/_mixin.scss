@@ -33,3 +33,29 @@
 	left: 0;
 	margin:auto;
 }
+@mixin pos_abs($top , $right , $bottom , $left){
+	position: absolute;
+	top: $top;
+	bottom:  $bottom;
+	right: $right;
+	left: $left;
+	margin:auto;
+}
+
+@mixin edit_btn {
+	color: #6C51E2;
+	border-radius: 3px;
+	border: 1px solid #6C51E2;
+	background: transparent;
+}
+@mixin cancel_btn {
+	color: #fff;
+	border-radius: 3px;
+	border: 1px solid #fff;
+	background: transparent;
+}
+@mixin primary_btn {
+	color: #fff;
+	border-radius: 3px;
+	background: #6C51E2;
+}

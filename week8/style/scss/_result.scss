@@ -24,6 +24,8 @@
 		color: #6C51E2;
 		font-family: 'Raleway', sans-serif;
 		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
 	}
 	@include max1200px {
 		width: 210px;
@@ -41,8 +43,11 @@
 	.function_item+.function_item{
 		border-top:1px solid #fff;
 	}
-	h4{
+	.function_title{
+		display: block;
 		margin-bottom: 17px;
+		font-size: 16px;
+		line-height: 24px;
 		font-weight: bold;
 	}
 	li+li{
@@ -84,6 +89,11 @@
 		}
 		tt{
 			display: block;
+		}
+	}
+	@include max1200px{
+		.price_dash{
+			display: none;
 		}
 	}
 }
@@ -193,7 +203,6 @@
 			}
 		}
 		.list_item{
-			padding-right: 40px;
 			.pic{
 				width: 150px;
 				height: 150px;
@@ -210,6 +219,15 @@
 			}
 		}
 	}
+	@include max768px{
+		.list_note{
+			flex-direction: column;
+		}
+		.start{
+			width: 100%;
+			text-align: right;
+		}
+	}
 }
 .page_box{
 	padding: 16px;
@@ -223,7 +241,9 @@
 		border-radius: 3px;
 		color: #6C51E2;
 		border:1px solid #6C51E2;
-
+		.material-icons{
+			display: none;
+		}
 		@include hoverHandler{
 			&:hover{
 				background: #6C51E2;
@@ -246,5 +266,16 @@
 	}
 	li.on{
 		background: #fff;
+	}
+	@include max768px{
+		button{
+			padding: 8px;
+			span{
+				display: none;
+			}
+			.material-icons{
+				display: block;
+			}
+		}
 	}
 }
