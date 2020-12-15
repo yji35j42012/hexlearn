@@ -1184,6 +1184,15 @@ h3 {
   transition: .2s;
 }
 
+.star .material-icons::after {
+  content: 'grade';
+  color: #000;
+}
+
+.person .material-icons::after {
+  content: 'person';
+}
+
 .result_box {
   margin-top: 24px;
 }
@@ -1495,7 +1504,7 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .list_group .start {
+  .list_group .star {
     width: 100%;
     text-align: right;
   }
@@ -1587,7 +1596,6 @@ h3 {
   position: relative;
   width: 100%;
   height: 100%;
-  max-height: 800px;
   background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/login.jpg?raw=true") no-repeat center/cover;
 }
 
@@ -1649,9 +1657,6 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
-  .login_bg {
-    max-height: none;
-  }
   .login_bg .content {
     -ms-flex-line-pack: end;
         align-content: flex-end;
@@ -1676,7 +1681,6 @@ h3 {
 
 .login_box {
   height: 100%;
-  max-height: 800px;
   padding-left: 30px;
   padding-right: 85px;
   display: -webkit-box;

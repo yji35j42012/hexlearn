@@ -964,3 +964,16 @@ h3{
 		transition:.2s;
 	}
 }
+
+.star{
+    .material-icons::after{
+        content:'grade';
+        color: #000;
+    }
+}
+.person{
+    .material-icons::after{
+        content:'person';
+    }
+}
+
