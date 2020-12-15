@@ -1,16 +1,27 @@
-h1 {
-  font-size: 96px;
-  line-height: 124px;
-  font-family: 'Merriweather', serif;
-  font-weight: 900;
-  font-style: italic;
+h1.logo {
+  width: 112px;
+  height: 48px;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/logo-fixie.svg") no-repeat center/contain;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+h1.logo a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 h2 {
-  font-size: 72px;
-  line-height: 91px;
+  font-size: 96px;
+  line-height: 128px;
   font-family: 'Merriweather', serif;
   font-weight: 900;
+  font-style: italic;
 }
 
 h3 {
@@ -25,15 +36,6 @@ h4 {
   max-width: 570px;
   font-size: 24px;
   line-height: 36px;
-  font-family: 'Lato', sans-serif;
-  color: #00000099;
-}
-
-h5 {
-  width: 100%;
-  max-width: 570px;
-  font-size: 16px;
-  line-height: 24px;
   font-family: 'Lato', sans-serif;
   color: #00000099;
 }
@@ -82,14 +84,35 @@ h5 {
   margin-left: 48px;
 }
 
-.w7_item {
+.product_group .product_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 960px;
   background: #F1F5F6;
 }
 
-.w7_item .w7_txt {
+.product_group .pic_box {
+  position: relative;
+  width: 50%;
+  background: #000;
+  overflow: hidden;
+}
+
+.product_group .pic_box .w7_pic {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.product_group .pic_box img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.product_group .txt_box {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,18 +127,7 @@ h5 {
   width: 50%;
 }
 
-.w7_item .w7_pic_box {
-  position: relative;
-  width: 50%;
-}
-
-.w7_item .w7_pic_box .w7_pic {
-  width: 100%;
-  height: 100%;
-  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week7/img1.jpg?raw=true") no-repeat center/cover;
-}
-
-.w7_item .read_more_arrow {
+.product_group .read_more_arrow {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,14 +141,14 @@ h5 {
   margin: auto;
 }
 
-.w7_item .read_more_arrow .material-icons {
+.product_group .read_more_arrow .material-icons {
   color: #fff;
   padding: 19px;
   background: #000;
   z-index: 1;
 }
 
-.w7_item .read_more_txt {
+.product_group .read_more_txt {
   font-size: 24px;
   line-height: 30px;
   position: absolute;
@@ -152,12 +164,26 @@ h5 {
           align-items: center;
 }
 
-.w7_item .read_more_txt tt {
+.product_group .read_more_txt tt {
   background: #fff;
   padding: 16px;
 }
 
-.w7_item .w7_control_box {
+.product_group .product_item1 .w7_pic {
+  height: calc(100% - 120px);
+}
+
+.product_group .product_item1 .w7_item1_txt {
+  width: 100%;
+  max-width: 570px;
+  font-size: 24px;
+  line-height: 36px;
+  font-family: 'Lato', sans-serif;
+  color: #00000099;
+}
+
+.product_group .product_item1 .w7_control_box {
+  background: #fff;
   border: 1px solid #121212;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,7 +194,7 @@ h5 {
   height: 120px;
 }
 
-.w7_item .w7_control_box button {
+.product_group .product_item1 .w7_control_box button {
   width: 120px;
   height: 100%;
   text-align: center;
@@ -176,7 +202,7 @@ h5 {
   border-right: 1px solid #121212;
 }
 
-.w7_item .w7_control_box .txt {
+.product_group .product_item1 .control_txt {
   padding-left: 48px;
   font-size: 48px;
   line-height: 58px;
@@ -184,42 +210,37 @@ h5 {
   font-weight: 900;
 }
 
-.w7_item:nth-child(even) {
+.product_group .product_item2 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-flow: row-reverse;
           flex-flow: row-reverse;
 }
 
-.w7_item1 .w7_pic_box .w7_pic {
-  height: calc(100% - 120px);
+.product_group .product_item2 .w7_item2_txt {
+  width: 100%;
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Lato', sans-serif;
+  color: #00000099;
 }
 
-.w7_item2 .w7_pic {
-  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week7/img2.jpg?raw=true");
-}
-
-.w7_item2 .w7_txt {
-  padding: 95px 95px 192px 135px;
+.product_group .product_item2 .txt_box {
+  padding: 95px 125px 192px 135px;
   -ms-flex-line-pack: justify;
       align-content: space-between;
 }
 
-.w7_item2 .big_txt {
-  width: 100%;
-  text-align: right;
-  margin-top: 395px;
+.product_group .product_item2 img {
+  right: 0;
 }
 
-.w7_item2 .big_txt * + * {
-  margin-top: 24px;
-}
-
-.w7_item3 .w7_pic {
+.product_group .product_item3 .w7_pic {
   background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week7/img2.jpg?raw=true");
 }
 
-.w7_item3 .w7_txt {
+.product_group .product_item3 .txt_box {
   padding: 192px 135px 95px 95px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -228,33 +249,52 @@ h5 {
       align-content: space-between;
 }
 
-.w7_item3 .big_txt {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 395px;
-}
-
-.w7_item3 .big_txt * + * {
-  margin-top: 24px;
-}
-
-.w7_item3 .read_more_arrow {
-  left: 100%;
-}
-
-.w7_item3 .read_more_arrow .material-icons {
+.product_group .product_item3 .read_more_arrow .material-icons {
   color: #000;
   background: #fff;
 }
 
-.w7_item3 .read_more_txt {
-  right: 100%;
-}
-
-.w7_item3 .read_more_txt tt {
+.product_group .product_item3 .read_more_txt tt {
   color: #fff;
   background: #000;
   white-space: nowrap;
+}
+
+.product_group .product_item3 .big_txt {
+  width: 100%;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 395px;
+}
+
+.product_group .product_item3 .big_txt * + * {
+  margin-top: 24px;
+}
+
+.product_group .product_item3 .w7_item3_txt {
+  width: 100%;
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Lato', sans-serif;
+  color: #00000099;
+}
+
+.product_group .big_txt {
+  width: 100%;
+  text-align: right;
+  margin-top: 395px;
+}
+
+.product_group .big_txt p {
+  font-size: 72px;
+  line-height: 91px;
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+}
+
+.product_group .big_txt * + * {
+  margin-top: 24px;
 }
 
 .bulit {
@@ -268,11 +308,15 @@ h5 {
   margin: auto;
 }
 
-.bulit h5 {
+.bulit .bulit_txt {
   width: 570px;
-  margin: auto;
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Lato', sans-serif;
+  color: #00000099;
+  margin: 24px auto 0;
   text-align: center;
-  margin-top: 24px;
 }
 
 .bulit .parallax {
@@ -283,25 +327,30 @@ h5 {
   background-size: cover;
 }
 
-.bulit .txt {
+.bulit .txt_box {
   position: absolute;
   width: 450px;
   background: #fff;
   padding: 16px;
   left: 255px;
   bottom: 77px;
+  font-family: 'Merriweather', serif;
 }
 
-.bulit .txt h4 {
-  color: #000;
+.bulit .txt_box span {
+  width: 100%;
+  max-width: 570px;
+  font-size: 24px;
+  line-height: 36px;
 }
 
-.bulit .txt h5 {
+.bulit .txt_box p {
   width: 100%;
   text-align: left;
+  color: #00000099;
 }
 
-.ul_list {
+.ul_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,29 +361,29 @@ h5 {
   overflow: hidden;
 }
 
-.ul_list li {
+.ul_card li {
   width: calc(100% / 3 - 20px);
 }
 
-.ul_list .txt {
+.ul_card .txt_box {
   padding-top: 24px;
 }
 
-.ul_list .txt h4 {
+.ul_card .txt_box h4 {
   color: #000;
   line-height: 31px;
   font-weight: 900;
   font-family: 'Merriweather', serif;
 }
 
-.ul_list .txt .date {
+.ul_card .txt_box .date {
   color: #00000099;
   font-size: 16px;
   line-height: 20px;
   margin-top: 16px;
 }
 
-.ul_list .txt .info {
+.ul_card .txt_box .info {
   font-size: 16px;
   line-height: 24px;
   color: #00000099;
@@ -343,11 +392,12 @@ h5 {
 
 footer {
   overflow: hidden;
+  height: 96px;
 }
 
-.footer_box {
+footer .footer_box {
   max-width: 1410px;
-  height: 96px;
+  height: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,32 +413,34 @@ footer {
   overflow: hidden;
 }
 
-.footer_box .menu {
+footer .footer_box .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.footer_box .menu li {
+footer .footer_box .menu li {
   font-size: 16px;
   line-height: 20px;
 }
 
-.footer_box .menu li + li {
+footer .footer_box .menu li + li {
   margin-left: 48px;
 }
 
-.footer_box .copy_rigth {
+footer .footer_box .copy_rigth {
   color: #00000099;
   font-size: 14px;
   line-height: 16px;
 }
 
-[data-aos] {
-  visibility: hidden;
+.scrollme {
+  -webkit-perspective: 600px;
+          perspective: 600px;
 }
 
-[data-aos].animated {
-  visibility: visible;
+.animateme {
+  -webkit-transform-origin: center center center;
+          transform-origin: center center center;
 }
 /*# sourceMappingURL=week7.css.map */
