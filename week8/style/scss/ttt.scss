@@ -1,0 +1,31 @@
+@import "mixin";
+
+$sizes: "mb" , "mt", "ml", "mr", "m";
+// 基本倍數
+$count: 8px;
+// 總共要幾個
+$length: 9;
+@for $i from 1 through $length {
+	@each $item in $sizes{
+		.#{$item}-xl-#{$count * $i}{
+			font-size: $count * $i;
+		}
+		
+		.#{$item}-lg-#{$count * $i}{
+			@include max576px{
+				font-size: $count * $i;
+			}
+		}
+	}
+}
+
+
+
+// @each $item  in $length {
+	
+	// .mb-xl-#{$size} {
+	// 	font-size: $size;
+	// 	height: $size;
+	// 	width: $size;
+	// }
+// }

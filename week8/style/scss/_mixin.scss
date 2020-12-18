@@ -39,7 +39,6 @@
 	bottom:  $bottom;
 	right: $right;
 	left: $left;
-	margin:auto;
 }
 
 @mixin edit_btn {
@@ -47,15 +46,18 @@
 	border-radius: 3px;
 	border: 1px solid #6C51E2;
 	background: transparent;
+	text-transform: uppercase;
 }
 @mixin cancel_btn {
 	color: #fff;
 	border-radius: 3px;
 	border: 1px solid #fff;
 	background: transparent;
+	text-transform: uppercase;
 }
 @mixin primary_btn {
 	color: #fff;
 	border-radius: 3px;
 	background: #6C51E2;
+	text-transform: uppercase;
 }
