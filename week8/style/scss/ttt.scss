@@ -1,31 +1,45 @@
-@import "mixin";
+@mixin aniHandler{
 
-$sizes: "mb" , "mt", "ml", "mr", "m";
-// 基本倍數
-$count: 8px;
-// 總共要幾個
-$length: 9;
-@for $i from 1 through $length {
-	@each $item in $sizes{
-		.#{$item}-xl-#{$count * $i}{
-			font-size: $count * $i;
-		}
-		
-		.#{$item}-lg-#{$count * $i}{
-			@include max576px{
-				font-size: $count * $i;
-			}
-		}
+    &.active{
+        >.active_item,
+        ~.active_item{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+    .active_item{
+        visibility: hidden;
+        opacity: 0;
+    }
+.ooo{
+    @include aniHandler();
+}
+
+%op07{opacity: .7;}
+
+
+
+
+
+
+
+
+$op: 1 !default;
+
+@mixin hoverHandler($op){
+	@media (pointer: fine),
+	(-moz-touch-enabled: 0),
+	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){ 
+        &:hover{
+            opacity: $op;
+            @content;
+        }
 	}
 }
 
+.ooooo{
+    @include hoverHandler(1);
+}
 
 
-// @each $item  in $length {
-	
-	// .mb-xl-#{$size} {
-	// 	font-size: $size;
-	// 	height: $size;
-	// 	width: $size;
-	// }
-// }

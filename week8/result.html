@@ -5,20 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- 字行 -->
-	<!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway"> -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-		rel="stylesheet">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-		rel="stylesheet">
-
-	<!-- https://fonts.google.com/specimen/Raleway -->
-	<!-- https://fonts.google.com/specimen/Open+Sans -->
-	<!-- 圖片 -->
-	<!-- https://unsplash.com/collections/10473290/booking -->
 	<link rel="stylesheet" href="./style/css/reset.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="./style/css/all.css">
@@ -27,6 +14,7 @@
 
 <body>
 	<div class="wrap" id="app">
+
 		<div class="header">
 			<div class="container">
 				<button class="menu_btn material-icons">menu</button>
@@ -127,331 +115,337 @@
 				<button class="search_btn">SEARCH</button>
 			</div>
 		</div>
-		<div class="result_box" style="display: none">
-			<div class="container">
-				<div class="function_box">
-					<div class="function_header">
-						<h2>Bangkok</h2>
-						<span class="count">3,240</span>
-					</div>
-					<div class="function_group">
-						<div class="function_item">
-							<span class="function_title">Deals</span>
-							<ul>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										Free cancellation
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										No prepayment
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										Special offers
-									</label>
-								</li>
-							</ul>
+
+		<div class="scroll_box">
+			<!-- 扣掉上面高度，開卷軸 -->
+			<!-- 中間內容 -->
+			<div class="result_box">
+				<div class="container">
+					<div class="function_box">
+						<div class="function_header">
+							<h2>Bangkok</h2>
+							<span class="count">3,240</span>
 						</div>
-						<div class="function_item">
-							<span class="function_title">
-								Popular filter
-							</span>
-							<ul>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										Breakfast included
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										Free Wi-Fi
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										Swimming pool
-									</label>
-								</li>
-							</ul>
-						</div>
-						<div class="function_item">
-							<span class="function_title">
-								Budget
-							</span>
-							<span class="mod_range">
-								<input type="range">
-							</span>
-							<div class="price_box">
-								<span class="min_price">
-									<tt>Min price</tt>
-									<tt>TWD 800</tt>
+						<div class="function_group">
+							<div class="function_item">
+								<span class="function_title">Deals</span>
+								<ul>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											Free cancellation
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											No prepayment
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											Special offers
+										</label>
+									</li>
+								</ul>
+							</div>
+							<div class="function_item">
+								<span class="function_title">
+									Popular filter
 								</span>
-								<tt class="price_dash">-</tt>
-								<span class="max_price">
-									<tt>Max price</tt>
-									<tt>TWD 4,000+</tt>
+								<ul>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											Breakfast included
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											Free Wi-Fi
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											Swimming pool
+										</label>
+									</li>
+								</ul>
+							</div>
+							<div class="function_item">
+								<span class="function_title">
+									Budget
 								</span>
+								<span class="mod_range">
+									<input type="range">
+								</span>
+								<div class="price_box">
+									<span class="min_price">
+										<tt>Min price</tt>
+										<tt>TWD 800</tt>
+									</span>
+									<tt class="price_dash">-</tt>
+									<span class="max_price">
+										<tt>Max price</tt>
+										<tt>TWD 4,000+</tt>
+									</span>
+								</div>
+							</div>
+							<div class="function_item">
+								<span class="function_title">Rating</span>
+								<ul>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											<ul class="star">
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+											</ul>
+											5.0
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											<ul class="star">
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+											</ul>
+											4.0
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											<ul class="star">
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+											</ul>
+											3.0
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											<ul class="star">
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+											</ul>
+											2.0
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											<ul class="star">
+												<li class="material-icons"></li>
+											</ul>
+											1.0
+										</label>
+									</li>
+									<li>
+										<label class="mod_checkbox">
+											<input name="button" type="checkbox">
+											<span></span>
+											Unrated
+										</label>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="function_item">
-							<span class="function_title">
-								Rating
-							</span>
+					</div>
+					<div class="list_box">
+						<ul class="list_header">
+							<li class="on">Recommended</li>
+							<li>Lowest Price</li>
+							<li>Best value</li>
+							<li>Distance to City Center</li>
+						</ul>
+						<div class="list_group">
+							<div class="list_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
+										alt="">
+								</div>
+								<div class="list_txt">
+									<div class="list_info">
+										<span>
+											<p class="color_graw list_distance">
+												<tt class="color_purple">Rachada, Bangkok</tt>
+												<tt>・2 km from center</tt>
+											</p>
+											<p class="list_hotel">Rachada Hotel</p>
+										</span>
+										<span class="list_evaluate">
+											<ul class="star">
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+											</ul>
+											<tt class="color_graw">4.0 (283)</tt>
+										</span>
+									</div>
+									<ul class="list_room">
+										<li class="model">Deluxe Double Room</li>
+										<li>2 guests・1 bed (Queen size)</li>
+									</ul>
+									<div class="list_price">
+										<ul class="list_note">
+											<li>Free cancellation</li>
+											<li>No prepayment</li>
+										</ul>
+										<span class="txt_r">
+											<div class="mod_price"data-txt="per night" data-oprice="1,980">
+												<span>TWD 1,980</span>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="list_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
+										alt="">
+								</div>
+								<div class="list_txt">
+									<div class="list_info">
+										<span>
+											<p class="color_graw list_distance">
+												<tt class="color_purple">Rachada, Bangkok</tt>
+												<tt>・2 km from center</tt>
+											</p>
+											<p class="list_hotel">Rachada Hotel</p>
+										</span>
+										<span class="list_evaluate">
+											<ul class="star">
+												<li class="material-icons"></li>
+												<li class="material-icons"></li>
+											</ul>
+											<tt class="color_graw">4.0 (283)</tt>
+										</span>
+									</div>
+									<ul class="list_room">
+										<li class="model">Deluxe Double Room</li>
+										<li>2 guests・1 bed (Queen size)</li>
+									</ul>
+									<div class="list_price">
+										<ul class="list_note">
+											<li>Free cancellation</li>
+											<li>No prepayment</li>
+										</ul>
+										<span class="txt_r">
+											<div class="mod_price"data-txt="per night" data-oprice="1,980">
+												<span>TWD 1,980</span>
+											</div>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="page_box">
+							<button>
+								<span>PREVIOUS</span>
+								<i class="material-icons">navigate_before</i>
+							</button>
 							<ul>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										<ul class="star">
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-										</ul>
-										5.0
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										<ul class="star">
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-										</ul>
-										4.0
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										<ul class="star">
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-										</ul>
-										3.0
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										<ul class="star">
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-										</ul>
-										2.0
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										<ul class="star">
-											<li class="material-icons"></li>
-										</ul>
-										1.0
-									</label>
-								</li>
-								<li>
-									<label class="mod_checkbox">
-										<input name="button" type="checkbox">
-										<span></span>
-										Unrated
-									</label>
-								</li>
+								<li class="on">1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>6</li>
 							</ul>
+							<button>
+								<span>NEXT</span>
+								<i class="material-icons">navigate_next</i>
+							</button>
 						</div>
 					</div>
 				</div>
-				<div class="list_box">
-					<ul class="list_header">
-						<li class="on">Recommended</li>
-						<li>Lowest Price</li>
-						<li>Best value</li>
-						<li>Distance to City Center</li>
-					</ul>
-					<div class="list_group">
-						<div class="list_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
-									alt="">
-							</div>
-							<div class="list_txt">
-								<div class="list_info">
-									<span>
-										<h6 class="color_graw">
-											<tt class="color_purple">Rachada, Bangkok</tt>
-											<span>・2 km from center</span>
-										</h6>
-										<h3>Rachada Hotel</h3>
-									</span>
-									<span class="list_evaluate">
-										<ul class="star">
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-										</ul>
-										<tt class="color_graw">4.0 (283)</tt>
-									</span>
-								</div>
-								<div class="list_model">
-									<h5>Deluxe Double Room</h5>
-									<h6>2 guests・1 bed (Queen size)</h6>
-								</div>
-								<div class="list_price">
-									<ul class="list_note">
-										<li>Free cancellation</li>
-										<li>No prepayment</li>
-									</ul>
-									<span class="txt_r">
-										<tt class="color_graw">per night</tt>
-										<h3>TWD 1,980</h3>
-									</span>
-								</div>
-							</div>
-						</div>
-						<div class="list_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
-									alt="">
-							</div>
-							<div class="list_txt">
-								<div class="list_info">
-									<span>
-										<h6 class="color_graw">
-											<tt class="color_purple">Rachada, Bangkok</tt>
-											<span>・2 km from center</span>
-										</h6>
-										<h3>Rachada Hotel</h3>
-									</span>
-									<span class="list_evaluate">
-										<ul class="star">
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-											<li class="material-icons"></li>
-										</ul>
-										<tt class="color_graw">4.0 (283)</tt>
-									</span>
-								</div>
-								<div class="list_model">
-									<h5>Deluxe Double Room</h5>
-									<h6>2 guests・1 bed (Queen size)</h6>
-								</div>
-								<div class="list_price">
-									<ul class="list_note">
-										<li>Free cancellation</li>
-										<li>No prepayment</li>
-									</ul>
-									<span class="txt_r">
-										<tt class="color_graw">per night</tt>
-										<h3>TWD 1,980</h3>
-									</span>
-								</div>
-							</div>
-						</div>
+			</div>
+			<!-- subscribe -->
+			<div class="subscribe">
+				<div class="container">
+					<div class="subscribe_txt">
+						Subscribe for Exclusive Offer
 					</div>
-					<div class="page_box">
-						<button>
-							<span>PREVIOUS</span>
-							<i class="material-icons">navigate_before</i>
-						</button>
-						<ul>
-							<li class="on">1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-							<li>6</li>
+					<div class="email_box">
+						<input type="text" placeholder="Your email address">
+						<button class="subscribe_btn">SUBSCEIB</button>
+					</div>
+				</div>
+			</div>
+			<!-- footer -->
+			<div class="footer">
+				<div class="container">
+					<div class="qa_box">
+						<span class="cp_right">
+							© 2020 ALOHA, Inc. All rights reserved.
+						</span>
+						<ul class="question">
+							<li>
+								<a href="#">FAQs</a>
+							</li>
+							<li>
+								<a href="#">Terms of use</a>
+							</li>
+							<li>
+								<a href="#">Privacy policy</a>
+							</li>
 						</ul>
-						<button>
-							<span>NEXT</span>
-							<i class="material-icons">navigate_next</i>
-						</button>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="subscribe">
-			<div class="container">
-				<div class="subscribe_txt">
-					Subscribe for Exclusive Offer
-				</div>
-				<div class="email_box">
-					<input type="text" placeholder="Your email address">
-					<button class="subscribe_btn">SUBSCEIB</button>
-				</div>
-			</div>
-		</div>
-		<div class="footer">
-			<div class="container">
-				<div class="qa_box">
-					<span class="cp_right">
-						© 2020 ALOHA, Inc. All rights reserved.
-					</span>
-					<ul class="question">
-						<li>
-							<a href="#">FAQs</a>
+					<ul class="f_menu">
+						<li class="mod_select_box">
+							<span class="mod_select_btn">
+								<i class="material-icons">language</i>
+								<tt>English</tt>
+								<i class="material-icons">arrow_drop_down</i>
+							</span>
+
+							<ul id="second_menu" class="second_menu">
+								<li class="active">繁體中文</li>
+								<li>簡體</li>
+								<li>English</li>
+							</ul>
 						</li>
-						<li>
-							<a href="#">Terms of use</a>
-						</li>
-						<li>
-							<a href="#">Privacy policy</a>
+						<li class="mod_select_box">
+							<span class="mod_select_btn">
+								<i class="material-icons">language</i>
+								<tt>TWD</tt>
+								<i class="material-icons">arrow_drop_down</i>
+							</span>
+
+							<ul id="second_menu" class="second_menu">
+								<li class="active">繁體中文</li>
+								<li>簡體</li>
+								<li>English</li>
+							</ul>
 						</li>
 					</ul>
+
 				</div>
-				<ul class="f_menu">
-					<li class="mod_select_box">
-						<span class="mod_select_btn">
-							<i class="material-icons">language</i>
-							<tt>English</tt>
-							<i class="material-icons">arrow_drop_down</i>
-						</span>
-
-						<ul id="second_menu" class="second_menu">
-							<li class="active">繁體中文</li>
-							<li>簡體</li>
-							<li>English</li>
-						</ul>
-					</li>
-					<li class="mod_select_box">
-						<span class="mod_select_btn">
-							<i class="material-icons">language</i>
-							<tt>TWD</tt>
-							<i class="material-icons">arrow_drop_down</i>
-						</span>
-
-						<ul id="second_menu" class="second_menu">
-							<li class="active">繁體中文</li>
-							<li>簡體</li>
-							<li>English</li>
-						</ul>
-					</li>
-				</ul>
-
 			</div>
 		</div>
+
 	</div>
 
 </body>

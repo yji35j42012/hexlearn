@@ -1,13 +1,19 @@
 .result_box{
 	margin-top: 24px;
-	
 	.container{
 		display: flex;
 	}
 	@include max1200px{
 		padding-left: 40px;
+		margin-top: 0;
 		.container{
 			margin: 0;
+		}
+	}
+	@include max576px{
+		padding-left: 0;
+		.container{
+			flex-wrap: wrap;
 		}
 	}
 }
@@ -17,8 +23,8 @@
 	padding: 24px 0 24px;
 	.function_header{
 		display: flex;
-		height: 40px;
 		align-items: flex-start;
+		height: 40px;
 	}
 	.count{
 		color: #6C51E2;
@@ -30,7 +36,13 @@
 	@include max1200px {
 		width: 210px;
 	}
-
+	@include max576px{
+		width: 100%;
+		padding: 16px 0 24px;
+		.function_header{
+			justify-content: center;
+		}
+	}
 }
 .function_group{
 	margin-top: 25px;
@@ -53,11 +65,10 @@
 	li+li{
 		margin-top: 8px;
 	}
-	.starts{
+	.star{
 		margin-right: 8px;
-		.material-icons{
-			font-size: 18px;
-			color: #000;
+		li + li{
+			margin-top: 0;
 		}
 	}
 	.price_box{
@@ -96,11 +107,11 @@
 			display: none;
 		}
 	}
+	@include max576px{
+		display: none;
+	}
 }
-.list_txt{
-	width: 100%;
-	padding: 16px;
-}
+
 .list_box{
 	width: 100%;
 	padding: 24px 0 24px 30px;	
@@ -122,7 +133,12 @@
 		}
 	}
 	.list_header::-webkit-scrollbar {display: none;}
-	
+	@include max576px{
+		padding: 0;
+		.list_header{
+			display: none;
+		}
+	}
 }
 .list_group{
 	.list_item{
@@ -140,15 +156,27 @@
 			@include poa_img;
 		}
 	}
+	.list_txt{
+		width: 100%;
+		padding: 16px;
+		display: flex;
+		flex-wrap: wrap;
+	}
 	.list_info{
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+		.list_distance{
+			font-size: 12px;
+			line-height: 18px;
+		}
+		.list_hotel{
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: bold;
+		}
 		li{
 			font-size: 18px;
-		}
-		h5{
-			font-weight: bold;
 		}
 	}
 	.list_evaluate{
@@ -163,17 +191,41 @@
 			margin-left: 4px;
 		}
 	}
-	.list_model{
+	.list_room{
+		font-size: 12px;
+		line-height: 18px;
 		margin-top: 16px;
 		color: #00000099;
-		h5{
+		.model{
+			font-size: 14px;
+			line-height: 21px;
 			font-weight: bold;
 		}
 	}
 	.list_price{
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		
+		align-self: flex-end;
+		.mod_price{
+			color: #000000DE;
+		}
+		.mod_price::before{
+			content:attr(data-txt);
+			position: absolute;
+			right: 0;
+			bottom: 180%;
+			font-size: 12px;
+			line-height: 18px;
+			color: #00000099;
+		}
+		.mod_price:after{
+			position: absolute;
+			right: 0;
+			bottom: 100%;
+			font-size: 16px;
+			line-height: 24px;
+		}
 	}
 	.list_note{
 		display: flex;
@@ -192,15 +244,11 @@
 		}
 	}
 	@include max992px{
-		.list_model{
+		.list_room{
 			margin-top: 8px;
 		}
 		.list_txt{
-			h3{
-				font-size: 16px;
-				line-height: 22px;
-				white-space: nowrap;
-			}
+			padding: 8px;
 		}
 		.list_item{
 			.pic{
@@ -218,14 +266,54 @@
 				transform: scale(.85);
 			}
 		}
+	
+		.mod_price{
+			span{
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+		
 	}
 	@include max768px{
+		
 		.list_note{
 			flex-direction: column;
 		}
 		.star{
 			width: 100%;
 			text-align: right;
+		}
+	}
+	@include max576px{
+		.list_item{
+			padding: 4px 0 0;
+			.pic{
+				border-radius: 0;
+			}
+		}
+		.list_txt{
+			padding: 4px 8px;
+		}
+		.list_info{
+			flex-direction: column;
+		}
+		.list_evaluate{
+			justify-content: flex-start;
+		}
+		.star{
+			width: auto;
+		}		
+		.mod_price:after{
+			content:'';
+		}
+		.list_price{
+			
+			justify-content: flex-end;
+			tt,
+			.list_note{
+				display: none;
+			}
 		}
 	}
 }

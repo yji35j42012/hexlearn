@@ -5,17 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- 字行 -->
-	<!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway"> -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-		rel="stylesheet">
-	<!-- https://fonts.google.com/specimen/Raleway -->
-	<!-- https://fonts.google.com/specimen/Open+Sans -->
-	<!-- 圖片 -->
-	<!-- https://unsplash.com/collections/10473290/booking -->
 	<link rel="stylesheet" href="./style/css/reset.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="./style/css/all.css">
@@ -23,7 +14,7 @@
 </head>
 
 <body>
-	<div class="home" id="app">
+	<div class="home wrap" id="app">
 		<div class="header">
 			<div class="container">
 				<button class="menu_btn material-icons">menu</button>
@@ -39,384 +30,393 @@
 							<li>簡體</li>
 							<li>English</li>
 						</ul>
+						<select class="second_mb_menu">
+							<option value="">繁體中文</option>
+							<option value="">簡體</option>
+							<option value="">English</option>
+						</select>
 					</li>
-					<li>Sign up</li>
+					<li><a href="#">Sign up</a></li>
 				</ul>
-				<a class="login_btn fz-16" href="#">Login</a>
+				<a class="login_btn fz-16" href="./login.html">Login</a>
 			</div>
 		</div>
-		<div class="banner">
-			<div class="banner_item"></div>
-			<div class="banner_txt">
-				<button class="material-icons">keyboard_arrow_left</button>
-				<tt>Discover your ideal hotel</tt>
-				<button class="material-icons">keyboard_arrow_right</button>
-			</div>
-		</div>
-		<div class="search_box home">
-			<div class="container">
-				<label class="search_inp">
-					<i class="material-icons">location_on</i>
-					<div class="search_condition">
-						<span class="title">DESTINATION</span>
-						<span class="detail">
-							<tt class="city">Bangkok</tt>
-							<tt class="country">,Thailand</tt>
-						</span>
-					</div>
-					<ul class="search_list">
-						<li>
-							<i class="material-icons">star</i>
-							<div class="search_list_txt">
-								<span class="city">Bangkok</span>
-								<span class="country">Thailand</span>
-							</div>
-						</li>
-						<li>
-							<i class="material-icons">star</i>
-							<div class="search_list_txt">
-								<span class="city">Osaka</span>
-								<span class="country">Japan</span>
-							</div>
-						</li>
-						<li>
-							<i class="material-icons">star</i>
-							<div class="search_list_txt">
-								<span class="city">Roma</span>
-								<span class="country">Italy</span>
-							</div>
-						</li>
-					</ul>
-				</label>
-				<label class="search_inp">
-					<i class="material-icons">date_range</i>
-					<div class="search_condition">
-						<span class="title">CHECK-IN / OUT</span>
-						<span class="detail">17 June - 19 June</span>
-					</div>
-					<ul class="search_list"></ul>
-				</label>
-				<label class="search_inp">
-					<i class="material-icons">person</i>
-					<div class="search_condition">
-						<span class="title">GUEST</span>
-						<span class="detail">2 adults・1 room</span>
-					</div>
-					<ul class="search_list guests">
-						<li>
-							<span>Adult</span>
-							<span class="num">
-								<button class="material-icons">remove</button>
-								<tt>2</tt>
-								<button class="material-icons">add</button>
-							</span>
-						</li>
-						<li>
-							<span>Child</span>
-							<span class="num">
-								<button class="material-icons">remove</button>
-								<tt>0</tt>
-								<button class="material-icons">add</button>
-							</span>
-						</li>
-						<li>
-							<span>Room</span>
-							<span class="num">
-								<button class="material-icons">remove</button>
-								<tt>1</tt>
-								<button class="material-icons">add</button>
-							</span>
-						</li>
-					</ul>
-				</label>
-				<button class="search_btn">SEARCH</button>
-			</div>
-		</div>
-		<div class="top_choices">
-			<div class="container">
-				<h2>Top Choices</h2>
-				<ul class="list_tab">
-					<li class="on">
-						<h3 class="area">Bali</h3>
-						<span class="count">128</span>
-					</li>
-					<li>
-						<h3 class="area">Okinawa</h3>
-						<span class="count">67</span>
-					</li>
-					<li>
-						<h3 class="area">Taipei</h3>
-						<span class="count">53</span>
-					</li>
-				</ul>
-				<div class="content_box">
-					<div class="top_choices_group">
-						<div class="top_choices_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
-									alt="">
-							</div>
-							<h4>Hotel Aqua</h4>
-							<div class="evaluation">
-								<ul class="start">
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-								</ul>
-								<h5 class="evaluation_num">5.0</h5>
-								<h6 class="reviews">・2k reviews</h6>
-							</div>
-							<div class="price">
-								<h5 class="new_price" data-oprice="3,980">TWD 2,480</h5>
-							</div>
-						</div>
-						<div class="top_choices_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
-									alt="">
-							</div>
-							<h4>Hotel Aqua</h4>
-							<div class="evaluation">
-								<ul class="start">
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-								</ul>
-								<h5 class="evaluation_num">5.0</h5>
-								<h6 class="reviews">・2k reviews</h6>
-							</div>
-							<div class="price">
-								<h5 class="new_price" data-oprice="3,980">TWD 2,480</h5>
-							</div>
-						</div>
-						<div class="top_choices_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
-									alt="">
-							</div>
-							<h4>Hotel Aqua</h4>
-							<div class="evaluation">
-								<ul class="start">
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-								</ul>
-								<h5 class="evaluation_num">5.0</h5>
-								<h6 class="reviews">・2k reviews</h6>
-							</div>
-							<div class="price">
-								<h5 class="new_price" data-oprice="3,980">TWD 2,480</h5>
-							</div>
-						</div>
-						<div class="top_choices_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
-									alt="">
-							</div>
-							<h4>Hotel Aqua</h4>
-							<div class="evaluation">
-								<ul class="start">
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-									<li class="material-icons">grade</li>
-								</ul>
-								<h5 class="evaluation_num">5.0</h5>
-								<h6 class="reviews">・2k reviews</h6>
-							</div>
-							<div class="price">
-								<h5 class="new_price" data-oprice="3,980">TWD 2,480</h5>
-							</div>
-						</div>
-					</div>
-					<button class="material-icons next">keyboard_arrow_right</button>
-				</div>
 
-			</div>
-		</div>
-		<div class="popular">
-			<div class="container">
-				<h2>Popular Destinations</h2>
-				<div class="content_box">
-					<div class="popular_group">
-						<div class="popular_item">
-							<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Osaka.jpg?raw=true"
-								alt="">
-							<div class="txt_box">
-								<span>
-									<h6>JAPAN</h6>
-									<h3>Osaka</h3>
-								</span>
-								<i class="material-icons">expand_more</i>
-							</div>
-						</div>
-						<div class="popular_item">
-							<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Kyoto.jpg?raw=true"
-								alt="">
-							<div class="txt_box">
-								<span>
-									<h6>JAPAN</h6>
-									<h3>Kyoto</h3>
-								</span>
-								<i class="material-icons">expand_more</i>
-							</div>
-						</div>
-						<div class="popular_item">
-							<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Reykjavic.jpg?raw=true"
-								alt="">
-							<div class="txt_box">
-								<span>
-									<h6>iceland</h6>
-									<h3>Reykjavík</h3>
-								</span>
-								<i class="material-icons">expand_more</i>
-							</div>
-						</div>
-						<div class="popular_item">
-							<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Paris.jpg?raw=true"
-								alt="">
-							<div class="txt_box">
-								<span>
-									<h6>France</h6>
-									<h3>Paris</h3>
-								</span>
-								<i class="material-icons">expand_more</i>
-							</div>
-						</div>
-						<div class="popular_item">
-							<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Roman.jpg?raw=true"
-								alt="">
-							<div class="txt_box">
-								<span>
-									<h6>Italy</h6>
-									<h3>Roma</h3>
-								</span>
-								<i class="material-icons">expand_more</i>
-							</div>
-						</div>
-						<div class="popular_item">
-							<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Bangkok.jpg?raw=true"
-								alt="">
-							<div class="txt_box">
-								<span>
-									<h6>Thailand</h6>
-									<h3>Bangkok</h3>
-								</span>
-								<i class="material-icons">expand_more</i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="inspiration">
-			<div class="container">
-				<h2>
-					Get Inspiration
-					<button class="inspiration_btn">SEE MORE</button>
-				</h2>
-				<div class="content_box">
-					<div class="inspiration_gruop">
-						<div class="inspiration_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/italy.jpg?raw=true"
-									alt="">
-							</div>
-							<h3>The fifth most visited country</h3>
-							<h4>
-								Italy is the fifth most visited country in the world, with a total of 52.3 million…
-							</h4>
-						</div>
-						<div class="inspiration_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Thailand.jpg?raw=true"
-									alt="">
-							</div>
-							<h3>Visit Thailand for Bangkok</h3>
-							<h4>
-								Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…
-							</h4>
-						</div>
-						<div class="inspiration_item">
-							<div class="pic">
-								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/NewZealand.jpg?raw=true"
-									alt="">
-							</div>
-							<h3>Lord of the Rings Tour</h3>
-							<h4>
-								The national cuisine has been described as Pacific Rim, incorporating the native Māori…
-							</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="home subscribe">
-			<div class="container">
-				<div class="subscribe_txt">
-					Subscribe for Exclusive Offer
-				</div>
-				<div class="email_box">
-					<input type="text" placeholder="Your email address">
-					<button class="subscribe_btn">SUBSCRIBE</button>
-				</div>
-			</div>
-		</div>
-		<div class="footer">
-			<div class="container">
-				<div class="qa_box">
-					<span class="cp_right">
-						© 2020 ALOHA, Inc. All rights reserved.
-					</span>
-					<ul class="question">
-						<li>
-							<a href="#">FAQs</a>
-						</li>
-						<li>
-							<a href="#">Terms of use</a>
-						</li>
-						<li>
-							<a href="#">Privacy policy</a>
-						</li>
-					</ul>
-				</div>
-				<ul class="f_menu">
-					<li class="mod_select_box">
-						<span class="mod_select_btn">
-							<i class="material-icons">language</i>
-							<tt>English</tt>
-							<i class="material-icons">arrow_drop_down</i>
-						</span>
+		<div class="scroll_box">
 
-						<ul id="second_menu" class="second_menu">
-							<li class="active">繁體中文</li>
-							<li>簡體</li>
-							<li>English</li>
+			<div class="banner">
+				<div class="banner_item"></div>
+				<div class="banner_txt">
+					<button class="material-icons">keyboard_arrow_left</button>
+					<tt>Discover your ideal hotel</tt>
+					<button class="material-icons">keyboard_arrow_right</button>
+				</div>
+			</div>
+			<div class="search_box home">
+				<div class="container">
+					<label class="search_inp">
+						<i class="material-icons">location_on</i>
+						<div class="search_condition">
+							<span class="title">DESTINATION</span>
+							<span class="detail">
+								<tt class="city">Bangkok</tt>
+								<tt class="country">,Thailand</tt>
+							</span>
+						</div>
+						<ul class="search_list">
+							<li>
+								<i class="material-icons">star</i>
+								<div class="search_list_txt">
+									<span class="city">Bangkok</span>
+									<span class="country">Thailand</span>
+								</div>
+							</li>
+							<li>
+								<i class="material-icons">star</i>
+								<div class="search_list_txt">
+									<span class="city">Osaka</span>
+									<span class="country">Japan</span>
+								</div>
+							</li>
+							<li>
+								<i class="material-icons">star</i>
+								<div class="search_list_txt">
+									<span class="city">Roma</span>
+									<span class="country">Italy</span>
+								</div>
+							</li>
 						</ul>
-					</li>
-					<li class="mod_select_box">
-						<span class="mod_select_btn">
-							<i class="material-icons">attach_money</i>
-							<tt>TWD</tt>
-							<i class="material-icons">arrow_drop_down</i>
-						</span>
-
-						<ul id="second_menu" class="second_menu">
-							<li class="active">繁體中文</li>
-							<li>簡體</li>
-							<li>English</li>
+					</label>
+					<label class="search_inp">
+						<i class="material-icons">date_range</i>
+						<div class="search_condition">
+							<span class="title">CHECK-IN / OUT</span>
+							<span class="detail">17 June - 19 June</span>
+						</div>
+						<ul class="search_list"></ul>
+					</label>
+					<label class="search_inp">
+						<i class="material-icons">person</i>
+						<div class="search_condition">
+							<span class="title">GUEST</span>
+							<span class="detail">2 adults・1 room</span>
+						</div>
+						<ul class="search_list guests">
+							<li>
+								<span>Adult</span>
+								<span class="num">
+									<button class="material-icons">remove</button>
+									<tt>2</tt>
+									<button class="material-icons">add</button>
+								</span>
+							</li>
+							<li>
+								<span>Child</span>
+								<span class="num">
+									<button class="material-icons">remove</button>
+									<tt>0</tt>
+									<button class="material-icons">add</button>
+								</span>
+							</li>
+							<li>
+								<span>Room</span>
+								<span class="num">
+									<button class="material-icons">remove</button>
+									<tt>1</tt>
+									<button class="material-icons">add</button>
+								</span>
+							</li>
 						</ul>
-					</li>
-				</ul>
-
+					</label>
+					<button class="search_btn">SEARCH</button>
+				</div>
 			</div>
+			<div class="top_choices">
+				<div class="container">
+					<h2>Top Choices</h2>
+					<ul class="list_tab">
+						<li class="on">
+							<h3 class="area">Bali</h3>
+							<span class="count">128</span>
+						</li>
+						<li>
+							<h3 class="area">Okinawa</h3>
+							<span class="count">67</span>
+						</li>
+						<li>
+							<h3 class="area">Taipei</h3>
+							<span class="count">53</span>
+						</li>
+					</ul>
+					<div class="content_box">
+						<div class="top_choices_group">
+							<div class="top_choices_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
+										alt="">
+								</div>
+								<h4>Hotel Aqua</h4>
+								<div class="evaluation">
+									<ul class="start">
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+									</ul>
+									<h5 class="evaluation_num">5.0</h5>
+									<h6 class="reviews">・2k reviews</h6>
+								</div>
+								<div class="mod_price" data-oprice="3,980">TWD 2,480</div>
+							</div>
+							<div class="top_choices_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
+										alt="">
+								</div>
+								<h4>Hotel Aqua</h4>
+								<div class="evaluation">
+									<ul class="start">
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+									</ul>
+									<h5 class="evaluation_num">5.0</h5>
+									<h6 class="reviews">・2k reviews</h6>
+								</div>
+								<div class="mod_price" data-oprice="3,980">TWD 2,480</div>
+							</div>
+							<div class="top_choices_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
+										alt="">
+								</div>
+								<h4>Hotel Aqua</h4>
+								<div class="evaluation">
+									<ul class="start">
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+									</ul>
+									<h5 class="evaluation_num">5.0</h5>
+									<h6 class="reviews">・2k reviews</h6>
+								</div>
+								<div class="mod_price" data-oprice="3,980">TWD 2,480</div>
+
+							</div>
+							<div class="top_choices_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/top1.jpg?raw=true"
+										alt="">
+								</div>
+								<h4>Hotel Aqua</h4>
+								<div class="evaluation">
+									<ul class="start">
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+										<li class="material-icons">grade</li>
+									</ul>
+									<h5 class="evaluation_num">5.0</h5>
+									<h6 class="reviews">・2k reviews</h6>
+								</div>
+								<div class="mod_price" data-oprice="3,980">TWD 2,480</div>
+							</div>
+						</div>
+						<button class="material-icons next">keyboard_arrow_right</button>
+					</div>
+
+				</div>
+			</div>
+			<div class="popular">
+				<div class="container">
+					<h2>Popular Destinations</h2>
+					<div class="content_box">
+						<div class="popular_group">
+							<div class="popular_item">
+								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Osaka.jpg?raw=true"
+									alt="">
+								<div class="txt_box">
+									<span>
+										<h6>JAPAN</h6>
+										<h3>Osaka</h3>
+									</span>
+									<i class="material-icons">expand_more</i>
+								</div>
+							</div>
+							<div class="popular_item">
+								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Kyoto.jpg?raw=true"
+									alt="">
+								<div class="txt_box">
+									<span>
+										<h6>JAPAN</h6>
+										<h3>Kyoto</h3>
+									</span>
+									<i class="material-icons">expand_more</i>
+								</div>
+							</div>
+							<div class="popular_item">
+								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Reykjavic.jpg?raw=true"
+									alt="">
+								<div class="txt_box">
+									<span>
+										<h6>iceland</h6>
+										<h3>Reykjavík</h3>
+									</span>
+									<i class="material-icons">expand_more</i>
+								</div>
+							</div>
+							<div class="popular_item">
+								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Paris.jpg?raw=true"
+									alt="">
+								<div class="txt_box">
+									<span>
+										<h6>France</h6>
+										<h3>Paris</h3>
+									</span>
+									<i class="material-icons">expand_more</i>
+								</div>
+							</div>
+							<div class="popular_item">
+								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Roman.jpg?raw=true"
+									alt="">
+								<div class="txt_box">
+									<span>
+										<h6>Italy</h6>
+										<h3>Roma</h3>
+									</span>
+									<i class="material-icons">expand_more</i>
+								</div>
+							</div>
+							<div class="popular_item">
+								<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Bangkok.jpg?raw=true"
+									alt="">
+								<div class="txt_box">
+									<span>
+										<h6>Thailand</h6>
+										<h3>Bangkok</h3>
+									</span>
+									<i class="material-icons">expand_more</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="inspiration">
+				<div class="container">
+					<h2>
+						Get Inspiration
+						<button class="inspiration_btn">SEE MORE</button>
+					</h2>
+					<div class="content_box">
+						<div class="inspiration_gruop">
+							<div class="inspiration_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/italy.jpg?raw=true"
+										alt="">
+								</div>
+								<h3>The fifth most visited country</h3>
+								<h4>
+									Italy is the fifth most visited country in the world, with a total of 52.3 million…
+								</h4>
+							</div>
+							<div class="inspiration_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Thailand.jpg?raw=true"
+										alt="">
+								</div>
+								<h3>Visit Thailand for Bangkok</h3>
+								<h4>
+									Asian tourists primarily visit Thailand for Bangkok and the historical, natural,
+									and…
+								</h4>
+							</div>
+							<div class="inspiration_item">
+								<div class="pic">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/NewZealand.jpg?raw=true"
+										alt="">
+								</div>
+								<h3>Lord of the Rings Tour</h3>
+								<h4>
+									The national cuisine has been described as Pacific Rim, incorporating the native
+									Māori…
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home subscribe">
+				<div class="container">
+					<div class="subscribe_txt">
+						Subscribe for Exclusive Offer
+					</div>
+					<div class="email_box">
+						<input type="text" placeholder="Your email address">
+						<button class="subscribe_btn">SUBSCRIBE</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="container">
+					<div class="qa_box">
+						<span class="cp_right">
+							© 2020 ALOHA, Inc. All rights reserved.
+						</span>
+						<ul class="question">
+							<li>
+								<a href="#">FAQs</a>
+							</li>
+							<li>
+								<a href="#">Terms of use</a>
+							</li>
+							<li>
+								<a href="#">Privacy policy</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="f_menu">
+						<li class="mod_select_box">
+							<span class="mod_select_btn">
+								<i class="material-icons">language</i>
+								<tt>English</tt>
+								<i class="material-icons">arrow_drop_down</i>
+							</span>
+
+							<ul id="second_menu" class="second_menu">
+								<li class="active">繁體中文</li>
+								<li>簡體</li>
+								<li>English</li>
+							</ul>
+						</li>
+						<li class="mod_select_box">
+							<span class="mod_select_btn">
+								<i class="material-icons">attach_money</i>
+								<tt>TWD</tt>
+								<i class="material-icons">arrow_drop_down</i>
+							</span>
+							<ul class="second_menu">
+								<li class="active">繁體中文</li>
+								<li>簡體</li>
+								<li>English</li>
+							</ul>
+							<select class="second_mb_menu">
+								<option value="">繁體中文</option>
+								<option value="">簡體</option>
+								<option value="">English</option>
+							</select>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
 		</div>
 	</div>
 </body>

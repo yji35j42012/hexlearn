@@ -1,9 +1,17 @@
 .reserve{
-    padding-top: 24px;
+    padding: 24px 40px;
     height: calc(100% - 72px);
+
     @include max576px{
-        padding-top: 0;
+        padding: 0;
         height: calc(100% - 102px);
+        .reserve_s_group{
+            padding: 0 15px;
+        }
+        h2{
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 }
 .inp_group{
@@ -79,6 +87,77 @@
             color: #6C51E2;
             font-size: 14px;
             font-weight: bold;
+        }
+    }
+}
+.reserve_s{
+    padding: 24px 40px;
+    height: calc(100% - 72px);
+    .reserve_s_group{
+        width: 100%;
+    } 
+    .reserve_s_item{
+        padding: 24px 0;
+        border-top: 1px solid #F1F0F8;
+        li{
+            display: flex;
+        }
+        li+li{
+            margin-top: 16px;
+        }
+        .title{
+            display: inline-block;
+            width: 100%;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: bold;
+            max-width: 190px;
+        }
+        .txt{
+            display: inline-block;
+            font-size: 16px;
+            line-height: 24px;
+            color: #00000099;
+        }
+        tt{
+            margin-right: 16px;
+        }
+    }
+    .reserve_s_item.mod_btn_box{
+        justify-content: flex-end;
+        button{
+            padding: 17px 32px;
+        }
+    }
+
+    @include max576px{
+        padding: 24px 15px;
+        h2{
+            font-size: 24px;
+            line-height: 30px;
+        }
+        .reserve_s_item{
+            .title{
+                max-width: 90px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .txt{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        tt{
+            display: block;
+        }
+        .reserve_s_item.mod_btn_box{
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            button{
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 8px;
+            }
         }
     }
 }

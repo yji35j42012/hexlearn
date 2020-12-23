@@ -1,0 +1,56 @@
+@import "mixin";
+$count: 8px;
+$length: 9;
+$types: (
+	margin   :  m,
+	padding   :  p,
+);
+// x軸 y軸
+@for $i from 1 through $length {
+	@each $name, $value in $types {
+		.#{$value}_x_#{$i} {
+			#{$name} : 0 $count * $i ;
+		}
+		.#{$value}_y_#{$i} {
+			#{$name} : $count * $i 0 ;
+		}
+	}
+}
+// 單向
+$types1: (
+	margin-top   :  mt,
+	padding-top   :  pt,
+	margin-right   :  mr,
+	padding-right   :  pr,
+	margin-bottom   :  mb,
+	padding-bottom   :  pb,
+	margin-left   :  ml,
+	padding-left   :  pl,
+);
+@for $i from 1 through $length {
+	@each $name, $value in $types1 {
+		.#{$value}_xl_#{$i} {
+			#{$name} :$count * $i ;
+		}
+		@include max1200px{
+			.#{$value}_lg_#{$i} {
+				#{$name} :$count * $i ;
+			}
+		}
+		@include max992px{
+			.#{$value}_md_#{$i} {
+				#{$name} :$count * $i ;
+			}
+		}
+		@include max768px{
+			.#{$value}_sm_#{$i} {
+				#{$name} :$count * $i ;
+			}
+		}
+		@include max576px{
+			.#{$value}_#{$i} {
+				#{$name} :$count * $i ;
+			}
+		}
+	}
+}
