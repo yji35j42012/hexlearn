@@ -1,17 +1,1 @@
-.active_item {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.ooo.active > .active_item,
-.ooo.active ~ .active_item {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media (pointer: fine), (-moz-touch-enabled: 0), screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .ooooo:hover {
-    opacity: 1;
-  }
-}
-/*# sourceMappingURL=ttt.css.map */
+/* No CSS *//*# sourceMappingURL=ttt.css.map */

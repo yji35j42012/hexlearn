@@ -25,6 +25,9 @@
 		@content;
 	}
 }
+
+%hand{cursor: pointer;}
+
 @mixin poa_img{
 	position: absolute;
 	top: 0;
@@ -84,4 +87,3 @@
 	background-repeat: $repeat;
 	background-size: $size;
 }
-%finger{cursor: pointer;}

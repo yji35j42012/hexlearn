@@ -1,22 +1,14 @@
-@mixin aniHandler{
 
-    &.active{
-        >.active_item,
-        ~.active_item{
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-}
-    .active_item{
-        visibility: hidden;
-        opacity: 0;
-    }
-.ooo{
-    @include aniHandler();
+$color: red;
+
+
+
+
+@mixin aaa{
+    @include hoverHandler(1,$bg_purple , $text_purple );
+    color: $text_purple;
 }
 
-%op07{opacity: .7;}
 
 
 
@@ -24,22 +16,75 @@
 
 
 
+// @mixin hoverHandler($op, $bg, $txt){
+//     @media (pointer: fine),
+//     (-moz-touch-enabled: 0),
+//     screen and (-ms-high-contrast: active),
+//     (-ms-high-contrast: none) {
+//         &:hover{
+//             opacity: $op;
+//             background-color: $bg;
+//             color: $txt;
+//             @content;
+//         }
+//     }
+// }
 
-$op: 1 !default;
+// .place_box_item{
+//     color: red;
+//     >li{
+//         @include hoverHandler(.7, unset, unset);
+//     }
+// }
 
-@mixin hoverHandler($op){
-	@media (pointer: fine),
-	(-moz-touch-enabled: 0),
-	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){ 
-        &:hover{
-            opacity: $op;
-            @content;
-        }
-	}
-}
 
-.ooooo{
-    @include hoverHandler(1);
-}
+// %op07{opacity: .7;}
+
+// @mixin mediaHandler{
+//     @media (pointer: fine), (-moz-touch-enabled: 0), screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//         @content;
+//     }
+// }
+
+// .aaa{
+//     @include mediaHandler{
+//         font-size: 1px;
+//     }
+// }
+// @mixin aniHandler{
+//     &.active{
+//         >.active_item,
+//         ~.active_item{
+//             visibility: visible;
+//             opacity: 1;
+//         }
+//     }
+// }
+//  .active_item{
+//     visibility: hidden;
+//     opacity: 0;
+// }
+// .ooo{
+//     @include aniHandler();
+// }
+
+
+
+// $op: 1 !default;
+
+// @mixin hoverHandler($op){
+// 	@media (pointer: fine),
+// 	(-moz-touch-enabled: 0),
+// 	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){ 
+//         &:hover{
+//             opacity: $op;
+//             @content;
+//         }
+// 	}
+// }
+
+// .ooooo{
+//     @include hoverHandler(1);
+// }
 
 

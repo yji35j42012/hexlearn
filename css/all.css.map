@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,EAAE,CAAA;EACE,KAAK,EDAK,MAAM;CCCnB;;AACD,AAAA,EAAE,CAAA;EFFE,KAAK,ECAK,MAAM;CCInB",
+    "sources": [
+        "../text/all.scss",
+        "../text/_mixin.scss",
+        "../text/_share.scss",
+        "../text/_index.scss"
+    ],
+    "names": [],
+    "file": "all.css"
+}

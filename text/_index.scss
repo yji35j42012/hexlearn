@@ -1,0 +1,6 @@
+h1{
+    color: $text_purple;
+}
+h2{
+    @include second($text_purple);
+}
