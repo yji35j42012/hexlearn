@@ -5,44 +5,49 @@
 	display: flex;
 	align-items: center;
 	margin: auto;
-}
-.login_bg{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/login.jpg?raw=true')no-repeat center/cover;
+
+	&_bg{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/login.jpg?raw=true')no-repeat center/cover;
+
+		&_txt{
+			height: calc( 100% - 72px);
+			@include d_f(flex , unset , unset , unset , wrap);
+			align-content: space-between;
+			padding: 100px 30px 24px 85px;
+			.txt_box{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				.title{
+					color: $text_primary;
+					font-size: 48px;
+					line-height: 64px;
+					font-weight: 900;
+					font-family: $text_family_secondary;
+				}
+				span{
+					color: #00000099;
+				}
+			}
+		}
+	}
 	.header{
 		position: relative;
 		padding: 0 85px;
 		top: 0;
 		background: transparent;
 	}
-	.close_btn{
-		display: none;
+	
+	&_txt{
+		color: #00000099;
+		font-size: 12px;
+		line-height: 18px;
 	}
-	.content{
-		height: calc( 100% - 72px);
-		display: flex;
-		flex-wrap: wrap;
-		align-content: space-between;
-		padding: 100px 30px 24px 85px;
-		
-	}
-	.txt_box{
-		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		.title{
-			color: #121212;
-			font-size: 48px;
-			line-height: 64px;
-			font-weight: bold;
-		}
-		span{
-			color: #00000099;
-		}
-	}
-	.address_box{
+
+	&_address{
 		position: relative;
 		background: #121212;
 		color: #FFFFFF;
@@ -54,35 +59,102 @@
 			font-size: 18px;
 		}
 	}
-	@include max768px{
-		.content{
-			align-content: flex-end;
-			justify-content: center;
-		}
-		.txt_box{
-			display: none;
-		}
+	
+	.close_btn{
+		display: none;
 	}
 
+	.login_btn{
+		@include primary_btn;
+		width: 100%;
+		padding: 16px;
+		text-align: center;
+		font-weight: bold;
+	}
+	&_box{
+		height: 100%;
+		padding-left: 30px;
+		padding-right: 85px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	
+		.mod_checkbox{
+			color: #00000099;
+			font-weight: 400;
+			span{
+				border-color: #6C51E2;
+			}
+			input:checked ~ span{
+				background: #6C51E2;
+			}
+			input:checked ~ span::after{
+				border-color: #fff;
+			}
+		}
+		
+		.new_account{
+			width: 100%;
+			text-align: center;
+			color: #00000099;
+			a{
+				font-weight: bold;
+			}
+		}
+
+
+	}
+	@include max1200px{
+		&_box{
+			padding-right: 30px;
+		}
+	}
+	@include max768px{
+		&_bg{
+			&_txt{
+				@include max768px{
+					display: none;
+				}
+			}
+		}
+		&_box{
+			justify-content: flex-start;
+			position: absolute;
+			top: 100px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			max-width: 330px;
+			height: auto;
+			padding: 0;
+		}
+	}
 	@include max576px{
-		background: none;
+		&_bg{
+			background: none;
+		}
 		.header{
 			padding: 0 15px;
+			.logo{
+				right: auto;
+			}
 		}
 		.container{
 			justify-content: flex-end;
 		}
-		.address_box{
+		&_address{
 			display: none;
-		}
-		.logo{
-			right: auto;
 		}
 		.close_btn{
 			display: block;
 		}
+		&_box{
+			max-width: none;
+			padding: 0 15px;
+		}
 	}
 }
+
 .mod_inp{
 	width: 100%;
 	height: 55px;
@@ -91,61 +163,4 @@
 	border-radius: 3px;
 	padding: 0 10px;
 	background: #fff;
-}
-.login_box{
-	height: 100%;
-	padding-left: 30px;
-	padding-right: 85px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	.login_txt{
-		color: #00000099;
-		line-height: 18px;
-	}
-	.mod_checkbox{
-		span{
-			border-color: #6C51E2; 
-		}
-		input:checked ~ span{
-			background: #6C51E2;
-		}
-		input:checked ~ span::after{
-			border-color: #fff;
-		}
-	}
-	.log_btn{
-		@include primary_btn;
-		width: 100%;
-		padding: 16px;
-		text-align: center;
-		font-weight: bold;
-	}
-	.new_account{
-		width: 100%;
-		text-align: center;
-		color: #00000099;
-		a{
-			font-weight: bold;
-		}
-	}
-	@include max1200px{
-		padding-right: 30px;
-	}
-	@include max768px{
-		justify-content: flex-start;
-		position: absolute;
-		top: 100px;
-		left: 0;
-		right: 0;
-		margin: auto;
-		max-width: 330px;
-		height: auto;
-		padding: 0;
-	}
-	@include max576px{
-		max-width: none;
-		padding: 0 15px;
-	}
 }

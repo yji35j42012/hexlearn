@@ -75,7 +75,7 @@
 			width: 100%;
 			transition-duration: .3s;
 		}
-		@include hoverHandler{
+		@include hoverHandler(.7,unset,#6451e2){
 			li:hover{
 				color: #6C51E2;
 				transition-duration: .3s;

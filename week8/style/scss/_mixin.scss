@@ -18,11 +18,23 @@
 		@content;
 	}
 }
-@mixin hoverHandler{
+
+@mixin hoverHandler($op, $bg, $txt) {
 	@media (pointer: fine),
 	(-moz-touch-enabled: 0),
-	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){ 
+	screen and (-ms-high-contrast: active),
+	(-ms-high-contrast: none) {
 		@content;
+		&:hover{
+			opacity: $op;
+			background-color: $bg;
+			color: $txt;
+		}
+	}
+	&:active{
+		opacity: $op;
+		background-color: $bg;
+		color: $txt;
 	}
 }
 
@@ -44,26 +56,29 @@
 	left: $left;
 }
 
-@mixin edit_btn {
-	color: $primary_color;
+@mixin primary_btn {
+	@include hoverHandler(1, #fff, $text_purple);
+	color: #fff;
 	border-radius: 3px;
-	border: 1px solid $primary_color;
-	background: transparent;
+	background: $primary_color;
+	border: 1px solid $bg_secondary;
 	text-transform: uppercase;
 	cursor: pointer;
 }
+@mixin secondary_btn {
+	@include hoverHandler(1, $bg_secondary, $text_purple);
+	color:  $primary_color;
+	border-radius: 3px;
+	border: 1px solid  $primary_color;
+	background: transparent;
+	text-transform: uppercase;
+}
 @mixin cancel_btn {
+	@include hoverHandler(.7, unset, unset);
 	color: #fff;
 	border-radius: 3px;
 	border: 1px solid #fff;
 	background: transparent;
-	text-transform: uppercase;
-	cursor: pointer;
-}
-@mixin primary_btn {
-	color: #fff;
-	border-radius: 3px;
-	background: $primary_color;
 	text-transform: uppercase;
 	cursor: pointer;
 }
@@ -86,4 +101,31 @@
 	background-position: $x $y;
 	background-repeat: $repeat;
 	background-size: $size;
+}
+// orange use
+@mixin omission($line, $height) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+	overflow: hidden;
+	max-height:$height;
+}
+
+// 選取勾勾
+@mixin checktick($width, $height, $x, $y, $boder, $bc) {
+	content: none;
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+	left: $x;
+	top: $y;
+	border-width: 0 0 $boder $boder;
+	border-style:  solid;
+	border-color: $bc;
+	transform: rotate(-48deg);
+}
+// 陰影
+@mixin shadow_primary {
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2);
 }

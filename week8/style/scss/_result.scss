@@ -435,20 +435,7 @@
         .material-icons{
             display: none;
         }
-        @include hoverHandler{
-            &:hover{
-                background: #6C51E2;
-                color: #fff;
-                transition-duration: .3s;
-            }
-        }
-        &.on,
-        &:active{
-            background: #6C51E2;
-            color: #fff;
-            transition-duration: .3s;
-        }
-        
+        @include hoverHandler(.7, #6C51E2,#fff);        
     }
     ul{
         display: flex;

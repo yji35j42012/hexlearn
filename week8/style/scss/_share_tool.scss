@@ -1,18 +1,28 @@
 /*================================================*/
-h1{
-
+html,
+body,
+input,
+button,
+select,
+textarea,
+tt {
+    font-family: 'Open sans',
+    sans-serif;
+    color: $text_primary;
+    font-size: $text_size_primary;
 }
+
 h2{
 	font-size: 32px;
 	line-height: 38px;
 	font-weight: bold;
-	font-family: 'Raleway', sans-serif;
+	font-family: $text_family_secondary;
 }
 h3{
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: bold;
-	font-family: 'Raleway', sans-serif;
+	font-family: $text_family_secondary;
 }
 .fz-12{
 	font-size: 12px;
@@ -112,9 +122,8 @@ h3{
 		padding: 0 15px;
 		height: 56px;
 		.logo{
-			left: 0;
-			right: 0;
-			margin: 0 auto;
+			@include pos_abs(0,0,0,0);
+			margin: auto;
 		}
 		.container{
 			justify-content: space-between;
@@ -197,13 +206,7 @@ h3{
 				background: #F1F0F8;
 				cursor: pointer;
 			}
-			@include hoverHandler{
-				&:hover{
-					background: #F1F0F8;
-					cursor: pointer;
-				}
-			}
-
+			@include hoverHandler(1 , #F1F0F8 , unset);
 		}
 		i{
 			position: relative;
@@ -643,7 +646,7 @@ h3{
 		@include primary_btn;
 	}
 	.edit_btn{
-		@include edit_btn;
+		@include secondary_btn;
 	}
 }
 .mod_price{
