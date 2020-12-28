@@ -1,1 +1,29 @@
-/* No CSS *//*# sourceMappingURL=ttt.css.map */
+@media (pointer: fine), (-moz-touch-enabled: 0), screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ooo:hover {
+    opacity: 1;
+    background-color: unset;
+    color: unset;
+    text-align: center;
+  }
+  .ooo:hover:after {
+    content: '';
+  }
+}
+
+.ooo:active {
+  opacity: 1;
+  background-color: unset;
+  color: unset;
+}
+
+@media (pointer: fine), (-moz-touch-enabled: 0), screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .rrr:hover {
+    text-align: center;
+  }
+  .rrr:hover {
+    opacity: 1;
+    background-color: unset;
+    color: unset;
+  }
+}
+/*# sourceMappingURL=ttt.css.map */

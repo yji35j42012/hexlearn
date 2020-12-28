@@ -1,14 +1,55 @@
 
 $color: red;
 
-
-
-
-@mixin aaa{
-    @include hoverHandler(1,$bg_purple , $text_purple );
-    color: $text_purple;
+@mixin hoverHandler($op, $bg, $txt){
+	@media (pointer: fine),
+	(-moz-touch-enabled: 0),
+	screen and (-ms-high-contrast: active),
+	(-ms-high-contrast: none) {
+		&:hover{
+			opacity: $op;
+			background-color: $bg;
+			color: $txt;
+			@content;
+		}
+	}
+	&:active{
+		opacity: $op;
+		background-color: $bg;
+		color: $txt;
+	}
 }
 
+@mixin hoverHandler2($op, $bg, $txt){
+	@media (pointer: fine),
+	(-moz-touch-enabled: 0),
+	screen and (-ms-high-contrast: active),
+	(-ms-high-contrast: none) {
+		@content;
+		&:hover{
+			opacity: $op;
+			background-color: $bg;
+			color: $txt;
+		}
+	}
+}
+
+.ooo{
+	@include hoverHandler(1,unset,unset){
+		text-align: center;
+		&:after{
+			content:'';
+		}
+	};
+}
+.rrr{
+	@include hoverHandler2(1,unset,unset){
+		&:hover{
+			text-align: center;
+		}
+	};
+	
+}
 
 
 
@@ -75,7 +116,7 @@ $color: red;
 // @mixin hoverHandler($op){
 // 	@media (pointer: fine),
 // 	(-moz-touch-enabled: 0),
-// 	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){ 
+// 	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
 //         &:hover{
 //             opacity: $op;
 //             @content;

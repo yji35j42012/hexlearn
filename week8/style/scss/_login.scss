@@ -2,8 +2,7 @@
 	width: 100%;
 	max-width: 1280px;
 	height: 100%;
-	display: flex;
-	align-items: center;
+	@include d_f_center(flex , center ,unset);
 	margin: auto;
 
 	&_bg{
@@ -29,7 +28,7 @@
 					font-family: $text_family_secondary;
 				}
 				span{
-					color: #00000099;
+					color: $text_secondary;
 				}
 			}
 		}
@@ -51,8 +50,7 @@
 		position: relative;
 		background: #121212;
 		color: #FFFFFF;
-		display: inline-flex;
-		align-items: center;
+		@include d_f_center(inline-flex , center , unset);
 		padding: 8px 16px;
 		border-radius: 3px;
 		.material-icons{
@@ -75,18 +73,16 @@
 		height: 100%;
 		padding-left: 30px;
 		padding-right: 85px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	
+		@include d_f_center(flex , unset , center);
+		flex-direction: column;	
 		.mod_checkbox{
 			color: #00000099;
 			font-weight: 400;
 			span{
-				border-color: #6C51E2;
+				border-color: $bg_secondary;
 			}
 			input:checked ~ span{
-				background: #6C51E2;
+				background: $bg_secondary;
 			}
 			input:checked ~ span::after{
 				border-color: #fff;
@@ -101,8 +97,6 @@
 				font-weight: bold;
 			}
 		}
-
-
 	}
 	@include max1200px{
 		&_box{
@@ -112,17 +106,12 @@
 	@include max768px{
 		&_bg{
 			&_txt{
-				@include max768px{
-					display: none;
-				}
+				display: none;
 			}
 		}
 		&_box{
 			justify-content: flex-start;
-			position: absolute;
-			top: 100px;
-			left: 0;
-			right: 0;
+			@include pos_abs(100px 0 auto 0 );
 			margin: auto;
 			max-width: 330px;
 			height: auto;
