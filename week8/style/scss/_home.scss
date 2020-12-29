@@ -111,7 +111,7 @@
 		height: 40px;
 		background: #F1F0F8;
 		border-radius: 50%;
-		@include max1200px{
+		@include mw_xl{
 			right: 20px;
 		}
 		&:hover{
@@ -165,7 +165,7 @@
 			font-size: 17px;
 		}
 	}
-	@include max576px{
+	@include mw_sm{
 		padding-left: 15px;
 	}
 }

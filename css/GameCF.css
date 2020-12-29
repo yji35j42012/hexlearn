@@ -1304,7 +1304,7 @@ main .info_container .current_info_container {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   color: #a3ae52;
-  text-shadow: 1px 0px 1px #300, 1px 1px 1px #300, -1px 0px 1px #300, -1px -1px 1px #300, -1px 1px 1px #000, 1px -1px 1px #300, 0px 1px 1px #300, 0px -1px 1px #300;
+  text-shadow: 1px 0px 1px #300, 1px 1px 1px #300, -1px 0px 1px #300, -1px -1px 1px #300, -1px 1px 1px #000, 1px -1px 1px #300, 0px 1px 1px #300, 0px -1px 1px #300;
 }
 
 .odds_content .meron_style {

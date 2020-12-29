@@ -32,22 +32,22 @@ $types1: (
 		.#{$value}_xl_#{$i} {
 			#{$name} :$count * $i ;
 		}
-		@include max1200px{
+		@include mw_xl{
 			.#{$value}_lg_#{$i} {
 				#{$name} :$count * $i ;
 			}
 		}
-		@include max992px{
+		@include mw_lg{
 			.#{$value}_md_#{$i} {
 				#{$name} :$count * $i ;
 			}
 		}
-		@include max768px{
+		@include mw_md{
 			.#{$value}_sm_#{$i} {
 				#{$name} :$count * $i ;
 			}
 		}
-		@include max576px{
+		@include mw_sm{
 			.#{$value}_#{$i} {
 				#{$name} :$count * $i ;
 			}

@@ -20,6 +20,9 @@
   .rrr:hover {
     text-align: center;
   }
+  .rrr:hover:before {
+    width: 100%;
+  }
   .rrr:hover {
     opacity: 1;
     background-color: unset;

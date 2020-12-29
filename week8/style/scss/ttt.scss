@@ -1,6 +1,7 @@
 
 $color: red;
 
+
 @mixin hoverHandler($op, $bg, $txt){
 	@media (pointer: fine),
 	(-moz-touch-enabled: 0),
@@ -19,6 +20,16 @@ $color: red;
 		color: $txt;
 	}
 }
+.ooo{
+	@include hoverHandler(1,unset,unset){
+		text-align: center;
+		&:after{
+			content:'';
+		}
+	};
+}
+
+
 
 @mixin hoverHandler2($op, $bg, $txt){
 	@media (pointer: fine),
@@ -33,27 +44,17 @@ $color: red;
 		}
 	}
 }
-
-.ooo{
-	@include hoverHandler(1,unset,unset){
-		text-align: center;
-		&:after{
-			content:'';
-		}
-	};
-}
 .rrr{
 	@include hoverHandler2(1,unset,unset){
 		&:hover{
 			text-align: center;
 		}
+		&:hover:before {
+			width: 100%;
+		}
 	};
 	
 }
-
-
-
-
 
 
 

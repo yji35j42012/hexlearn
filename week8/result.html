@@ -14,9 +14,8 @@
 
 <body>
 	<div class="wrap" id="app">
-
 		<div class="header">
-			<div class="container">
+			<div class="container" style="display: none">
 				<button class="menu_btn material-icons">menu</button>
 				<h1 class="logo"><a href="./home.html">ALOHA</a></h1>
 				<ul class="h_menu">
@@ -30,14 +29,19 @@
 							<li>簡體</li>
 							<li>English</li>
 						</ul>
+						<select class="second_mb_menu">
+							<option value="">繁體中文</option>
+							<option value="">簡體</option>
+							<option value="">English</option>
+						</select>
 					</li>
-					<li>Sign up</li>
+					<li><a href="#">Sign up</a></li>
 				</ul>
-				<a class="login_btn fz-16" href="#">Login</a>
+				<a class="login_btn fz-16" href="./login.html">Login</a>
 			</div>
 		</div>
-		<div class="search_box">
-			<div class="container">
+		<div class="search">
+			<div class="container" style="display:none">
 				<label class="search_inp">
 					<i class="material-icons">location_on</i>
 					<div class="search_condition">
@@ -116,17 +120,17 @@
 			</div>
 		</div>
 
-		<div class="scroll_box" style="display: none;">
+		<div class="scroll_box">
 			<!-- 扣掉上面高度，開卷軸 -->
 			<!-- 中間內容 -->
-			<div class="result_box">
+			<div class="result">
 				<div class="container">
-					<div class="function">
-						<div class="function_header">
+					<div class="result_function">
+						<div class="result_function_header">
 							<h2>Bangkok</h2>
 							<span class="count">3,240</span>
 						</div>
-						<div class="function_group">
+						<div id="result_function_group" class="result_function_group">
 							<div class="function_item">
 								<span class="function_title">Deals</span>
 								<ul>
@@ -314,24 +318,24 @@
 							</div>
 						</div>
 					</div>
-					<div class="list_box">
+					<div class="result_list">
 						<ul class="list_tab">
-							<li>
+							<li id="filter_Handler">
 								<i class="material-icons">filter_list</i>
 								FILTER
 							</li>
-							<li>
+							<li id="sort_Handler">
 								<i class="material-icons">sort</i>
 								SORT
 							</li>
 						</ul>
-						<ul class="list_header">
+						<ul id="result_list_header" class="result_list_header">
 							<li class="on">Recommended</li>
 							<li>Lowest Price</li>
 							<li>Best value</li>
 							<li>Distance to City Center</li>
 						</ul>
-						<div class="list_group">
+						<div class="result_list_group">
 							<div class="list_item">
 								<div class="pic">
 									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
@@ -495,9 +499,23 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
+	<script>
+		$("#result_list_header li").click(function(){
+			$("#result_list_header li").removeClass("on");
+			$(this).addClass("on");
+			
+		})
+		$("#sort_Handler").click(function(){			
+			$("#result_list_header").toggleClass("active");
+		})
+		$("#filter_Handler").click(function(){
+			$("#result_function_group").addClass("active");
+			
+		})
+	</script>
 </body>
 
 </html>

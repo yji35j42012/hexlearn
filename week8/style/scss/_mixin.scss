@@ -1,44 +1,44 @@
-@mixin max1200px{
-	@media screen and (max-width: 1200px){
+// max1200px
+@mixin mw_xl{
+	@media screen and (max-width: 1199px){
 		@content;
 	}
 }
-@mixin max992px{
-	@media screen and (max-width: 992px){
+// max992px
+@mixin mw_lg{
+	@media screen and (max-width: 991px){
 		@content;
 	}
 }
-@mixin max768px{
-	@media screen and (max-width: 768px){
+// max768px
+@mixin mw_md{
+	@media screen and (max-width: 767px){
 		@content;
 	}
 }
-@mixin max576px{
-	@media screen and (max-width: 576px){
+// max576px
+@mixin mw_sm{
+	@media screen and (max-width: 575px){
 		@content;
 	}
 }
 
 @mixin hoverHandler($op, $bg, $txt) {
-	@media (pointer: fine),
-	(-moz-touch-enabled: 0),
-	screen and (-ms-high-contrast: active),
-	(-ms-high-contrast: none) {
-		@content;
+	@media (pointer: fine),(-moz-touch-enabled: 0),screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
 		&:hover{
+			@content;
 			opacity: $op;
 			background-color: $bg;
 			color: $txt;
 		}
 	}
-	&:active{
+	&:active {
+		@content;
 		opacity: $op;
 		background-color: $bg;
 		color: $txt;
 	}
 }
-
-%hand{cursor: pointer;}
 
 @mixin poa_img{
 	position: absolute;
@@ -64,23 +64,30 @@
 	border: 1px solid $bg_secondary;
 	text-transform: uppercase;
 	cursor: pointer;
+	transition-duration: .3s;
+	font-weight: bold;
 }
 @mixin secondary_btn {
-	@include hoverHandler(1, $bg_secondary, $text_purple);
+	@include hoverHandler(1, $bg_secondary, #fff);
 	color:  $primary_color;
 	border-radius: 3px;
 	border: 1px solid  $primary_color;
 	background: transparent;
 	text-transform: uppercase;
+	cursor: pointer;
+	transition-duration: .3s;
+	font-weight: bold;
 }
 @mixin cancel_btn {
-	@include hoverHandler(.7, unset, unset);
+	@include hoverHandler(1, unset, unset);
 	color: #fff;
 	border-radius: 3px;
 	border: 1px solid #fff;
 	background: transparent;
 	text-transform: uppercase;
 	cursor: pointer;
+	transition-duration: .3s;
+	font-weight: bold;
 }
 
 @mixin d_f($flex, $ai, $jc, $di, $wr) {
@@ -129,3 +136,7 @@
 @mixin shadow_primary {
 	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2);
 }
+%transition {
+	transition: all .3s ease-in-out;
+}
+%hand{cursor: pointer;}

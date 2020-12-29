@@ -52,7 +52,7 @@ h3{
 		display: flex;
 		flex-wrap: wrap;
 	}
-	@include max576px{
+	@include mw_sm{
 		.container{
 			flex-wrap: wrap-reverse;
 		}
@@ -63,11 +63,6 @@ h3{
 		max-width: 730px;
 		display: flex;
 		flex-wrap: wrap;
-	}
-	@include max576px{
-		.container{
-			flex-wrap: wrap-reverse;
-		}
 	}
 }
 .header{
@@ -110,15 +105,16 @@ h3{
 			line-height: 20px;
 			color: #121212;
 			margin-right: 48px;
+			cursor: pointer;
 		}
 	}
 	.menu_btn{
 		display: none;
 	}
-	@include max768px {
+	@include mw_md {
 		padding: 0 40px;
 	}
-	@include max576px{
+	@include mw_sm{
 		padding: 0 15px;
 		height: 56px;
 		.logo{
@@ -138,7 +134,7 @@ h3{
 }
 
 
-.search_box{
+.search{
 	width: 100%;
 	background: #F1F0F8;
 	z-index: 9;
@@ -150,7 +146,7 @@ h3{
 		height: 100%;
 		max-width: 1110px;
 	}
-	.search_inp{
+	&_inp{
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -187,7 +183,7 @@ h3{
 			color: #00000099;
 		}
 	}
-	.search_list{
+	&_list{
 		display: none;
 		position: absolute;
 		width: 100%;
@@ -235,14 +231,14 @@ h3{
 			justify-content: space-between;
 		}
 	}
-	.search_btn{
+	&_btn{
 		width: 125px;
 		height: 55px;
 		@include primary_btn;
 	}
-	@include max768px{
+	@include mw_md{
 		padding: 16px 40px;
-		.search_inp{
+		&_inp{
 			max-width: none;
 			padding: 8px 0 8px 16px;
 			i{
@@ -250,9 +246,9 @@ h3{
 			}
 		}
 	}
-	@include max576px{
+	@include mw_sm{
 		padding: 0;
-		.search_inp{
+		&_inp{
 			height: 50px;
 			padding: 0;
 			justify-content: center;
@@ -272,12 +268,12 @@ h3{
 				font-size: 12px;
 			}
 		}
-		.search_btn{
+		&_btn{
 			display: none;
 		}
 	}
 }
-.search_box.home{
+.search.home{
 	position: relative;
 	background: #fff;
 	z-index: 1;
@@ -298,12 +294,12 @@ h3{
 	.detail{
 		display: none;
 	}
-	@include max992px{
+	@include mw_lg{
 		.container{
 			flex-wrap: wrap;
 			transform: translate3d(0, -25%, 0);
 		}
-		.search_inp{
+		&_inp{
 			flex: none;
 			width: 100%;
 			max-width: none;
@@ -312,7 +308,7 @@ h3{
 			justify-content: flex-start;
 			padding: 0 16px;
 		}
-		.search_inp + .search_inp{
+		&_inp + .search_inp{
 			margin-left: 0;
 			margin-top: 16px;
 		}
@@ -325,9 +321,9 @@ h3{
 			display: inline-block;
 		}
 	}
-	@include max576px{
+	@include mw_sm{
 		padding: 0 15px;
-		.search_condition{
+		&_condition{
 			.title{
 				display: block;
 			}
@@ -335,7 +331,7 @@ h3{
 				display: block;
 			}
 		}
-		.search_btn{
+		&_btn{
 			display: block;
 		}
 	}
@@ -369,7 +365,7 @@ h3{
 	.material-icons{
 		color: #000;
 	}
-	@include max992px{
+	@include mw_lg{
 		padding: 24px 40px;
 		.qa_box{
 			width: 100%;
@@ -382,7 +378,7 @@ h3{
 			margin-left: 0;
 		}
 	}
-	@include max576px{
+	@include mw_sm{
 		.qa_box{
 			justify-content: center;
 			flex-wrap: wrap-reverse;
@@ -399,16 +395,16 @@ h3{
 	overflow-x: hidden;
 	overflow-y: auto;
 	z-index: 1;
-	@include max768px{
+	@include mw_md{
 		height: calc(100% - 159px);
 	}
-	@include max576px{
+	@include mw_sm{
 		height: calc(100% - 106px);
 	}
 }
 .home .scroll_box{
 	height: calc(100% - 72px);
-	@include max576px{
+	@include mw_sm{
 		height: calc(100% - 56px);
 	}
 }
@@ -441,10 +437,12 @@ h3{
 		visibility: collapse;
 		transform-origin: 0 0;
 		transition: all 300ms cubic-bezier(.55,0,.42,1);
+		z-index: 1;
 		li{
 			margin-right: 0;
 			white-space: nowrap;
 			padding: 5px 10px;
+			@include hoverHandler(1px, $bg_secondary, #fff);
 		}
 
 	}
@@ -458,7 +456,7 @@ h3{
 			visibility: visible;
 		}
 	}
-	@include max768px{
+	@include mw_md{
 		.second_menu{
 			display: none;
 		}
@@ -510,7 +508,7 @@ h3{
 			@include primary_btn;
 		}
 	}
-	@include max768px{
+	@include mw_md{
 		&_txt{
 			max-width: 171px;
 			font-size: 24px;
@@ -518,7 +516,7 @@ h3{
 			text-align: left;
 		}
 	}
-	@include max576px{
+	@include mw_sm{
 		padding: 0 15px;
 		.container{
 			flex-wrap: wrap;
@@ -547,13 +545,13 @@ h3{
 		margin-left: 0;
 		margin-top: 24px;
 	}
-	@include max768px{
+	@include mw_md{
 		.subscribe_txt{
 			max-width: 1100px;
 			text-align: center;
 		}
 	}
-	@include max576px{
+	@include mw_sm{
 		.container{
 			padding: 24px 15px;
 		}
@@ -605,7 +603,7 @@ h3{
 		border-top: none;
 		border-right: none;
 	}
-	@include max1200px{
+	@include mw_xl{
 		font-size: 14px;
 		line-height: 20px;
 	}

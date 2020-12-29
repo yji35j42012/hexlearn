@@ -1,465 +1,479 @@
-.result_box{
-    margin-top: 24px;
-    .container{
-        display: flex;
-    }
-    @include max1200px{
-        padding-left: 40px;
-        margin-top: 0;
-        .container{
-            margin: 0;
-        }
-    }
-    @include max576px{
-        padding-left: 0;
-        .container{
-            flex-wrap: wrap;
-        }
-    }
-}
-.function{
-    width: 350px;
-    flex: none;
-    padding: 24px 0 24px;
+.result{
+	margin-top: 24px;
+	@include mw_xl{
+		padding-left: 40px;
+		margin-top: 0;
+	}
+	@include mw_sm{
+		padding-left: 0;
+	}
+	.container{
+		display: flex;
+		@include mw_xl{
+			margin: 0;
+		}
+		@include mw_sm{
+			flex-wrap: wrap;
+		}
+	}
 
-    &_header{
-        display: flex;
-        height: 40px;
-    }
-    .count{
-        color: #6C51E2;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    @include max1200px {
-        width: 210px;
-    }
-    @include max576px{
-        width: 100%;
-        padding: 16px 0 24px;
-        .function_header{
-            justify-content: center;
-        }
-    }
-}
-.function_group{
-    margin-top: 25px;
-    padding: 0 24px;
-    background: #F1F0F8;
-    border-radius: 8px;
-    .function_item{
-        padding: 24px 0;
-        
-    }
-    .function_item+.function_item{
-        border-top:1px solid #fff;
-    }
-    .function_title{
-        display: block;
-        margin-bottom: 17px;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: bold;
+	&_function{
+		width: 350px;
+		flex: none;
+		padding: 24px 0 24px;
+		&_header{
+			display: flex;
+			height: 40px;
+			@include mw_sm{
+				justify-content: center;
+			}
+		}
+		.count{
+			color: #6C51E2;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		&_group{
+			margin-top: 25px;
+			padding: 0 24px;
+			background: #F1F0F8;
+			border-radius: 8px;
+			.function_item{
+				padding: 24px 0;
+			}
+			.function_item+.function_item{
+				border-top:1px solid #fff;
+			}
+			.function_title{
+				display: block;
+				margin-bottom: 17px;
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: bold;
+		
+			}
+			li+li{
+				margin-top: 8px;
+			}
+			.star{
+				margin-right: 8px;
+				li + li{
+					margin-top: 0;
+				}
+			}
+			.price_box{
+				position: relative;
+				@include d_f_center(flex , center , flex-start);
+				margin-top: 16px;
+				white-space: nowrap;
+				span{
+					background: #fff;
+					flex: 1 1 50%;
+					padding: 8px;
+					border-radius: 4px;
+		
+					tt:first-child{
+						font-size: 12px;
+						line-height: 17px;
+						font-weight: bold;
+						font-family: 'Open Sans', sans-serif;
+					}
+					tt:nth-child(2){
+						font-size: 14px;
+						line-height: 19px;
+						color: #00000099;
+						font-family: 'Open Sans', sans-serif;
+						@include mw_xl{
+							font-size: 1px;
+							line-height: 18px;
+						}
+					}
+				}
+		
+				.price_dash{
+					margin: 0 8px;
+					@include mw_xl{
+						display: none;
+					}
+				}
+				tt{
+					display: block;
+				}
+			}
+			.function_item_check{display: none;}
+		
+			@include mw_sm{
+				position: fixed;
+				z-index: 99;
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				margin-top: 0;
+				transform: translateY(-100%);
+				transition-duration: .3s;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				-webkit-overflow-scrolling: touch;
+				padding-bottom: 180px;
+				&.active{
+					transform: translateY(0);
+				}
+				.function_item_check{
+					display: block;
+					background: #000000DE;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					border-radius: 8px 8px 0px 0px;
+					padding: 20px 15px;
+					.result_txt{
+						font-size: 24px;
+						line-height: 30px;
+						color: #fff;
+						font-family: 'Raleway', sans-serif;
+					}
+					.mod_btn_box{
+						margin-top: 24px;
+						justify-content: space-between;
+					}
+					.clear{
+						@include cancel_btn;
+						min-width: 160px;
+						padding: 17px 0;
+						border-radius: 3px;
+						margin-left: 0;
+					}
+					.filter{
+						@include primary_btn;
+						min-width: 160px;
+						padding: 17px 0;
+						border-radius: 3px;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+		@include mw_xl{
+			width: 210px;
+		}
+		@include mw_sm{
+			width: 100%;
+			padding: 16px 0 24px;
+		}
+	}
+	&_list{
+		width: 100%;
+		padding: 24px 0 24px 30px;
 
-    }
-    li+li{
-        margin-top: 8px;
-    }
-    .star{
-        margin-right: 8px;
-        li + li{
-            margin-top: 0;
-        }
-    }
-    .price_box{
-        position: relative;
-        @include d_f_center(flex , center , flex-start);
-        margin-top: 16px;
-        span{
-            background: #fff;
-            flex: 1 1 50%;
-            padding: 8px;
-            border-radius: 4px;
+		@include mw_sm{
+			padding: 0;
+		}
 
-            tt:first-child{
-                font-size: 12px;
-                line-height: 17px;
-                font-weight: bold;
-                font-family: 'Open Sans', sans-serif;
-            }
-            tt:nth-child(2){
-                font-size: 14px;
-                line-height: 19px;
-                color: #00000099;
-                font-family: 'Open Sans', sans-serif;
-            }
-        }
-        .price_dash{
-            margin: 0 8px;
-        }
-        tt{
-            display: block;
-        }
-    }
-    .function_item_check{display: none;}
-    @include max1200px{
-        .price_dash{
-            display: none;
-        }
-    }
-    @include max576px{
-        position: fixed;
-        z-index: 99;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        margin-top: 0;
-        transform: translateY(-100%);
-        transition-duration: .3s;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 180px;
-        &.active{
-            transform: translateY(0);
-        }
-        .function_item_check{
-            display: block;
-            background: #000000DE;
-            position: absolute;
-            left: 0;
-            right: 0;
-            border-radius: 8px 8px 0px 0px;
-            padding: 20px 15px;
-            .result_txt{
-                font-size: 24px;
-                line-height: 30px;
-                color: #fff;
-                font-family: 'Raleway', sans-serif;
-            }
-            .mod_btn_box{
-                margin-top: 24px;
-                justify-content: space-between;
-            }
-            .clear{
-                @include cancel_btn;
-                min-width: 160px;
-                padding: 17px 0;
-                border-radius: 3px;
-                margin-left: 0;
-            }
-            .filter{
-                @include primary_btn;
-                min-width: 160px;
-                padding: 17px 0;
-                border-radius: 3px;
-                margin-left: 0;
-            }
-        }
-    }
+		&_header{
+			@include d_f_center(flex , flex-end , flex-start);
+			height: 40px;
+			overflow-x: auto;
+			overflow-y: hidden;
+			@extend %transition;
+			@include mw_sm{
+				// display: none;
+				visibility: hidden;
+				transform: scale(1 , 0);
+				transform-origin: top center;
+				width: calc(100% - 30px);
+				position: absolute;
+				background: #F1F0F8;
+				z-index: 1;
+				height: auto;
+				flex-wrap: wrap;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				border-radius: 3px;
+				padding: 15px 20px;
+				
+				&.active{
+					visibility: visible;
+					transform: scale(1 , 1);
+				}
+			}
+			li{
+				flex: none;
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: bold;
+				margin-right: 24px;
+				@extend %hand;
+				@include hoverHandler(1,unset , $primary_color);
+				@include mw_sm{
+					width: 100%;
+					padding: 15px 0;
+				}
+				
+			}
+			li.on{
+				color: #6C51E2;
+			}
+		}
+		&_group{
+			padding-right: 40px;
+			@include mw_sm{
+				padding-right: 8px;
+			}
+			.list_item{
+				display: flex;
+				padding: 25px 0;
+				@include mw_sm{
+					padding: 4px 0 0;
+				}
+				.pic{
+					position: relative;
+					overflow: hidden;
+					flex: none;
+					width: 255px;
+					height: 175px;
+					border-radius: 8px 0 0 8px;
+					@include mw_lg{
+						width: 150px;
+						height: 150px;
+					}
+					@include mw_sm{
+						border-radius: 0;
+					}
+				}
+				img{
+					@include poa_img;
+				}
+			}
+			.list_txt{
+				width: 100%;
+				padding: 16px;
+				display: flex;
+				flex-wrap: wrap;
+				@include mw_lg{
+					padding: 8px;
+				}
+				@include mw_sm{
+					padding: 4px 8px;
+				}
+			}
+			.list_info{
+				@include d_f_center(flex , flex-start , space-between);
+				width: 100%;
+				@include mw_sm{
+					flex-direction: column;
+				}
+				.list_distance{
+					font-size: 12px;
+					line-height: 18px;
+				}
+				.list_hotel{
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: bold;
+				}
+				li{
+					font-size: 18px;
+				}
+			}
+			.list_evaluate{
+				// @include d_f_center(flex , flex-start , flex-start);
+				display: flex;
+				align-content: flex-start;
+				align-items: flex-start;
+				justify-content: flex-end;
+				flex-wrap: wrap;
+				@include mw_sm{
+					justify-content: flex-start;
+				}
+				.color_graw{
+					line-height: 18px;
+					margin-left: 4px;
+					@include mw_lg{
+						span{
+							display: none;
+						}
+					}
+				}
+			}
+			.list_room{
+				font-size: 12px;
+				line-height: 18px;
+				margin-top: 16px;
+				color: #00000099;
+				@include mw_lg{
+					margin-top: 8px;
+				}
+				@include mw_sm{
+					margin-top: 4px;
+				}
+				.model{
+					font-size: 14px;
+					line-height: 20px;
+					font-weight: bold;
+				}
+			}
+			.list_price{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				@include mw_sm{
+					justify-content: flex-end;
+					tt,
+					.list_note{
+						display: none;
+					}
+				}
+				.mod_price{
+					color: #000000DE;
+					margin-top: 0;
+					white-space: nowrap;
+					@include mw_lg{
+						span{
+							font-size: 16px;
+							line-height: 24px;
+						}
+					}
+				}
+				.mod_price::before{
+					content:attr(data-txt);
+					position: absolute;
+					right: 0;
+					bottom: 180%;
+					font-size: 12px;
+					line-height: 18px;
+					color: #00000099;
+					@include mw_sm{
+						content:'';
+					}
+				}
+				.mod_price:after{
+					position: absolute;
+					right: 0;
+					bottom: 100%;
+					font-size: 16px;
+					line-height: 24px;
+					@include mw_lg{
+						font-size: 14px;
+						line-height: 20px;
+					}
+					@include mw_sm{
+						font-size: 12px;
+						line-height: 14px;
+					}
+				}
+			}
+			.list_note{
+				display: flex;
+				align-self: flex-end;
+				flex-wrap: wrap;
+				li{
+					font-size: 12px;
+					line-height: 17px;
+					border-radius: 13px;
+					color: #00000099;
+					background: #F1F0F8;
+					padding: 4px 8px;
+					@include mw_lg{
+						transform: scale(.85);
+					}
+				}
+				li+li{
+					margin-left: 4px;
+				}
+				@include mw_md{
+					flex-direction: column;
+				}
+			}
+			@include mw_lg{
+				.kilometer{
+					display: none;
+				}
+			}
+			@include mw_md{
+				.star{
+					width: 100%;
+					text-align: right;
+				}
+			}
+			@include mw_sm{
+				.star{
+					width: auto;
+				}
+			}
+		}
+		&_header::-webkit-scrollbar {display: none;}
+		.list_tab{
+			display: none;
+			@include mw_sm{
+				display: flex;
+				margin-bottom: 20px;
+				li{
+					width: 50%;
+					font-size: 14px;
+					line-height: 20px;
+					@include hoverHandler(1,unset, $primary_color);
+					@include d_f_center(flex , center , center);
+					font-weight: bold;
+					&.on{
+						color: $primary_color;
+					}
+				}
+				.material-icons{
+					margin-right: 8px;
+				}
+			}
+		}
+	}
 }
 
-.list_box{
-    width: 100%;
-    padding: 24px 0 24px 30px;	
-    .list_header{
-        @include d_f_center(flex , flex-end , flex-start);
-        height: 40px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        li{
-            flex: none;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: bold;
-            margin-right: 24px;
-        }
-        li.on{
-            color: #6C51E2;
-        }
-    }
-    .list_header::-webkit-scrollbar {display: none;}
-    .list_tab{
-        display: none;
-    }
-    @include max576px{
-        padding: 0;
-        .list_header{
-            display: none;
-            width: calc(100% - 30px);
-            position: absolute;
-            background: #F1F0F8;
-            z-index: 1;
-            height: auto;
-            flex-wrap: wrap;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            border-radius: 3px;
-            padding: 15px 20px;
-            li{
-                width: 100%;
-                padding: 15px 0 ;
-            }
-        }
-        .list_tab{
-            display: flex;
-            margin-bottom: 20px;
-            li{
-                width: 50%;
-                font-size: 14px;
-                line-height: 20px;
-                @include d_f_center(flex , center , center);
-                font-weight: bold;
-                &.on{
-                    color: $primary_color;
-                }
-            }
-            .material-icons{
-                margin-right: 8px;
-            }
-        }
-    }
-}
-.list_group{
-    padding-right: 40px;
-    .list_item{
-        display: flex;
-        padding: 25px 0;
-        .pic{
-            position: relative;
-            overflow: hidden;
-            flex: none;
-            width: 255px;
-            height: 175px;
-            border-radius: 8px 0 0 8px;
-        }
-        img{
-            @include poa_img;
-        }
-    }
-    .list_txt{
-        width: 100%;
-        padding: 16px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .list_info{
-        @include d_f_center(flex , flex-start , space-between);
-        width: 100%;
-        .list_distance{
-            font-size: 12px;
-            line-height: 18px;
-        }
-        .list_hotel{
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: bold;
-        }
-        li{
-            font-size: 18px;
-        }
-    }
-    .list_evaluate{
-        // @include d_f_center(flex , flex-start , flex-start);
-        display: flex;
-        align-content: flex-start;
-        align-items: flex-start;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        
-        .color_graw{
-            line-height: 18px;
-            margin-left: 4px;
-        }
-    }
-    .list_room{
-        font-size: 12px;
-        line-height: 18px;
-        margin-top: 16px;
-        color: #00000099;
-        .model{
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: bold;
-        }
-    }
-    .list_price{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        .mod_price{
-            color: #000000DE;
-            margin-top: 0;
-            white-space: nowrap;
-        }
-        .mod_price::before{
-            content:attr(data-txt);
-            position: absolute;
-            right: 0;
-            bottom: 180%;
-            font-size: 12px;
-            line-height: 18px;
-            color: #00000099;
-        }
-        .mod_price:after{
-            position: absolute;
-            right: 0;
-            bottom: 100%;
-            font-size: 16px;
-            line-height: 24px;
-        }
-    }
-    .list_note{
-        display: flex;
-        align-self: flex-end;
-        flex-wrap: wrap;
-        li{
-            font-size: 12px;
-            line-height: 17px;
-            border-radius: 13px;
-            color: #00000099;
-            background: #F1F0F8;
-            padding: 4px 8px;
-        }
-        li+li{
-            margin-left: 4px;
-        }
-    }
-    @include max992px{
-        .list_room{
-            margin-top: 8px;
-        }
-        .list_txt{
-            padding: 8px;
-        }
-        .list_item{
-            .pic{
-                width: 150px;
-                height: 150px;
-            }
-        }
-        .color_graw{
-            span{
-                display: none;
-            }
-        }
-        .list_note{
-            li{
-                transform: scale(.85);
-            }
-        }
-        .list_price{
-            .mod_price{
-                span{
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-                &:after{
-                    font-size: 14px;
-                    line-height: 20px;
-                }
-            }
 
-        }
-        .kilometer{
-            display: none;
-        }
-    }
-    @include max768px{
-        .list_note{
-            flex-direction: column;
-        }
-        .star{
-            width: 100%;
-            text-align: right;
-        }
-    }
-    @include max576px{
-        padding-right: 8px;
-        .list_room{
-            margin-top: 4px;
-        }
-        .list_item{
-            padding: 4px 0 0;
-            .pic{
-                border-radius: 0;
-            }
-        }
-        .list_txt{
-            padding: 4px 8px;
-        }
-        .list_info{
-            flex-direction: column;
-        }
-        .list_evaluate{
-            justify-content: flex-start;
-        }
-        .star{
-            width: auto;
-        }		
-        
-        .list_price{
-            
-            justify-content: flex-end;
-            tt,
-            .list_note{
-                display: none;
-            }
-            .mod_price:before{
-                content:'';
-            }
-            .mod_price:after{
-                font-size: 12px;
-                line-height: 14px;
-            }
-        }
-    }
-}
+
 .page_box{
-    padding: 16px;
-    background: #F1F0F8;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 48px;
-    border-radius: 8px;
-    button{
-        padding: 8px 16px;
-        border-radius: 3px;
-        color: #6C51E2;
-        border:1px solid #6C51E2;
-        @extend %hand;
-        .material-icons{
-            display: none;
-        }
-        @include hoverHandler(.7, #6C51E2,#fff);        
-    }
-    ul{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    li{
-        padding: 8px 14px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    li.on{
-        background: #fff;
-    }
-    @include max768px{
-        button{
-            padding: 8px;
-            span{
-                display: none;
-            }
-            .material-icons{
-                display: block;
-            }
-        }
-    }
+	padding: 16px;
+	background: #F1F0F8;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 48px;
+	border-radius: 8px;
+	button{
+		padding: 8px 16px;
+		border-radius: 3px;
+		color: #6C51E2;
+		border:1px solid #6C51E2;
+		@include hoverHandler(1, #6C51E2,#fff);
+		@extend %hand;
+		.material-icons{
+			display: none;
+		}
+	}
+	ul{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	li{
+		padding: 8px 14px;
+		font-size: 16px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	li.on{
+		background: #fff;
+	}
+	@include mw_md{
+		button{
+			padding: 8px;
+			span{
+				display: none;
+			}
+			.material-icons{
+				display: block;
+			}
+		}
+	}
 }
