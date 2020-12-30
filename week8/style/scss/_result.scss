@@ -207,7 +207,7 @@
 				font-weight: bold;
 				margin-right: 24px;
 				@extend %hand;
-				@include hoverHandler(1,unset , $primary_color);
+				@include hoverHandler(1,unset , $text_purple);
 				@include mw_sm{
 					width: 100%;
 					padding: 15px 0;
@@ -226,6 +226,7 @@
 			.list_item{
 				display: flex;
 				padding: 25px 0;
+				@extend %hand;
 				@include mw_sm{
 					padding: 4px 0 0;
 				}
@@ -246,6 +247,30 @@
 				}
 				img{
 					@include poa_img;
+				}
+				button{
+					opacity: 0;
+					margin: auto 0;
+					width: 30px;
+					height: 30px;
+					background: #F1F0F8;
+					border-radius: 50%;
+					z-index: 1;
+					@extend %transition;
+				}
+				.next{
+					@include pos_abs(0,5px,0,auto);
+				}
+				.prev{
+					@include pos_abs(0,auto,0,5px);
+				}
+				@include hoverHandler(1,unset,unset){
+					button{
+						opacity: 1;
+					}
+					.list_hotel{
+						text-decoration: underline;
+					}
 				}
 			}
 			.list_txt{
@@ -277,6 +302,12 @@
 				}
 				li{
 					font-size: 18px;
+				}
+				@include hoverHandler(1,unset,unset){
+					.list_hotel{
+						opacity: 1;
+						text-decoration: underline;
+					}
 				}
 			}
 			.list_evaluate{
@@ -416,11 +447,11 @@
 					width: 50%;
 					font-size: 14px;
 					line-height: 20px;
-					@include hoverHandler(1,unset, $primary_color);
+					@include hoverHandler(1,unset, $text_purple);
 					@include d_f_center(flex , center , center);
 					font-weight: bold;
 					&.on{
-						color: $primary_color;
+						color: $text_purple;
 					}
 				}
 				.material-icons{

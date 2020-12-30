@@ -13,112 +13,104 @@
 </head>
 
 <body>
-	<div class="wrap" id="app">
-		<div class="header">
-			<div class="container" style="display: none">
-				<button class="menu_btn material-icons">menu</button>
-				<h1 class="logo"><a href="./home.html">ALOHA</a></h1>
-				<ul class="h_menu">
-					<li class="mod_select_box">
-						<span class="mod_select_btn">
-							<i class="material-icons">language</i>
-							<i class="material-icons">arrow_drop_down</i>
-						</span>
-						<ul class="second_menu">
-							<li class="active">繁體中文</li>
-							<li>簡體</li>
-							<li>English</li>
+	<div class="outside">
+		<header class="main_width">
+            <i class="material-icons hab_btn">menu</i>
+            <h1 class="main_logo">ALOHA</h1>
+            <label class="select_box">
+                <i class="material-icons function">language</i>
+                <select name="" id="">
+                    <option value="">English</option>
+                    <option value="">繁體</option>
+                </select>
+                <i class="material-icons arr">arrow_drop_down</i>
+            </label>
+            <!-- 登入後選單 -->
+            <div class="select_box _member" style="display:none;">
+                <div class="select_member_img">
+                    <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/profile.jpg?raw=true"
+                        alt="">
+                </div>
+                <span>David Lin</span>
+                <i class="material-icons arr">arrow_drop_down</i>
+            </div>
+
+            <div class="txt_btn">Sign up</div>
+            <div class="txt_btn">Login</div>
+        </header>
+		<!-- 展示＆搜尋 -->
+		<div class="slider_box">
+			<!-- 搜尋 -->
+			<!-- 加上 _orther_state 為搜尋後樣式 -->
+			<div class="search_box _orther_state">
+				<div class="search_box_width">
+					<!-- 展開選單加上 .active -->
+					<div class="search_box_item">
+						<label class="import_box material-icons" data-icon="location_on">
+							<input type="text" placeholder="Destination">
+							<div class="more_title">Destination</div>
+							<tt>Bangkok</tt>
+						</label>
+						<!-- 下拉 -->
+						<ul class="search_location_list active_item">
+							<li class="material-icons" data-icon="grade">
+								<span>Roma</span>
+								<tt>Italy</tt>
+							</li>
+							<li class="material-icons on" data-icon="grade">
+								<span>Roma</span>
+								<tt>Italy</tt>
+							</li>
+							<li class="material-icons" data-icon="grade">
+								<span>Roma</span>
+								<tt>Italy</tt>
+							</li>
 						</ul>
-						<select class="second_mb_menu">
-							<option value="">繁體中文</option>
-							<option value="">簡體</option>
-							<option value="">English</option>
-						</select>
-					</li>
-					<li><a href="#">Sign up</a></li>
-				</ul>
-				<a class="login_btn fz-16" href="./login.html">Login</a>
+					</div>
+
+					<div class="search_box_item">
+						<div class="import_box material-icons material-icons" data-icon="date_range">
+							<span>Check-in / out</span>
+							<tt>17 June - 19 June</tt>
+						</div>
+					</div>
+
+					<!-- 展開選單加上 .active -->
+					<div class="search_box_item">
+						<div class="import_box material-icons" data-icon="person">
+							<span>Guests</span>
+							<tt>2 adults・1 room</tt>
+						</div>
+
+						<!-- 下拉 -->
+						<ul class="search_guest_list active_item">
+							<li>
+								<span class="txt">Adult</span>
+								<button class="material-icons qu_btn">remove</button>
+								<input type="tel" placeholder="0">
+								<button class="material-icons qu_btn">add</button>
+							</li>
+							<li>
+								<span class="txt">Child</span>
+								<button class="material-icons qu_btn">remove</button>
+								<input type="tel" placeholder="0">
+								<button class="material-icons qu_btn">add</button>
+							</li>
+							<li>
+								<span class="txt">Room</span>
+								<button class="material-icons qu_btn">remove</button>
+								<input type="tel" placeholder="0">
+								<button class="material-icons qu_btn">add</button>
+							</li>
+						</ul>
+					</div>
+
+					<button class="saerch_btn">search</button>
+				</div>
 			</div>
+			<!-- 搜尋 end -->
 		</div>
-		<div class="search">
-			<div class="container" style="display:none">
-				<label class="search_inp">
-					<i class="material-icons">location_on</i>
-					<div class="search_condition">
-						<span class="title">DESTINATION</span>
-						<span class="detail">
-							<tt class="city">Bangkok</tt>
-							<tt class="country">,Thailand</tt>
-						</span>
-					</div>
-					<ul class="search_list">
-						<li>
-							<i class="material-icons">star</i>
-							<div class="search_list_txt">
-								<span class="city">Bangkok</span>
-								<span class="country">Thailand</span>
-							</div>
-						</li>
-						<li>
-							<i class="material-icons">star</i>
-							<div class="search_list_txt">
-								<span class="city">Osaka</span>
-								<span class="country">Japan</span>
-							</div>
-						</li>
-						<li>
-							<i class="material-icons">star</i>
-							<div class="search_list_txt">
-								<span class="city">Roma</span>
-								<span class="country">Italy</span>
-							</div>
-						</li>
-					</ul>
-				</label>
-				<label class="search_inp">
-					<i class="material-icons">date_range</i>
-					<div class="search_condition">
-						<span class="title">CHECK-IN / OUT</span>
-						<span class="detail">17 June - 19 June</span>
-					</div>
-					<ul class="search_list"></ul>
-				</label>
-				<label class="search_inp">
-					<i class="material-icons">person</i>
-					<div class="search_condition">
-						<span class="title">GUEST</span>
-						<span class="detail">2 adults・1 room</span>
-					</div>
-					<ul class="search_list guests">
-						<li>
-							<span>Adult</span>
-							<span class="num">
-								<button class="material-icons">remove</button>
-								<tt>2</tt>
-								<button class="material-icons">add</button>
-							</span>
-						</li>
-						<li>
-							<span>Child</span>
-							<span class="num">
-								<button class="material-icons">remove</button>
-								<tt>0</tt>
-								<button class="material-icons">add</button>
-							</span>
-						</li>
-						<li>
-							<span>Room</span>
-							<span class="num">
-								<button class="material-icons">remove</button>
-								<tt>1</tt>
-								<button class="material-icons">add</button>
-							</span>
-						</li>
-					</ul>
-				</label>
-				<button class="search_btn">SEARCH</button>
-			</div>
-		</div>
+		<!-- 展示＆搜尋 end -->
 
 		<div class="scroll_box">
 			<!-- 扣掉上面高度，開卷軸 -->
@@ -338,8 +330,12 @@
 						<div class="result_list_group">
 							<div class="list_item">
 								<div class="pic">
+									<button class="material-icons prev">keyboard_arrow_left</button>
 									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
 										alt="">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
+										alt="">
+									<button class="material-icons next">keyboard_arrow_right</button>
 								</div>
 								<div class="list_txt">
 									<div class="list_info">
@@ -368,7 +364,7 @@
 											<li>No prepayment</li>
 										</ul>
 										<span class="txt_r">
-											<div class="mod_price"data-txt="per night" data-oprice="1,980">
+											<div class="mod_price" data-txt="per night" data-oprice="1,980">
 												<span>TWD 1,980</span>
 											</div>
 										</span>
@@ -377,8 +373,12 @@
 							</div>
 							<div class="list_item">
 								<div class="pic">
+									<button class="material-icons prev">keyboard_arrow_left</button>
 									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
 										alt="">
+									<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/Rachada1.jpg?raw=true"
+										alt="">
+									<button class="material-icons next">keyboard_arrow_right</button>
 								</div>
 								<div class="list_txt">
 									<div class="list_info">
@@ -407,7 +407,7 @@
 											<li>No prepayment</li>
 										</ul>
 										<span class="txt_r">
-											<div class="mod_price"data-txt="per night" data-oprice="1,980">
+											<div class="mod_price" data-txt="per night" data-oprice="1,980">
 												<span>TWD 1,980</span>
 											</div>
 										</span>
@@ -436,84 +436,64 @@
 					</div>
 				</div>
 			</div>
-			<!-- subscribe -->
-			<div class="subscribe">
-				<div class="container">
-					<div class="subscribe_txt">
-						Subscribe for Exclusive Offer
-					</div>
-					<div class="subscribe_email">
-						<input type="text" placeholder="Your email address">
-						<button class="subscribe_btn">SUBSCEIB</button>
-					</div>
+			<!-- 訂閱 -->
+			<div class="subscripte_box _orther_state">
+				<div class="main_width">
+					<h2>Subscribe for Exclusive Offer</h2>
+					<label class="subscripte_box_item">
+						<input type="mail" placeholder="Your email address">
+						<button class="subscripte_btn">subscribe</button>
+					</label>
 				</div>
 			</div>
-			<!-- footer -->
-			<div class="footer">
-				<div class="container">
-					<div class="qa_box">
-						<span class="cp_right">
-							© 2020 ALOHA, Inc. All rights reserved.
-						</span>
-						<ul class="question">
-							<li>
-								<a href="#">FAQs</a>
-							</li>
-							<li>
-								<a href="#">Terms of use</a>
-							</li>
-							<li>
-								<a href="#">Privacy policy</a>
-							</li>
-						</ul>
-					</div>
-					<ul class="f_menu">
-						<li class="mod_select_box">
-							<span class="mod_select_btn">
-								<i class="material-icons">language</i>
-								<tt>English</tt>
-								<i class="material-icons">arrow_drop_down</i>
-							</span>
+			<!-- 訂閱 end -->
 
-							<ul id="second_menu" class="second_menu">
-								<li class="active">繁體中文</li>
-								<li>簡體</li>
-								<li>English</li>
-							</ul>
-						</li>
-						<li class="mod_select_box">
-							<span class="mod_select_btn">
-								<i class="material-icons">language</i>
-								<tt>TWD</tt>
-								<i class="material-icons">arrow_drop_down</i>
-							</span>
 
-							<ul id="second_menu" class="second_menu">
-								<li class="active">繁體中文</li>
-								<li>簡體</li>
-								<li>English</li>
-							</ul>
-						</li>
+
+			<footer class="main_width">
+				<div class="copyright_box">
+					<span>© 2020 ALOHA, Inc. All rights reserved.</span>
+					<ul>
+						<li>FAQs</li>
+						<li>Terms of use</li>
+						<li>Privacy policy</li>
 					</ul>
-
 				</div>
-			</div>
+
+				<label class="select_box">
+					<i class="material-icons function">language</i>
+					<select name="" id="">
+						<option value="">English</option>
+						<option value="">繁體</option>
+					</select>
+					<i class="material-icons arr">arrow_drop_down</i>
+				</label>
+
+				<label class="select_box">
+					<i class="material-icons function">attach_money</i>
+					<select name="" id="">
+						<option value="">TWD</option>
+						<option value="">USD</option>
+					</select>
+					<i class="material-icons arr">arrow_drop_down</i>
+				</label>
+			</footer>
 		</div>
 	</div>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
 	<script>
-		$("#result_list_header li").click(function(){
+		$("#result_list_header li").click(function () {
 			$("#result_list_header li").removeClass("on");
 			$(this).addClass("on");
-			
+
 		})
-		$("#sort_Handler").click(function(){			
+		$("#sort_Handler").click(function () {
 			$("#result_list_header").toggleClass("active");
 		})
-		$("#filter_Handler").click(function(){
+		$("#filter_Handler").click(function () {
 			$("#result_function_group").addClass("active");
-			
+
 		})
 	</script>
 </body>

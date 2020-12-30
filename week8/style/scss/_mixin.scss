@@ -60,7 +60,7 @@
 	@include hoverHandler(1, #fff, $text_purple);
 	color: #fff;
 	border-radius: 3px;
-	background: $primary_color;
+	background: $bg_secondary;
 	border: 1px solid $bg_secondary;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -69,9 +69,9 @@
 }
 @mixin secondary_btn {
 	@include hoverHandler(1, $bg_secondary, #fff);
-	color:  $primary_color;
+	color:  $text_purple;
 	border-radius: 3px;
-	border: 1px solid  $primary_color;
+	border: 1px solid  $bg_secondary;
 	background: transparent;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -140,3 +140,8 @@
 	transition: all .3s ease-in-out;
 }
 %hand{cursor: pointer;}
+
+// 陰影
+%shadow_primary {
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2);
+}
