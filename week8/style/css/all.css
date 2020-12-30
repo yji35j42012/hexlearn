@@ -138,7 +138,7 @@ table {
   }
 }
 
-.search_location_list, .search_guest_list, .result_list_header, .result_list_group .list_item button {
+.search_location_list, .search_guest_list, .result_list_header, .result_list_group .list_item button, .page_box button {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -2313,7 +2313,7 @@ table {
   }
 }
 
-.search_location_list, .search_guest_list, .result_list_header, .result_list_group .list_item button {
+.search_location_list, .search_guest_list, .result_list_header, .result_list_group .list_item button, .page_box button {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -3691,8 +3691,59 @@ footer > .select_box {
   line-height: 24px;
 }
 
+@media screen and (max-width: 575px) {
+  .result_function_box {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin-top: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+    overflow: hidden;
+  }
+  .result_function_box.active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.result_function_title {
+  display: none;
+  background: #fff;
+  padding: 15px;
+}
+
+.result_function_title > span {
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 575px) {
+  .result_function_title {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .result_function_group {
-  margin-top: 25px;
   padding: 0 24px;
   background: #F1F0F8;
   border-radius: 8px;
@@ -3720,6 +3771,17 @@ footer > .select_box {
 
 .result_function_group .star {
   margin-right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.result_function_group .star li {
+  font-size: 18px;
+  color: #000;
 }
 
 .result_function_group .star li + li {
@@ -3785,32 +3847,22 @@ footer > .select_box {
   display: block;
 }
 
-.result_function_group .function_item_check {
+@media screen and (max-width: 575px) {
+  .result_function_group {
+    height: 100%;
+    padding-bottom: 190px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.result_function .result_function_check {
   display: none;
 }
 
 @media screen and (max-width: 575px) {
-  .result_function_group {
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    margin-top: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    -webkit-transition-duration: .3s;
-            transition-duration: .3s;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 180px;
-  }
-  .result_function_group.active {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .result_function_group .function_item_check {
+  .result_function .result_function_check {
     display: block;
     background: #000000DE;
     position: absolute;
@@ -3820,19 +3872,19 @@ footer > .select_box {
     border-radius: 8px 8px 0px 0px;
     padding: 20px 15px;
   }
-  .result_function_group .function_item_check .result_txt {
+  .result_function .result_function_check .result_txt {
     font-size: 24px;
     line-height: 30px;
     color: #fff;
     font-family: 'Raleway', sans-serif;
   }
-  .result_function_group .function_item_check .mod_btn_box {
+  .result_function .result_function_check .mod_btn_box {
     margin-top: 24px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .result_function_group .function_item_check .clear {
+  .result_function .result_function_check .clear {
     color: #fff;
     border-radius: 3px;
     border: 1px solid #fff;
@@ -3850,7 +3902,7 @@ footer > .select_box {
 }
 
 @media screen and (max-width: 575px) and (pointer: fine), screen and (max-width: 575px) and (-moz-touch-enabled: 0), screen and (max-width: 575px) and (-ms-high-contrast: active), screen and (max-width: 575px) and (-ms-high-contrast: none) {
-  .result_function_group .function_item_check .clear:hover {
+  .result_function .result_function_check .clear:hover {
     opacity: 1;
     background-color: unset;
     color: unset;
@@ -3858,12 +3910,12 @@ footer > .select_box {
 }
 
 @media screen and (max-width: 575px) {
-  .result_function_group .function_item_check .clear:active {
+  .result_function .result_function_check .clear:active {
     opacity: 1;
     background-color: unset;
     color: unset;
   }
-  .result_function_group .function_item_check .filter {
+  .result_function .result_function_check .filter {
     color: #fff;
     border-radius: 3px;
     background: #6C51E2;
@@ -3881,7 +3933,7 @@ footer > .select_box {
 }
 
 @media screen and (max-width: 575px) and (pointer: fine), screen and (max-width: 575px) and (-moz-touch-enabled: 0), screen and (max-width: 575px) and (-ms-high-contrast: active), screen and (max-width: 575px) and (-ms-high-contrast: none) {
-  .result_function_group .function_item_check .filter:hover {
+  .result_function .result_function_check .filter:hover {
     opacity: 1;
     background-color: #fff;
     color: #6C51E2;
@@ -3889,7 +3941,7 @@ footer > .select_box {
 }
 
 @media screen and (max-width: 575px) {
-  .result_function_group .function_item_check .filter:active {
+  .result_function .result_function_check .filter:active {
     opacity: 1;
     background-color: #fff;
     color: #6C51E2;
@@ -4151,9 +4203,14 @@ footer > .select_box {
   }
 }
 
-.result_list_group .list_info .list_distance {
+.result_list_group .list_info .list_distance > tt {
   font-size: 12px;
   line-height: 18px;
+  color: #00000099;
+}
+
+.result_list_group .list_info .list_distance > .color_purple {
+  color: #6C51E2;
 }
 
 .result_list_group .list_info .list_hotel {
@@ -4214,6 +4271,7 @@ footer > .select_box {
 }
 
 .result_list_group .list_evaluate .color_graw {
+  font-size: 14px;
   line-height: 18px;
   margin-left: 4px;
 }

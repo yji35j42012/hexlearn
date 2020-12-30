@@ -15,37 +15,37 @@
 <body>
 	<div class="outside">
 		<header class="main_width">
-            <i class="material-icons hab_btn">menu</i>
-            <h1 class="main_logo">ALOHA</h1>
-            <label class="select_box">
-                <i class="material-icons function">language</i>
-                <select name="" id="">
-                    <option value="">English</option>
-                    <option value="">繁體</option>
-                </select>
-                <i class="material-icons arr">arrow_drop_down</i>
-            </label>
-            <!-- 登入後選單 -->
-            <div class="select_box _member" style="display:none;">
-                <div class="select_member_img">
-                    <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/profile.jpg?raw=true"
-                        alt="">
-                </div>
-                <span>David Lin</span>
-                <i class="material-icons arr">arrow_drop_down</i>
-            </div>
+			<i class="material-icons hab_btn">menu</i>
+			<h1 class="main_logo">ALOHA</h1>
+			<label class="select_box">
+				<i class="material-icons function">language</i>
+				<select name="" id="">
+					<option value="">English</option>
+					<option value="">繁體</option>
+				</select>
+				<i class="material-icons arr">arrow_drop_down</i>
+			</label>
+			<!-- 登入後選單 -->
+			<div class="select_box _member" style="display:none;">
+				<div class="select_member_img">
+					<img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week8/profile.jpg?raw=true"
+						alt="">
+				</div>
+				<span>David Lin</span>
+				<i class="material-icons arr">arrow_drop_down</i>
+			</div>
 
-            <div class="txt_btn">Sign up</div>
-            <div class="txt_btn">Login</div>
-        </header>
+			<div class="txt_btn">Sign up</div>
+			<div class="txt_btn">Login</div>
+		</header>
 		<!-- 展示＆搜尋 -->
 		<div class="slider_box">
 			<!-- 搜尋 -->
 			<!-- 加上 _orther_state 為搜尋後樣式 -->
 			<div class="search_box _orther_state">
-				<div class="search_box_width">
+				<div id="search_box_width" class="search_box_width">
 					<!-- 展開選單加上 .active -->
-					<div class="search_box_item">
+					<div id="search_box_width1" class="search_box_item">
 						<label class="import_box material-icons" data-icon="location_on">
 							<input type="text" placeholder="Destination">
 							<div class="more_title">Destination</div>
@@ -68,7 +68,7 @@
 						</ul>
 					</div>
 
-					<div class="search_box_item">
+					<div id="search_box_width2" class="search_box_item">
 						<div class="import_box material-icons material-icons" data-icon="date_range">
 							<span>Check-in / out</span>
 							<tt>17 June - 19 June</tt>
@@ -76,7 +76,7 @@
 					</div>
 
 					<!-- 展開選單加上 .active -->
-					<div class="search_box_item">
+					<div id="search_box_width3" class="search_box_item">
 						<div class="import_box material-icons" data-icon="person">
 							<span>Guests</span>
 							<tt>2 adults・1 room</tt>
@@ -122,186 +122,196 @@
 							<h2>Bangkok</h2>
 							<span class="count">3,240</span>
 						</div>
-						<div id="result_function_group" class="result_function_group">
-							<div class="function_item">
-								<span class="function_title">Deals</span>
-								<ul>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Free cancellation
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											No prepayment
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Special offers
-										</label>
-									</li>
-								</ul>
+						<div id="result_function_box" class="result_function_box">
+							<div class="result_function_title">
+								<span>
+									<i class="material-icons">filter_list</i>
+									FILTER
+								</span>
+								<button id="result_close" class="material-icons">clear</button>
 							</div>
-							<div class="function_item">
-								<span class="function_title">
-									Popular filter
-								</span>
-								<ul>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Breakfast included
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Free Wi-Fi
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Swimming pool
-										</label>
-									</li>
-								</ul>
-							</div>
-							<div class="function_item">
-								<span class="function_title">
-									Budget
-								</span>
-								<span class="mod_range">
-									<input type="range">
-								</span>
-								<div class="price_box">
-									<span class="min_price">
-										<tt>Min price</tt>
-										<tt>TWD 800</tt>
-									</span>
-									<tt class="price_dash">-</tt>
-									<span class="max_price">
-										<tt>Max price</tt>
-										<tt>TWD 4,000+</tt>
-									</span>
+							<div class="result_function_group">
+								<div class="function_item">
+									<span class="function_title">Deals</span>
+									<ul>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Free cancellation
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												No prepayment
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Special offers
+											</label>
+										</li>
+									</ul>
 								</div>
+								<div class="function_item">
+									<span class="function_title">
+										Popular filter
+									</span>
+									<ul>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Breakfast included
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Free Wi-Fi
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Swimming pool
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="function_item">
+									<span class="function_title">
+										Budget
+									</span>
+									<span class="mod_range">
+										<input type="range">
+									</span>
+									<div class="price_box">
+										<span class="min_price">
+											<tt>Min price</tt>
+											<tt>TWD 800</tt>
+										</span>
+										<tt class="price_dash">-</tt>
+										<span class="max_price">
+											<tt>Max price</tt>
+											<tt>TWD 4,000+</tt>
+										</span>
+									</div>
+								</div>
+								<div class="function_item">
+									<span class="function_title">Rating</span>
+									<ul>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												<ul class="star">
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+												</ul>
+												5.0
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												<ul class="star">
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+												</ul>
+												4.0
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												<ul class="star">
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+												</ul>
+												3.0
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												<ul class="star">
+													<li class="material-icons">grade</li>
+													<li class="material-icons">grade</li>
+												</ul>
+												2.0
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												<ul class="star">
+													<li class="material-icons">grade</li>
+												</ul>
+												1.0
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Unrated
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="function_item">
+									<span class="function_title">Stay type</span>
+									<ul>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Hotel
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Apartment
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Unique
+											</label>
+										</li>
+										<li>
+											<label class="mod_checkbox">
+												<input name="button" type="checkbox">
+												<span></span>
+												Hostel
+											</label>
+										</li>
+									</ul>
+								</div>
+
 							</div>
-							<div class="function_item">
-								<span class="function_title">Rating</span>
-								<ul>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											<ul class="star">
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-											</ul>
-											5.0
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											<ul class="star">
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-											</ul>
-											4.0
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											<ul class="star">
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-											</ul>
-											3.0
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											<ul class="star">
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
-											</ul>
-											2.0
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											<ul class="star">
-												<li class="material-icons"></li>
-											</ul>
-											1.0
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Unrated
-										</label>
-									</li>
-								</ul>
-							</div>
-							<div class="function_item">
-								<span class="function_title">Stay type</span>
-								<ul>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Hotel
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Apartment
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Unique
-										</label>
-									</li>
-									<li>
-										<label class="mod_checkbox">
-											<input name="button" type="checkbox">
-											<span></span>
-											Hostel
-										</label>
-									</li>
-								</ul>
-							</div>
-							<div class="function_item_check">
+							<div class="result_function_check">
 								<span class="result_txt">Find 1,245 results</span>
 								<div class="mod_btn_box">
 									<button class="clear">clear</button>
@@ -309,6 +319,7 @@
 								</div>
 							</div>
 						</div>
+
 					</div>
 					<div class="result_list">
 						<ul class="list_tab">
@@ -348,8 +359,8 @@
 										</span>
 										<span class="list_evaluate">
 											<ul class="star">
-												<li class="material-icons"></li>
-												<li class="material-icons"></li>
+												<li class="material-icons">grade</li>
+												<li class="material-icons">grade</li>
 											</ul>
 											<tt class="color_graw">4.0 (283)</tt>
 										</span>
@@ -428,7 +439,7 @@
 								<li>5</li>
 								<li>6</li>
 							</ul>
-							<button class="on">
+							<button>
 								<span>NEXT</span>
 								<i class="material-icons">navigate_next</i>
 							</button>
@@ -480,22 +491,8 @@
 			</footer>
 		</div>
 	</div>
-
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js'></script>
-	<script>
-		$("#result_list_header li").click(function () {
-			$("#result_list_header li").removeClass("on");
-			$(this).addClass("on");
-
-		})
-		$("#sort_Handler").click(function () {
-			$("#result_list_header").toggleClass("active");
-		})
-		$("#filter_Handler").click(function () {
-			$("#result_function_group").addClass("active");
-
-		})
-	</script>
+	<script src="./js/index.js"></script>
 </body>
 
 </html>

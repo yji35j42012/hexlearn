@@ -35,8 +35,37 @@
 			font-size: 16px;
 			line-height: 24px;
 		}
+		&_box{
+			@include mw_sm{
+				position: fixed;
+				z-index: 1;
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				margin-top: 0;
+				transform: translateY(-100%);
+				transition-duration: .3s;
+				overflow: hidden;
+				
+				
+				&.active{
+					transform: translateY(0);
+				}
+			}
+		}
+		&_title{
+			display: none;
+			background: #fff;
+			padding: 15px;
+			>span{
+				@include d_f_center(flex , center , unset);
+			}
+			@include mw_sm{
+				@include d_f_center(flex , center , space-between);
+			}
+		}
 		&_group{
-			margin-top: 25px;
+			// margin-top: 25px;
 			padding: 0 24px;
 			background: #F1F0F8;
 			border-radius: 8px;
@@ -52,13 +81,18 @@
 				font-size: 16px;
 				line-height: 24px;
 				font-weight: bold;
-		
 			}
 			li+li{
 				margin-top: 8px;
 			}
 			.star{
 				margin-right: 8px;
+				display: flex;
+				align-items: center;
+				li{
+					font-size: 18px;
+					color: #000;
+				}
 				li + li{
 					margin-top: 0;
 				}
@@ -102,57 +136,48 @@
 					display: block;
 				}
 			}
-			.function_item_check{display: none;}
-		
 			@include mw_sm{
-				position: fixed;
-				z-index: 99;
-				width: 100%;
-				top: 0;
-				bottom: 0;
-				margin-top: 0;
-				transform: translateY(-100%);
-				transition-duration: .3s;
+				height: 100%;
+				padding-bottom: 190px;
 				overflow-x: hidden;
 				overflow-y: scroll;
 				-webkit-overflow-scrolling: touch;
-				padding-bottom: 180px;
-				&.active{
-					transform: translateY(0);
+			}
+		}
+		.result_function_check{
+			display: none;
+			@include mw_sm{
+				display: block;
+				background: #000000DE;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 8px 8px 0px 0px;
+				padding: 20px 15px;
+				.result_txt{
+					font-size: 24px;
+					line-height: 30px;
+					color: #fff;
+					font-family: 'Raleway', sans-serif;
 				}
-				.function_item_check{
-					display: block;
-					background: #000000DE;
-					position: absolute;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					border-radius: 8px 8px 0px 0px;
-					padding: 20px 15px;
-					.result_txt{
-						font-size: 24px;
-						line-height: 30px;
-						color: #fff;
-						font-family: 'Raleway', sans-serif;
-					}
-					.mod_btn_box{
-						margin-top: 24px;
-						justify-content: space-between;
-					}
-					.clear{
-						@include cancel_btn;
-						min-width: 160px;
-						padding: 17px 0;
-						border-radius: 3px;
-						margin-left: 0;
-					}
-					.filter{
-						@include primary_btn;
-						min-width: 160px;
-						padding: 17px 0;
-						border-radius: 3px;
-						margin-left: 0;
-					}
+				.mod_btn_box{
+					margin-top: 24px;
+					justify-content: space-between;
+				}
+				.clear{
+					@include cancel_btn;
+					min-width: 160px;
+					padding: 17px 0;
+					border-radius: 3px;
+					margin-left: 0;
+				}
+				.filter{
+					@include primary_btn;
+					min-width: 160px;
+					padding: 17px 0;
+					border-radius: 3px;
+					margin-left: 0;
 				}
 			}
 		}
@@ -292,8 +317,14 @@
 					flex-direction: column;
 				}
 				.list_distance{
-					font-size: 12px;
-					line-height: 18px;
+					>tt{
+						font-size: 12px;
+						line-height: 18px;
+						color:#00000099;
+					}
+					>.color_purple{
+						color: #6C51E2;
+					}
 				}
 				.list_hotel{
 					font-size: 16px;
@@ -321,6 +352,7 @@
 					justify-content: flex-start;
 				}
 				.color_graw{
+					font-size: 14px;
 					line-height: 18px;
 					margin-left: 4px;
 					@include mw_lg{
@@ -478,6 +510,7 @@
 		border:1px solid #6C51E2;
 		@include hoverHandler(1, #6C51E2,#fff);
 		@extend %hand;
+		@extend %transition;
 		.material-icons{
 			display: none;
 		}
