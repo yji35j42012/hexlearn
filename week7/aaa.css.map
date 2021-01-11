@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../scss/ttt.scss"
+        "aaa.scss"
     ],
     "names": [],
-    "file": "ttt.css"
+    "file": "aaa.css"
 }

@@ -1,132 +1,17 @@
+$spacers: () !default;
+$spacers: map-merge((
+	0: 0,
+	1: ($spacer * .25),
+	2: ($spacer * .5),
+	3: $spacer,
+	4: ($spacer * 1.5),
+	5: ($spacer * 3)
+), $spacers);
 
-$color: red;
+@include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $prop, $abbrev in (margin: m, padding: p) {
+	@each $size, $length in $spacers {
 
-
-@mixin hoverHandler($op, $bg, $txt){
-	@media (pointer: fine),
-	(-moz-touch-enabled: 0),
-	screen and (-ms-high-contrast: active),
-	(-ms-high-contrast: none) {
-		&:hover{
-			opacity: $op;
-			background-color: $bg;
-			color: $txt;
-			@content;
-		}
-	}
-	&:active{
-		opacity: $op;
-		background-color: $bg;
-		color: $txt;
 	}
 }
-.ooo{
-	@include hoverHandler(1,unset,unset){
-		text-align: center;
-		&:after{
-			content:'';
-		}
-	};
-}
-
-
-
-@mixin hoverHandler2($op, $bg, $txt){
-	@media (pointer: fine),
-	(-moz-touch-enabled: 0),
-	screen and (-ms-high-contrast: active),
-	(-ms-high-contrast: none) {
-		@content;
-		&:hover{
-			opacity: $op;
-			background-color: $bg;
-			color: $txt;
-		}
-	}
-}
-.rrr{
-	@include hoverHandler2(1,unset,unset){
-		&:hover{
-			text-align: center;
-		}
-		&:hover:before {
-			width: 100%;
-		}
-	};
-	
-}
-
-
-
-// @mixin hoverHandler($op, $bg, $txt){
-//     @media (pointer: fine),
-//     (-moz-touch-enabled: 0),
-//     screen and (-ms-high-contrast: active),
-//     (-ms-high-contrast: none) {
-//         &:hover{
-//             opacity: $op;
-//             background-color: $bg;
-//             color: $txt;
-//             @content;
-//         }
-//     }
-// }
-
-// .place_box_item{
-//     color: red;
-//     >li{
-//         @include hoverHandler(.7, unset, unset);
-//     }
-// }
-
-
-// %op07{opacity: .7;}
-
-// @mixin mediaHandler{
-//     @media (pointer: fine), (-moz-touch-enabled: 0), screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-//         @content;
-//     }
-// }
-
-// .aaa{
-//     @include mediaHandler{
-//         font-size: 1px;
-//     }
-// }
-// @mixin aniHandler{
-//     &.active{
-//         >.active_item,
-//         ~.active_item{
-//             visibility: visible;
-//             opacity: 1;
-//         }
-//     }
-// }
-//  .active_item{
-//     visibility: hidden;
-//     opacity: 0;
-// }
-// .ooo{
-//     @include aniHandler();
-// }
-
-
-
-// $op: 1 !default;
-
-// @mixin hoverHandler($op){
-// 	@media (pointer: fine),
-// 	(-moz-touch-enabled: 0),
-// 	screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-//         &:hover{
-//             opacity: $op;
-//             @content;
-//         }
-// 	}
-// }
-
-// .ooooo{
-//     @include hoverHandler(1);
-// }
-
-
