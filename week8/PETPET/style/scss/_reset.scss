@@ -127,7 +127,7 @@ table {
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: #6C51E2;
+        background-color: $primary-bg;
         border: 1px transparent solid;
         border-radius: 3px;
         cursor: pointer;
@@ -136,7 +136,7 @@ table {
     }
 
     *:hover::-webkit-scrollbar-thumb {
-        background-color: rgb(147, 126, 245);
+        background-color: $primary-bg;
     }
 
     ::-webkit-scrollbar-corner {

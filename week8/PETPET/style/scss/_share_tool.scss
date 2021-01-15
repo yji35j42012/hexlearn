@@ -1,0 +1,22 @@
+.scroll_box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &:not(._lg){
+        height: calc(100% - 65px);
+        @include scroll(hidden , auto);
+    }
+    @include mw_lg{
+        &._lg{
+            @include scroll(hidden , auto);
+        }
+        &:not(._lg){
+            height: auto;
+            @include scroll(hidden , hidden);
+        }
+    }
+}
+
+header{
+    height: 65px;
+}
