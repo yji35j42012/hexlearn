@@ -28,3 +28,9 @@
     overflow-y: $y;
     -webkit-overflow-scrolling: touch;
 }
+
+@mixin d_flex($ai, $jc) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
