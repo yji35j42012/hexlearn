@@ -138,6 +138,33 @@ table {
   }
 }
 
+html,
+body,
+input,
+button,
+select,
+textarea,
+tt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  color: #772400;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 85px;
+}
+
 .scroll_box {
   width: 100%;
   height: 100%;
@@ -177,12 +204,15 @@ header {
           align-items: center;
   height: 65px;
   padding: 0 85px;
+  max-width: 1280px;
+  margin: auto;
 }
 
 header .logo {
+  position: relative;
   width: 120px;
   height: 55px;
-  background: url("../../images/PETPET.svg") no-repeat center/contain;
+  background: url("../../images/logo.svg") no-repeat center/contain;
 }
 
 header .logo a {
@@ -212,5 +242,41 @@ header .menu {
 
 header .menu li + li {
   margin-left: 40px;
+}
+
+.card_group {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.card_list {
+  overflow: hidden;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  margin-right: 30px;
+  border-radius: 3px;
+}
+
+.card_list_pic {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 120px;
+}
+
+.card_list_pic img {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 /*# sourceMappingURL=all.css.map */
