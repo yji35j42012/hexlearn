@@ -34,3 +34,17 @@
 	justify-content: $jc;
 	align-items: $ai;
 }
+
+@mixin hoverHandler {
+	@media (pointer: fine),
+	(-moz-touch-enabled: 0),
+	screen and (-ms-high-contrast: active),
+	(-ms-high-contrast: none) {		
+		&:hover{
+			@content;
+		}		
+	}
+	&:active {
+		@content;
+	}
+}

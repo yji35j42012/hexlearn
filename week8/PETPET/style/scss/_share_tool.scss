@@ -9,6 +9,7 @@ tt {
 	// font-family: 'Open sans',
 	// sans-serif;
 	font-size: 20px;
+	color: #772400;
 }
 
 h2{
@@ -18,15 +19,16 @@ h2{
 }
 h3{
 	font-size: 32px;
+	line-height: 48px;
+	font-weight: bold;
 }
-
+// 模組 start
 .container{
+	position: relative;
 	max-width: 1280px;
 	margin: auto;
 	padding: 0 85px;
 }
-
-
 
 .scroll_box{
 	width: 100%;
@@ -45,7 +47,57 @@ h3{
 			@include scroll(hidden , hidden);
 		}
 	}
+	> div+div{
+		margin-top: 80px;
+	}
 }
+.primary_btn{
+	width: 100%;
+	background-color: #D54100;
+	color: #ffffff;
+	font-size: 16px;
+	border-radius: 3px;
+	transition-duration: .3s;
+	cursor: pointer;
+
+	@include hoverHandler{
+		background-color: #772400;
+	}
+}
+
+.scroll_btn{
+	position: absolute;
+	top: 15%;
+	bottom: 0;
+	right: 5%;
+	width: 44px;
+	height: 44px;
+	margin: auto 0;
+	background-color: #772400;
+	border-radius: 50%;
+	transform: rotate(270deg);
+	&::after{
+		content: '\25BE';
+		position: absolute;
+		width: 25px;
+		height: 100%;
+		color: #fff;
+		font-size: 20px;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		line-height: 44px;
+		pointer-events: none;
+	}
+
+
+}
+
+// 模組 end
+
+
+
 
 header{
 	@include d_flex(center,space-between);
