@@ -251,6 +251,14 @@ h3 {
   pointer-events: none;
 }
 
+.normol_inp {
+  width: 100%;
+  height: 48px;
+  padding-left: 12px;
+  background-color: #fff;
+  border: 1px solid #CED4DA;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -571,5 +579,21 @@ header .menu li + li {
 .help_txt {
   margin-top: 8px;
   line-height: 30px;
+}
+
+.help_inp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 560px;
+  margin-top: 16px;
+}
+
+.help_inp .primary_btn {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  padding: 12px 0;
+  max-width: 160px;
 }
 /*# sourceMappingURL=all.css.map */
