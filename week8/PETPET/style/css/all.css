@@ -201,6 +201,12 @@ h3 {
   margin-top: 80px;
 }
 
+@media screen and (max-width: 1199px) {
+  .scroll_box > div + div {
+    margin-top: 60px;
+  }
+}
+
 .primary_btn {
   width: 100%;
   background-color: #D54100;

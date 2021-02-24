@@ -50,6 +50,10 @@ h3{
 	}
 	> div+div{
 		margin-top: 80px;
+
+		@include mw_xl{
+			margin-top: 60px;
+		}
 	}
 }
 .primary_btn{
