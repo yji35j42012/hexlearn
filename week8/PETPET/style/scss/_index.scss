@@ -1,3 +1,91 @@
+.search{
+	position: relative;
+	display: flex;
+	align-items: center;
+	
+	@include mw_xl{
+		flex-direction: column;
+		padding-top: 100px;
+	}
+	&_pic{
+		flex: none;
+		max-width: 530px;
+
+		@include mw_xl{
+			max-width: 210px;
+		}
+	}
+
+	&_inf{
+		width: 100%;
+		padding: 0 85px 0 30px;
+
+		@include mw_xl{
+			max-width: 390px;
+			margin-top: 24px;
+			padding: 0;
+			text-align: center;
+		}
+		h2{
+			@include mw_xl{
+				font-size: 32px;
+				line-height: 48px;
+			}
+		}
+		p{
+			margin-top: 16px;
+			font-size: 24px;
+			line-height: 36px;
+			font-weight: bold;
+			@include mw_xl{
+				margin-top: 8px;
+				text-align: left;
+			}
+		}
+	}
+
+	&_box{
+		display: flex;
+		margin-top: 50px;
+		@include mw_xl{
+			flex-wrap: wrap;
+			margin-top: 20px;
+		}
+		.variety{
+			flex: 0 0 120px;
+			@include mw_xl{
+				flex: 0 0 100%;
+				margin-top: 20px;
+			}
+		}
+		.serve,
+		.area{
+			flex: 0 1 210px;
+			@include mw_xl{
+				flex: 0 0 100%;
+				margin-top: 12px;
+			}
+		}
+		.primary_btn{
+			flex: none;
+			width: 95px;
+			height: 50px;
+			@include mw_xl{
+				width: 100%;
+				margin-top: 16px;
+			}
+		}
+	}
+	.scroll_btn{
+		top: auto;
+		bottom: 16px;
+		margin: 0;
+		background-color: #D54100;
+		transform: rotate(0deg);
+	}
+}
+
+
 .card{
 
 	&_group{

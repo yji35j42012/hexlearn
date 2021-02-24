@@ -102,6 +102,14 @@ h3{
 	background-color: #fff;
 	border: 1px solid #CED4DA;
 }
+
+.normol_select{
+	height: 50px;
+	padding: 0 16px;
+	color: #6C757D;
+	border: 1px solid #CED4DA;
+	appearance: auto;
+}
 // 模組 end
 
 
@@ -114,10 +122,7 @@ header{
 	max-width: 1280px;
 	margin: auto;
 	.logo{
-		position: relative;
-		width: 120px;
-		height: 55px;
-		background: url('../../images/logo.svg')no-repeat center / contain;
+		@include logo;
 		a{
 			position: absolute;
 			display: block;
@@ -133,12 +138,59 @@ header{
 	.menu{
 		@include d_flex(flex-start,flex-start);
 		color: $primary_color;
+		li{
+			font-size: 16px;
+			line-height: 24px;
+		}
 		li+li{
 			margin-left: 40px;
 		}
 	}
 }
 
-footer{
+.footer{
+	padding: 60px 0 28px;
+	&_list{
+		display: flex;
+		justify-content: space-between;
 
+		li:not(.title){
+			font-size: 16px;
+			line-height: 24px;
+		}
+		li+li{
+			margin-top: 24px;
+		}	
+		.title{
+			height: 55px;
+			line-height: 55px;
+			font-weight: bold;
+		}
+		.logo{
+			@include logo;
+		}
+	}
+
+	&_inf{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 108px;
+		.phone{
+			display: inline-flex;
+			align-items: center;
+		}
+		.phone::before{
+			content:'';
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin-right: 12px;
+			background: url('../../images/call.svg')no-repeat center/cover;
+		}
+		.copyright{
+			font-size: 14px;
+			line-height: 20px;
+		}
+		
+	}
 }
