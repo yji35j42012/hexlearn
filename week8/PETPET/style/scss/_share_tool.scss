@@ -33,6 +33,9 @@ h3{
 	@include mw_lg{
 		padding: 0 40px;
 	}
+	@include mw_sm{
+		padding: 0 15px;
+	}
 }
 
 .scroll_box{
@@ -89,6 +92,9 @@ h3{
 	@include mw_lg{
 		right: 3%;
 	}
+	@include mw_sm{
+		display: none;
+	}
 	&::after{
 		content: '\25BE';
 		position: absolute;
@@ -120,6 +126,7 @@ h3{
 	color: #6C757D;
 	border: 1px solid #CED4DA;
 	appearance: auto;
+	cursor: pointer;
 }
 // 模組 end
 

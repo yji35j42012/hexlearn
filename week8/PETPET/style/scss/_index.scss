@@ -8,6 +8,10 @@
 			flex-direction: column;
 			padding-top: 100px;
 		}
+
+		@include mw_sm{
+			padding: 0;
+		}
 	}
 	
 	&_pic{
@@ -16,6 +20,15 @@
 
 		@include mw_lg{
 			max-width: 210px;
+		}
+
+		@include mw_sm{
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			max-width: none;
+			height: 352px;
 		}
 	}
 
@@ -29,10 +42,20 @@
 			padding: 0;
 			text-align: center;
 		}
+		
+		@include mw_sm{
+			padding: 0 15px;
+		}
 		h2{
 			@include mw_lg{
 				font-size: 32px;
 				line-height: 48px;
+				text-align: left;
+			}
+			@include mw_sm{
+				font-size: 28px;
+				line-height: 42px;
+				text-align: center;
 			}
 		}
 		p{
@@ -43,6 +66,15 @@
 			@include mw_lg{
 				margin-top: 8px;
 				text-align: left;
+				font-size: 20px;
+				line-height: 30px;
+
+				span{
+					display: block;
+				}
+			}
+			@include mw_sm{
+				text-align: center;
 			}
 		}
 	}
@@ -98,6 +130,10 @@
 		margin-top: 12px;
 		// 為了讓 .card_list 陰影跑出來
 		padding: 3px;
+
+		@include mw_sm{
+			flex-wrap: wrap;
+		}
 	}
 
 	&_list{
@@ -113,6 +149,9 @@
 		box-shadow: 0px 3px 6px #00000029;
 		border: 5px solid #FFFFFF;
 
+		@include mw_sm{
+			width: 100%;
+		}
 		&_bgpic{
 			position: relative;
 			overflow: hidden;
@@ -196,6 +235,10 @@
 		@include mw_lg{
 			height: 210px;
 		}
+		@include mw_sm{
+			flex-flow: row wrap;
+			height: auto;
+		}
 	}
 
 	&_list{
@@ -211,33 +254,49 @@
 
 		& + .reserve_list{
 			margin-left: 6px;
+			@include mw_sm{
+				margin-top: 4px;
+				margin-left: 0;
+			}
 		}
 		&:nth-child(1){
-			max-width: 350px;
+			width: 350px;
 			background-image: url('../../images/index-5.jpeg');
 			
 			@include mw_lg{
 				width: 210px;
 			}
+			@include mw_sm{
+				width: 100%;
+				height: 132px;
+			}
 		}
 		&:nth-child(2){
-			max-width: 303px;
+			width: 303px;
 			background-image: url('../../images/index-6.jpeg');
 			@include mw_lg{
 				width: 182px;
 			}
+			@include mw_sm{
+				width: 100%;
+				height: 132px;
+			}
 		}
 		&:nth-child(3){
-			max-width: 267px;
+			width: 267px;
 			height: 172px;
 			background-image: url('../../images/index-7.jpeg');
 			@include mw_lg{
 				width: 160px;
 				height: 103px;
 			}
+			@include mw_sm{
+				width: 100%;
+				height: 132px;
+			}
 		}
 		&:nth-child(4){
-			max-width: 267px;
+			width: 267px;
 			height: 172px;
 			background-image: url('../../images/index-8.jpeg');
 			margin-top: 6px;
@@ -246,12 +305,20 @@
 				height: 103px;
 				margin-top: 4px;
 			}
+			@include mw_sm{
+				width: 100%;
+				height: 132px;
+			}
 		}
 		&:nth-child(5){
-			max-width: 172px;
+				width: 172px;
 			background-image: url('../../images/index-3.jpeg');
 			@include mw_lg{
 				width: 125px;
+			}
+			@include mw_sm{
+				width: 100%;
+				height: 132px;
 			}
 		}
 		&::before{
@@ -285,10 +352,13 @@
 }
 
 .service{
-	padding: 80px 85px 132px;
+	padding: 80px 0 132px;
 	background: url('../../images/index-9.jpeg')no-repeat center/cover;
 	@include mw_lg{
-		padding: 80px 40px 132px;
+		padding: 80px 0 132px;
+	}
+	@include mw_sm{
+		padding: 60px 0 125px;
 	}
 	h2{
 		color: #fff;
@@ -297,6 +367,10 @@
 	ul{
 		display: flex;
 		margin-top: 100px;
+
+		@include mw_sm{
+			flex-wrap: wrap;
+		}
 	}
 
 	li{
@@ -309,7 +383,11 @@
 		line-height: 72px;
 		font-weight: bold;
 		border-left: 2px solid #fff;
-
+		@include mw_sm{
+			min-width: 175px;
+			height: 120px;
+			margin: auto;
+		}
 		&::after{
 			content: attr(data-txt);
 			display: block;
@@ -318,6 +396,10 @@
 		}
 		&+li{
 			margin-left: 130px;
+			@include mw_sm{
+				margin-top: 80px;
+				margin-left: auto;
+			}
 		}
 	}
 }
@@ -327,9 +409,20 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: 20px;
+
+		@include mw_sm{
+			flex-wrap: wrap;
+		}
 	}
 	&_list{
 		width: calc(100% / 3 - 20px);
+		@include mw_sm{
+			width: 100%;
+
+			& + .process_list{
+				margin-top: 32px;
+			}
+		}
 		img{
 			margin-top: 4px;
 		}
@@ -341,9 +434,19 @@
 	padding: 35px 0;
 	background-color: #F0AD25;
 
+	h2{
+		@include mw_sm{
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
 	&_txt{
 		margin-top: 8px;
 		line-height: 30px;
+		@include mw_sm{
+			font-size: 16px;
+			line-height: 24px;
+		}
 	}
 
 	&_inp{

@@ -176,6 +176,12 @@ h3 {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
 .scroll_box {
   width: 100%;
   height: 100%;
@@ -254,6 +260,12 @@ h3 {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .scroll_btn {
+    display: none;
+  }
+}
+
 .scroll_btn::after {
   content: '\25BE';
   position: absolute;
@@ -285,6 +297,7 @@ h3 {
   -webkit-appearance: auto;
      -moz-appearance: auto;
           appearance: auto;
+  cursor: pointer;
 }
 
 header {
@@ -465,6 +478,12 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .search .container {
+    padding: 0;
+  }
+}
+
 .search_pic {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -475,6 +494,21 @@ header .menu li + li {
 @media screen and (max-width: 991px) {
   .search_pic {
     max-width: 210px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .search_pic {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    max-width: none;
+    height: 352px;
   }
 }
 
@@ -492,10 +526,25 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .search_inf {
+    padding: 0 15px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .search_inf h2 {
     font-size: 32px;
     line-height: 48px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .search_inf h2 {
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
   }
 }
 
@@ -510,6 +559,17 @@ header .menu li + li {
   .search_inf p {
     margin-top: 8px;
     text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .search_inf p span {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .search_inf p {
+    text-align: center;
   }
 }
 
@@ -594,6 +654,13 @@ header .menu li + li {
   padding: 3px;
 }
 
+@media screen and (max-width: 575px) {
+  .card_group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .card_list {
   overflow: hidden;
   display: -webkit-box;
@@ -614,6 +681,12 @@ header .menu li + li {
   -webkit-box-shadow: 0px 3px 6px #00000029;
           box-shadow: 0px 3px 6px #00000029;
   border: 5px solid #FFFFFF;
+}
+
+@media screen and (max-width: 575px) {
+  .card_list {
+    width: 100%;
+  }
 }
 
 .card_list_bgpic {
@@ -719,6 +792,16 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .reserve_group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    height: auto;
+  }
+}
+
 .reserve_list {
   overflow: hidden;
   position: relative;
@@ -735,8 +818,15 @@ header .menu li + li {
   margin-left: 6px;
 }
 
+@media screen and (max-width: 575px) {
+  .reserve_list + .reserve_list {
+    margin-top: 4px;
+    margin-left: 0;
+  }
+}
+
 .reserve_list:nth-child(1) {
-  max-width: 350px;
+  width: 350px;
   background-image: url("../../images/index-5.jpeg");
 }
 
@@ -746,8 +836,15 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .reserve_list:nth-child(1) {
+    width: 100%;
+    height: 132px;
+  }
+}
+
 .reserve_list:nth-child(2) {
-  max-width: 303px;
+  width: 303px;
   background-image: url("../../images/index-6.jpeg");
 }
 
@@ -757,8 +854,15 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .reserve_list:nth-child(2) {
+    width: 100%;
+    height: 132px;
+  }
+}
+
 .reserve_list:nth-child(3) {
-  max-width: 267px;
+  width: 267px;
   height: 172px;
   background-image: url("../../images/index-7.jpeg");
 }
@@ -770,8 +874,15 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .reserve_list:nth-child(3) {
+    width: 100%;
+    height: 132px;
+  }
+}
+
 .reserve_list:nth-child(4) {
-  max-width: 267px;
+  width: 267px;
   height: 172px;
   background-image: url("../../images/index-8.jpeg");
   margin-top: 6px;
@@ -785,14 +896,28 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .reserve_list:nth-child(4) {
+    width: 100%;
+    height: 132px;
+  }
+}
+
 .reserve_list:nth-child(5) {
-  max-width: 172px;
+  width: 172px;
   background-image: url("../../images/index-3.jpeg");
 }
 
 @media screen and (max-width: 991px) {
   .reserve_list:nth-child(5) {
     width: 125px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .reserve_list:nth-child(5) {
+    width: 100%;
+    height: 132px;
   }
 }
 
@@ -836,13 +961,19 @@ header .menu li + li {
 }
 
 .service {
-  padding: 80px 85px 132px;
+  padding: 80px 0 132px;
   background: url("../../images/index-9.jpeg") no-repeat center/cover;
 }
 
 @media screen and (max-width: 991px) {
   .service {
-    padding: 80px 40px 132px;
+    padding: 80px 0 132px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .service {
+    padding: 60px 0 125px;
   }
 }
 
@@ -855,6 +986,13 @@ header .menu li + li {
   display: -ms-flexbox;
   display: flex;
   margin-top: 100px;
+}
+
+@media screen and (max-width: 575px) {
+  .service ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .service li {
@@ -874,6 +1012,14 @@ header .menu li + li {
   border-left: 2px solid #fff;
 }
 
+@media screen and (max-width: 575px) {
+  .service li {
+    min-width: 175px;
+    height: 120px;
+    margin: auto;
+  }
+}
+
 .service li::after {
   content: attr(data-txt);
   display: block;
@@ -883,6 +1029,13 @@ header .menu li + li {
 
 .service li + li {
   margin-left: 130px;
+}
+
+@media screen and (max-width: 575px) {
+  .service li + li {
+    margin-top: 80px;
+    margin-left: auto;
+  }
 }
 
 .process_group {
@@ -895,8 +1048,24 @@ header .menu li + li {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 575px) {
+  .process_group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .process_list {
   width: calc(100% / 3 - 20px);
+}
+
+@media screen and (max-width: 575px) {
+  .process_list {
+    width: 100%;
+  }
+  .process_list + .process_list {
+    margin-top: 32px;
+  }
 }
 
 .process_list img {
@@ -908,9 +1077,23 @@ header .menu li + li {
   background-color: #F0AD25;
 }
 
+@media screen and (max-width: 575px) {
+  .help h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
 .help_txt {
   margin-top: 8px;
   line-height: 30px;
+}
+
+@media screen and (max-width: 575px) {
+  .help_txt {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .help_inp {
