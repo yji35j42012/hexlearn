@@ -710,6 +710,12 @@ header .menu li + li {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .card_list_bgpic img {
+    top: -50%;
+  }
+}
+
 .card_list_pic {
   position: absolute;
   -webkit-transform: translateY(75%);
@@ -981,6 +987,12 @@ header .menu li + li {
   color: #fff;
 }
 
+@media screen and (max-width: 575px) {
+  .service h2 {
+    text-align: center;
+  }
+}
+
 .service ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -990,8 +1002,10 @@ header .menu li + li {
 
 @media screen and (max-width: 575px) {
   .service ul {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

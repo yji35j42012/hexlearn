@@ -168,6 +168,9 @@
 				@include mw_lg{
 					top: -30%;
 				}
+				@include mw_sm{
+					top: -50%;
+				}
 			}
 		}
 
@@ -362,6 +365,9 @@
 	}
 	h2{
 		color: #fff;
+		@include mw_sm{
+			text-align: center;
+		}
 	}
 
 	ul{
@@ -369,7 +375,7 @@
 		margin-top: 100px;
 
 		@include mw_sm{
-			flex-wrap: wrap;
+			flex-direction: column;
 		}
 	}
 
