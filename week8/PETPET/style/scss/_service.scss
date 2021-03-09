@@ -1,0 +1,51 @@
+.banner{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_pic{
+        max-width: 730px;
+    }
+}
+
+.search{
+    padding: 16px 0;
+    &._bg_primary{
+        background-color: $primary_bg;
+    }
+    
+    .normol_select{
+		height: 40px;
+	}
+    select+select,
+    select+div{
+        margin-left: 8px;
+    }
+}
+
+.PetBacker{
+    &_list{
+        overflow: hidden;
+        max-width: 225px;
+        border-radius: 3px;
+        box-shadow: 0px 3px 6px #00000029;
+        &_pic{
+            overflow: hidden;
+            height: 128px;
+        }
+        span{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .material-icons{
+            color: #F0AD25;
+            font-size: 16px;
+        }
+    }
+}

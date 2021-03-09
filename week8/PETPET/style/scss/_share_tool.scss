@@ -6,8 +6,6 @@ select,
 textarea,
 tt {
 	font-family: 'Roboto', sans-serif;
-	// font-family: 'Open sans',
-	// sans-serif;
 	font-size: 20px;
 	color: #772400;
 }
@@ -26,9 +24,8 @@ h3{
 // 模組 start
 .container{
 	position: relative;
-	max-width: 1280px;
+	max-width: 1110px;
 	margin: auto;
-	padding: 0 85px;
 	
 	@include mw_lg{
 		padding: 0 40px;
@@ -124,6 +121,7 @@ h3{
 	height: 50px;
 	padding: 0 16px;
 	color: #6C757D;
+	background-color: #fff;
 	border: 1px solid #CED4DA;
 	appearance: auto;
 	cursor: pointer;
@@ -230,5 +228,17 @@ header{
 			line-height: 20px;
 		}
 		
+	}
+}
+
+
+.date_range{
+	display: flex;
+	align-items: center;
+
+	span{
+		margin: 0 8px;
+		font-size: 16px;
+		line-height: 24px;
 	}
 }

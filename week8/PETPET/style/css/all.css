@@ -165,9 +165,8 @@ h3 {
 
 .container {
   position: relative;
-  max-width: 1280px;
+  max-width: 1110px;
   margin: auto;
-  padding: 0 85px;
 }
 
 @media screen and (max-width: 991px) {
@@ -293,6 +292,7 @@ h3 {
   height: 50px;
   padding: 0 16px;
   color: #6C757D;
+  background-color: #fff;
   border: 1px solid #CED4DA;
   -webkit-appearance: auto;
      -moz-appearance: auto;
@@ -456,6 +456,21 @@ header .menu li + li {
 .footer_inf .copyright {
   font-size: 14px;
   line-height: 20px;
+}
+
+.date_range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.date_range span {
+  margin: 0 8px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .search .container {
@@ -1124,5 +1139,66 @@ header .menu li + li {
           flex: none;
   padding: 12px 0;
   max-width: 160px;
+}
+
+.banner .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner_pic {
+  max-width: 730px;
+}
+
+.search {
+  padding: 16px 0;
+}
+
+.search._bg_primary {
+  background-color: #F0AD25;
+}
+
+.search .normol_select {
+  height: 40px;
+}
+
+.search select + select,
+.search select + div {
+  margin-left: 8px;
+}
+
+.PetBacker_list {
+  overflow: hidden;
+  max-width: 225px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+}
+
+.PetBacker_list_pic {
+  overflow: hidden;
+  height: 128px;
+}
+
+.PetBacker_list span {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.PetBacker_list p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.PetBacker_list .material-icons {
+  color: #F0AD25;
+  font-size: 16px;
 }
 /*# sourceMappingURL=all.css.map */

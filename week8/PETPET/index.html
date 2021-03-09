@@ -34,7 +34,7 @@
 					<router-link to="/service"><a href="#">預約服務</a></router-link>
 				</li>
 				<li>
-					<router-link to="/list2"><a href="#">寵物保姆</a></router-link>
+					<router-link to="/detail"><a href="#">寵物保姆</a></router-link>
 				</li>
 				<li>
 					<router-link to="/login"><a href="#">登入</a></router-link>
@@ -43,7 +43,7 @@
 		</header>
 		<router-view></router-view>
 		<router-view class="alert" name="alert"></router-view>
-		
+
 	</div>
 
 
@@ -55,18 +55,40 @@
 	<script>
 
 		const routes = [
-			{ 
-				path: '/', 
+			{
+				path: '',
 				components: {
 					default: httpVueLoader('./view/home.vue'),
 					'alert': httpVueLoader('./view/login.vue'),
 				}
 
 			},
-			{ path: '/service', component: httpVueLoader('./view/service.vue')},
+			{
+				path: '/index.html',
+				components: {
+					default: httpVueLoader('./view/home.vue'),
+					'alert': httpVueLoader('./view/login.vue'),
+				}
+
+			},
+			{
+				path: '/service',
+				components: {
+					default: httpVueLoader('./view/service.vue'),
+					'alert': httpVueLoader('./view/login.vue'),
+				}
+			},
+			{
+				path: '/detail',
+				components: {
+					default: httpVueLoader('./view/detail.vue'),
+					'alert': httpVueLoader('./view/login.vue'),
+				}
+			},
 			// { path: '/login' , name: 'alert', component: httpVueLoader('./view/login.vue')},
 		]
 		const router = new VueRouter({
+			// mode: 'history',
 			routes // (缩写) 相当于 routes: routes
 		})
 

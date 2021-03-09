@@ -4,7 +4,7 @@
 		display: flex;
 		align-items: center;
 		
-		@include mw_lg{
+		@include mw_lg {
 			flex-direction: column;
 			padding-top: 100px;
 		}
