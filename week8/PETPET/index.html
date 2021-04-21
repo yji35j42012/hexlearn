@@ -88,7 +88,8 @@
 			// { path: '/login' , name: 'alert', component: httpVueLoader('./view/login.vue')},
 		]
 		const router = new VueRouter({
-			// mode: 'history',
+			mode: 'history',
+			base: '/index.html',
 			routes // (缩写) 相当于 routes: routes
 		})
 
